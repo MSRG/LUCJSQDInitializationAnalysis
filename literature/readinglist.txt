@@ -1,0 +1,19 @@
+.
+├── DDCC
+│   ├── Ch. 22 could be useful, we wrote a chapter on the data-driven methods in my PhD lab: 2022_Quantum Chemistry in the Age of Machine Learning.pdf
+│   ├── Could provide useful information about the DDCC method: pathirage-et-al-2024-exploration-of-the-two-electron-excitation-space-with-data-driven-coupled-cluster (1).pdf
+│   ├── Could provide useful information about the DDCC method: pathirage-et-al-2025-transferability-across-different-molecular-systems-and-levels-of-theory-with-the-data-driven.pdf
+│   └── 4) The first DDCC paper you should read: townsend-vogiatzis-2019-data-driven-acceleration-of-the-coupled-cluster-singles-and-doubles-iterative-solver.pdf
+├── LUCJ
+│   ├── 2) The original LUCJ paper: Bridging physical intuition and hardware efficiency for correlated electronic states- the local unitary cluster Jastrow ansatz for electronic structure copy.pdf
+│   ├── 3) Justification for initializing using T-amplitudes from coupled-cluster in LUCJ: matsuzawa-kurashige-2020-jastrow-type-decomposition-in-quantum-chemistry-for-low-depth-quantum-circuits.pdf
+│   └── 1) Read this one first to see what we are doing: quantumcentricsupercomputing.pdf
+├── electronic_structure_books
+│   ├── More basic introduction, could be useful context: Jensen_Introduction_to_Computational_Chemistry_2nd_ed.pdf
+│   ├── More advanced than "Modern Quantum Chemistry" but similar content as Helgaker: Mathematical-Physics-in-Theoretical-Chemistry.pdf
+│   └── All in first-quantization but could be useful: modern-quantum-chemistry.pdf
+├── quantum_computing_books
+│   ├── introduction-to-classical-and-quantum-computing.pdf
+│   └── quantum-computation-and-quantum-information-nielsen-chuang.pdf
+└── Just a useful FYI from a quantum chemist/computational chemist: writing-papers.pdf
+
