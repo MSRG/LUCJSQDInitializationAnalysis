@@ -1,0 +1,16 @@
+qiskit==1.4.2
+qiskit-algorithms==0.3.1
+qiskit-nature==0.7.2
+qiskit-nature-psi4 @ git+https://github.com/qiskit-community/qiskit-nature-psi4.git
+seaborn
+matplotlib
+pandas
+tqdm
+jupyter
+jupyterlab
+ipython
+qiskit-addon-cutting
+scikit-learn
+joblib
+numpy
+shap
