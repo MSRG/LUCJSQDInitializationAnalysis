@@ -1,0 +1,407 @@
+,structure,basis set,method,error
+0,CN,STO-3G,Psi4_Setup,"
+Fatal Error: RHF: RHF reference is only for singlets.
+Error occurred in file: /home/conda/feedstock_root/build_artifacts/psi4_1746393050636/work/psi4/src/psi4/libscf_solver/rhf.cc on line: 92
+The most recent 5 function calls were:
+
+psi::PsiException::PsiException(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char const*, int)
+"
+1,CN,STO-3G,PySCF_Setup,"Electron number 13 and spin 0 are not consistent
+Note mol.spin = 2S = Nalpha - Nbeta, not 2S+1"
+2,CN,cc-pVDZ,Psi4_Setup,"
+Fatal Error: RHF: RHF reference is only for singlets.
+Error occurred in file: /home/conda/feedstock_root/build_artifacts/psi4_1746393050636/work/psi4/src/psi4/libscf_solver/rhf.cc on line: 92
+The most recent 5 function calls were:
+
+psi::PsiException::PsiException(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char const*, int)
+"
+3,CN,cc-pVDZ,PySCF_Setup,"Electron number 13 and spin 0 are not consistent
+Note mol.spin = 2S = Nalpha - Nbeta, not 2S+1"
+4,CN,aug-cc-pVDZ,Psi4_Setup,"
+Fatal Error: RHF: RHF reference is only for singlets.
+Error occurred in file: /home/conda/feedstock_root/build_artifacts/psi4_1746393050636/work/psi4/src/psi4/libscf_solver/rhf.cc on line: 92
+The most recent 5 function calls were:
+
+psi::PsiException::PsiException(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char const*, int)
+"
+5,CN,aug-cc-pVDZ,PySCF_Setup,"Electron number 13 and spin 0 are not consistent
+Note mol.spin = 2S = Nalpha - Nbeta, not 2S+1"
+6,BO,STO-3G,Psi4_Setup,"
+Fatal Error: RHF: RHF reference is only for singlets.
+Error occurred in file: /home/conda/feedstock_root/build_artifacts/psi4_1746393050636/work/psi4/src/psi4/libscf_solver/rhf.cc on line: 92
+The most recent 5 function calls were:
+
+psi::PsiException::PsiException(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char const*, int)
+"
+7,BO,STO-3G,PySCF_Setup,"Electron number 13 and spin 0 are not consistent
+Note mol.spin = 2S = Nalpha - Nbeta, not 2S+1"
+8,BO,cc-pVDZ,Psi4_Setup,"
+Fatal Error: RHF: RHF reference is only for singlets.
+Error occurred in file: /home/conda/feedstock_root/build_artifacts/psi4_1746393050636/work/psi4/src/psi4/libscf_solver/rhf.cc on line: 92
+The most recent 5 function calls were:
+
+psi::PsiException::PsiException(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char const*, int)
+"
+9,BO,cc-pVDZ,PySCF_Setup,"Electron number 13 and spin 0 are not consistent
+Note mol.spin = 2S = Nalpha - Nbeta, not 2S+1"
+10,BO,aug-cc-pVDZ,Psi4_Setup,"
+Fatal Error: RHF: RHF reference is only for singlets.
+Error occurred in file: /home/conda/feedstock_root/build_artifacts/psi4_1746393050636/work/psi4/src/psi4/libscf_solver/rhf.cc on line: 92
+The most recent 5 function calls were:
+
+psi::PsiException::PsiException(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char const*, int)
+"
+11,BO,aug-cc-pVDZ,PySCF_Setup,"Electron number 13 and spin 0 are not consistent
+Note mol.spin = 2S = Nalpha - Nbeta, not 2S+1"
+12,CLi,STO-3G,Psi4_Setup,"
+Fatal Error: RHF: RHF reference is only for singlets.
+Error occurred in file: /home/conda/feedstock_root/build_artifacts/psi4_1746393050636/work/psi4/src/psi4/libscf_solver/rhf.cc on line: 92
+The most recent 5 function calls were:
+
+psi::PsiException::PsiException(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char const*, int)
+"
+13,CLi,STO-3G,PySCF_Setup,"Electron number 9 and spin 0 are not consistent
+Note mol.spin = 2S = Nalpha - Nbeta, not 2S+1"
+14,CLi,cc-pVDZ,Psi4_Setup,"
+Fatal Error: RHF: RHF reference is only for singlets.
+Error occurred in file: /home/conda/feedstock_root/build_artifacts/psi4_1746393050636/work/psi4/src/psi4/libscf_solver/rhf.cc on line: 92
+The most recent 5 function calls were:
+
+psi::PsiException::PsiException(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char const*, int)
+"
+15,CLi,cc-pVDZ,PySCF_Setup,"Electron number 9 and spin 0 are not consistent
+Note mol.spin = 2S = Nalpha - Nbeta, not 2S+1"
+16,CLi,aug-cc-pVDZ,Psi4_Setup,"
+Fatal Error: RHF: RHF reference is only for singlets.
+Error occurred in file: /home/conda/feedstock_root/build_artifacts/psi4_1746393050636/work/psi4/src/psi4/libscf_solver/rhf.cc on line: 92
+The most recent 5 function calls were:
+
+psi::PsiException::PsiException(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char const*, int)
+"
+17,CLi,aug-cc-pVDZ,PySCF_Setup,"Electron number 9 and spin 0 are not consistent
+Note mol.spin = 2S = Nalpha - Nbeta, not 2S+1"
+18,BeN,STO-3G,Psi4_Setup,"
+Fatal Error: RHF: RHF reference is only for singlets.
+Error occurred in file: /home/conda/feedstock_root/build_artifacts/psi4_1746393050636/work/psi4/src/psi4/libscf_solver/rhf.cc on line: 92
+The most recent 5 function calls were:
+
+psi::PsiException::PsiException(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char const*, int)
+"
+19,BeN,STO-3G,PySCF_Setup,"Electron number 11 and spin 0 are not consistent
+Note mol.spin = 2S = Nalpha - Nbeta, not 2S+1"
+20,BeN,cc-pVDZ,Psi4_Setup,"
+Fatal Error: RHF: RHF reference is only for singlets.
+Error occurred in file: /home/conda/feedstock_root/build_artifacts/psi4_1746393050636/work/psi4/src/psi4/libscf_solver/rhf.cc on line: 92
+The most recent 5 function calls were:
+
+psi::PsiException::PsiException(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char const*, int)
+"
+21,BeN,cc-pVDZ,PySCF_Setup,"Electron number 11 and spin 0 are not consistent
+Note mol.spin = 2S = Nalpha - Nbeta, not 2S+1"
+22,BeN,aug-cc-pVDZ,Psi4_Setup,"
+Fatal Error: RHF: RHF reference is only for singlets.
+Error occurred in file: /home/conda/feedstock_root/build_artifacts/psi4_1746393050636/work/psi4/src/psi4/libscf_solver/rhf.cc on line: 92
+The most recent 5 function calls were:
+
+psi::PsiException::PsiException(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char const*, int)
+"
+23,BeN,aug-cc-pVDZ,PySCF_Setup,"Electron number 11 and spin 0 are not consistent
+Note mol.spin = 2S = Nalpha - Nbeta, not 2S+1"
+24,BBe,STO-3G,Psi4_Setup,"
+Fatal Error: RHF: RHF reference is only for singlets.
+Error occurred in file: /home/conda/feedstock_root/build_artifacts/psi4_1746393050636/work/psi4/src/psi4/libscf_solver/rhf.cc on line: 92
+The most recent 5 function calls were:
+
+psi::PsiException::PsiException(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char const*, int)
+"
+25,BBe,STO-3G,PySCF_Setup,"Electron number 9 and spin 0 are not consistent
+Note mol.spin = 2S = Nalpha - Nbeta, not 2S+1"
+26,BBe,cc-pVDZ,Psi4_Setup,"
+Fatal Error: RHF: RHF reference is only for singlets.
+Error occurred in file: /home/conda/feedstock_root/build_artifacts/psi4_1746393050636/work/psi4/src/psi4/libscf_solver/rhf.cc on line: 92
+The most recent 5 function calls were:
+
+psi::PsiException::PsiException(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char const*, int)
+"
+27,BBe,cc-pVDZ,PySCF_Setup,"Electron number 9 and spin 0 are not consistent
+Note mol.spin = 2S = Nalpha - Nbeta, not 2S+1"
+28,BBe,aug-cc-pVDZ,Psi4_Setup,"
+Fatal Error: RHF: RHF reference is only for singlets.
+Error occurred in file: /home/conda/feedstock_root/build_artifacts/psi4_1746393050636/work/psi4/src/psi4/libscf_solver/rhf.cc on line: 92
+The most recent 5 function calls were:
+
+psi::PsiException::PsiException(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char const*, int)
+"
+29,BBe,aug-cc-pVDZ,PySCF_Setup,"Electron number 9 and spin 0 are not consistent
+Note mol.spin = 2S = Nalpha - Nbeta, not 2S+1"
+30,LiO,STO-3G,Psi4_Setup,"
+Fatal Error: RHF: RHF reference is only for singlets.
+Error occurred in file: /home/conda/feedstock_root/build_artifacts/psi4_1746393050636/work/psi4/src/psi4/libscf_solver/rhf.cc on line: 92
+The most recent 5 function calls were:
+
+psi::PsiException::PsiException(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char const*, int)
+"
+31,LiO,STO-3G,PySCF_Setup,"Electron number 11 and spin 0 are not consistent
+Note mol.spin = 2S = Nalpha - Nbeta, not 2S+1"
+32,LiO,cc-pVDZ,Psi4_Setup,"
+Fatal Error: RHF: RHF reference is only for singlets.
+Error occurred in file: /home/conda/feedstock_root/build_artifacts/psi4_1746393050636/work/psi4/src/psi4/libscf_solver/rhf.cc on line: 92
+The most recent 5 function calls were:
+
+psi::PsiException::PsiException(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char const*, int)
+"
+33,LiO,cc-pVDZ,PySCF_Setup,"Electron number 11 and spin 0 are not consistent
+Note mol.spin = 2S = Nalpha - Nbeta, not 2S+1"
+34,LiO,aug-cc-pVDZ,Psi4_Setup,"
+Fatal Error: RHF: RHF reference is only for singlets.
+Error occurred in file: /home/conda/feedstock_root/build_artifacts/psi4_1746393050636/work/psi4/src/psi4/libscf_solver/rhf.cc on line: 92
+The most recent 5 function calls were:
+
+psi::PsiException::PsiException(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char const*, int)
+"
+35,LiO,aug-cc-pVDZ,PySCF_Setup,"Electron number 11 and spin 0 are not consistent
+Note mol.spin = 2S = Nalpha - Nbeta, not 2S+1"
+36,CF,STO-3G,Psi4_Setup,"
+Fatal Error: RHF: RHF reference is only for singlets.
+Error occurred in file: /home/conda/feedstock_root/build_artifacts/psi4_1746393050636/work/psi4/src/psi4/libscf_solver/rhf.cc on line: 92
+The most recent 5 function calls were:
+
+psi::PsiException::PsiException(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char const*, int)
+"
+37,CF,STO-3G,PySCF_Setup,"Electron number 15 and spin 0 are not consistent
+Note mol.spin = 2S = Nalpha - Nbeta, not 2S+1"
+38,CF,cc-pVDZ,Psi4_Setup,"
+Fatal Error: RHF: RHF reference is only for singlets.
+Error occurred in file: /home/conda/feedstock_root/build_artifacts/psi4_1746393050636/work/psi4/src/psi4/libscf_solver/rhf.cc on line: 92
+The most recent 5 function calls were:
+
+psi::PsiException::PsiException(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char const*, int)
+"
+39,CF,cc-pVDZ,PySCF_Setup,"Electron number 15 and spin 0 are not consistent
+Note mol.spin = 2S = Nalpha - Nbeta, not 2S+1"
+40,CF,aug-cc-pVDZ,Psi4_Setup,"
+Fatal Error: RHF: RHF reference is only for singlets.
+Error occurred in file: /home/conda/feedstock_root/build_artifacts/psi4_1746393050636/work/psi4/src/psi4/libscf_solver/rhf.cc on line: 92
+The most recent 5 function calls were:
+
+psi::PsiException::PsiException(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char const*, int)
+"
+41,CF,aug-cc-pVDZ,PySCF_Setup,"Electron number 15 and spin 0 are not consistent
+Note mol.spin = 2S = Nalpha - Nbeta, not 2S+1"
+42,CH,STO-3G,Psi4_Setup,"
+Fatal Error: RHF: RHF reference is only for singlets.
+Error occurred in file: /home/conda/feedstock_root/build_artifacts/psi4_1746393050636/work/psi4/src/psi4/libscf_solver/rhf.cc on line: 92
+The most recent 5 function calls were:
+
+psi::PsiException::PsiException(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char const*, int)
+"
+43,CH,STO-3G,PySCF_Setup,"Electron number 7 and spin 0 are not consistent
+Note mol.spin = 2S = Nalpha - Nbeta, not 2S+1"
+44,CH,cc-pVDZ,Psi4_Setup,"
+Fatal Error: RHF: RHF reference is only for singlets.
+Error occurred in file: /home/conda/feedstock_root/build_artifacts/psi4_1746393050636/work/psi4/src/psi4/libscf_solver/rhf.cc on line: 92
+The most recent 5 function calls were:
+
+psi::PsiException::PsiException(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char const*, int)
+"
+45,CH,cc-pVDZ,PySCF_Setup,"Electron number 7 and spin 0 are not consistent
+Note mol.spin = 2S = Nalpha - Nbeta, not 2S+1"
+46,CH,aug-cc-pVDZ,Psi4_Setup,"
+Fatal Error: RHF: RHF reference is only for singlets.
+Error occurred in file: /home/conda/feedstock_root/build_artifacts/psi4_1746393050636/work/psi4/src/psi4/libscf_solver/rhf.cc on line: 92
+The most recent 5 function calls were:
+
+psi::PsiException::PsiException(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char const*, int)
+"
+47,CH,aug-cc-pVDZ,PySCF_Setup,"Electron number 7 and spin 0 are not consistent
+Note mol.spin = 2S = Nalpha - Nbeta, not 2S+1"
+48,BeF,STO-3G,Psi4_Setup,"
+Fatal Error: RHF: RHF reference is only for singlets.
+Error occurred in file: /home/conda/feedstock_root/build_artifacts/psi4_1746393050636/work/psi4/src/psi4/libscf_solver/rhf.cc on line: 92
+The most recent 5 function calls were:
+
+psi::PsiException::PsiException(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char const*, int)
+"
+49,BeF,STO-3G,PySCF_Setup,"Electron number 13 and spin 0 are not consistent
+Note mol.spin = 2S = Nalpha - Nbeta, not 2S+1"
+50,BeF,cc-pVDZ,Psi4_Setup,"
+Fatal Error: RHF: RHF reference is only for singlets.
+Error occurred in file: /home/conda/feedstock_root/build_artifacts/psi4_1746393050636/work/psi4/src/psi4/libscf_solver/rhf.cc on line: 92
+The most recent 5 function calls were:
+
+psi::PsiException::PsiException(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char const*, int)
+"
+51,BeF,cc-pVDZ,PySCF_Setup,"Electron number 13 and spin 0 are not consistent
+Note mol.spin = 2S = Nalpha - Nbeta, not 2S+1"
+52,BeF,aug-cc-pVDZ,Psi4_Setup,"
+Fatal Error: RHF: RHF reference is only for singlets.
+Error occurred in file: /home/conda/feedstock_root/build_artifacts/psi4_1746393050636/work/psi4/src/psi4/libscf_solver/rhf.cc on line: 92
+The most recent 5 function calls were:
+
+psi::PsiException::PsiException(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char const*, int)
+"
+53,BeF,aug-cc-pVDZ,PySCF_Setup,"Electron number 13 and spin 0 are not consistent
+Note mol.spin = 2S = Nalpha - Nbeta, not 2S+1"
+54,BeLi,STO-3G,Psi4_Setup,"
+Fatal Error: RHF: RHF reference is only for singlets.
+Error occurred in file: /home/conda/feedstock_root/build_artifacts/psi4_1746393050636/work/psi4/src/psi4/libscf_solver/rhf.cc on line: 92
+The most recent 5 function calls were:
+
+psi::PsiException::PsiException(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char const*, int)
+"
+55,BeLi,STO-3G,PySCF_Setup,"Electron number 7 and spin 0 are not consistent
+Note mol.spin = 2S = Nalpha - Nbeta, not 2S+1"
+56,BeLi,cc-pVDZ,Psi4_Setup,"
+Fatal Error: RHF: RHF reference is only for singlets.
+Error occurred in file: /home/conda/feedstock_root/build_artifacts/psi4_1746393050636/work/psi4/src/psi4/libscf_solver/rhf.cc on line: 92
+The most recent 5 function calls were:
+
+psi::PsiException::PsiException(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char const*, int)
+"
+57,BeLi,cc-pVDZ,PySCF_Setup,"Electron number 7 and spin 0 are not consistent
+Note mol.spin = 2S = Nalpha - Nbeta, not 2S+1"
+58,BeLi,aug-cc-pVDZ,Psi4_Setup,"
+Fatal Error: RHF: RHF reference is only for singlets.
+Error occurred in file: /home/conda/feedstock_root/build_artifacts/psi4_1746393050636/work/psi4/src/psi4/libscf_solver/rhf.cc on line: 92
+The most recent 5 function calls were:
+
+psi::PsiException::PsiException(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char const*, int)
+"
+59,BeLi,aug-cc-pVDZ,PySCF_Setup,"Electron number 7 and spin 0 are not consistent
+Note mol.spin = 2S = Nalpha - Nbeta, not 2S+1"
+60,BC,STO-3G,Psi4_Setup,"
+Fatal Error: RHF: RHF reference is only for singlets.
+Error occurred in file: /home/conda/feedstock_root/build_artifacts/psi4_1746393050636/work/psi4/src/psi4/libscf_solver/rhf.cc on line: 92
+The most recent 5 function calls were:
+
+psi::PsiException::PsiException(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char const*, int)
+"
+61,BC,STO-3G,PySCF_Setup,"Electron number 11 and spin 0 are not consistent
+Note mol.spin = 2S = Nalpha - Nbeta, not 2S+1"
+62,BC,cc-pVDZ,Psi4_Setup,"
+Fatal Error: RHF: RHF reference is only for singlets.
+Error occurred in file: /home/conda/feedstock_root/build_artifacts/psi4_1746393050636/work/psi4/src/psi4/libscf_solver/rhf.cc on line: 92
+The most recent 5 function calls were:
+
+psi::PsiException::PsiException(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char const*, int)
+"
+63,BC,cc-pVDZ,PySCF_Setup,"Electron number 11 and spin 0 are not consistent
+Note mol.spin = 2S = Nalpha - Nbeta, not 2S+1"
+64,BC,aug-cc-pVDZ,Psi4_Setup,"
+Fatal Error: RHF: RHF reference is only for singlets.
+Error occurred in file: /home/conda/feedstock_root/build_artifacts/psi4_1746393050636/work/psi4/src/psi4/libscf_solver/rhf.cc on line: 92
+The most recent 5 function calls were:
+
+psi::PsiException::PsiException(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char const*, int)
+"
+65,BC,aug-cc-pVDZ,PySCF_Setup,"Electron number 11 and spin 0 are not consistent
+Note mol.spin = 2S = Nalpha - Nbeta, not 2S+1"
+66,NO,STO-3G,Psi4_Setup,"
+Fatal Error: RHF: RHF reference is only for singlets.
+Error occurred in file: /home/conda/feedstock_root/build_artifacts/psi4_1746393050636/work/psi4/src/psi4/libscf_solver/rhf.cc on line: 92
+The most recent 5 function calls were:
+
+psi::PsiException::PsiException(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char const*, int)
+"
+67,NO,STO-3G,PySCF_Setup,"Electron number 15 and spin 0 are not consistent
+Note mol.spin = 2S = Nalpha - Nbeta, not 2S+1"
+68,NO,cc-pVDZ,Psi4_Setup,"
+Fatal Error: RHF: RHF reference is only for singlets.
+Error occurred in file: /home/conda/feedstock_root/build_artifacts/psi4_1746393050636/work/psi4/src/psi4/libscf_solver/rhf.cc on line: 92
+The most recent 5 function calls were:
+
+psi::PsiException::PsiException(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char const*, int)
+"
+69,NO,cc-pVDZ,PySCF_Setup,"Electron number 15 and spin 0 are not consistent
+Note mol.spin = 2S = Nalpha - Nbeta, not 2S+1"
+70,NO,aug-cc-pVDZ,Psi4_Setup,"
+Fatal Error: RHF: RHF reference is only for singlets.
+Error occurred in file: /home/conda/feedstock_root/build_artifacts/psi4_1746393050636/work/psi4/src/psi4/libscf_solver/rhf.cc on line: 92
+The most recent 5 function calls were:
+
+psi::PsiException::PsiException(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char const*, int)
+"
+71,NO,aug-cc-pVDZ,PySCF_Setup,"Electron number 15 and spin 0 are not consistent
+Note mol.spin = 2S = Nalpha - Nbeta, not 2S+1"
+72,FO,STO-3G,Psi4_Setup,"
+Fatal Error: RHF: RHF reference is only for singlets.
+Error occurred in file: /home/conda/feedstock_root/build_artifacts/psi4_1746393050636/work/psi4/src/psi4/libscf_solver/rhf.cc on line: 92
+The most recent 5 function calls were:
+
+psi::PsiException::PsiException(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char const*, int)
+"
+73,FO,STO-3G,PySCF_Setup,"Electron number 17 and spin 0 are not consistent
+Note mol.spin = 2S = Nalpha - Nbeta, not 2S+1"
+74,FO,cc-pVDZ,Psi4_Setup,"
+Fatal Error: RHF: RHF reference is only for singlets.
+Error occurred in file: /home/conda/feedstock_root/build_artifacts/psi4_1746393050636/work/psi4/src/psi4/libscf_solver/rhf.cc on line: 92
+The most recent 5 function calls were:
+
+psi::PsiException::PsiException(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char const*, int)
+"
+75,FO,cc-pVDZ,PySCF_Setup,"Electron number 17 and spin 0 are not consistent
+Note mol.spin = 2S = Nalpha - Nbeta, not 2S+1"
+76,FO,aug-cc-pVDZ,Psi4_Setup,"
+Fatal Error: RHF: RHF reference is only for singlets.
+Error occurred in file: /home/conda/feedstock_root/build_artifacts/psi4_1746393050636/work/psi4/src/psi4/libscf_solver/rhf.cc on line: 92
+The most recent 5 function calls were:
+
+psi::PsiException::PsiException(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char const*, int)
+"
+77,FO,aug-cc-pVDZ,PySCF_Setup,"Electron number 17 and spin 0 are not consistent
+Note mol.spin = 2S = Nalpha - Nbeta, not 2S+1"
+78,HH,STO-3G,Psi4_Corr,
+79,HO,STO-3G,Psi4_Setup,"
+Fatal Error: RHF: RHF reference is only for singlets.
+Error occurred in file: /home/conda/feedstock_root/build_artifacts/psi4_1746393050636/work/psi4/src/psi4/libscf_solver/rhf.cc on line: 92
+The most recent 5 function calls were:
+
+psi::PsiException::PsiException(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char const*, int)
+"
+80,HO,STO-3G,PySCF_Setup,"Electron number 9 and spin 0 are not consistent
+Note mol.spin = 2S = Nalpha - Nbeta, not 2S+1"
+81,HO,cc-pVDZ,Psi4_Setup,"
+Fatal Error: RHF: RHF reference is only for singlets.
+Error occurred in file: /home/conda/feedstock_root/build_artifacts/psi4_1746393050636/work/psi4/src/psi4/libscf_solver/rhf.cc on line: 92
+The most recent 5 function calls were:
+
+psi::PsiException::PsiException(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char const*, int)
+"
+82,HO,cc-pVDZ,PySCF_Setup,"Electron number 9 and spin 0 are not consistent
+Note mol.spin = 2S = Nalpha - Nbeta, not 2S+1"
+83,HO,aug-cc-pVDZ,Psi4_Setup,"
+Fatal Error: RHF: RHF reference is only for singlets.
+Error occurred in file: /home/conda/feedstock_root/build_artifacts/psi4_1746393050636/work/psi4/src/psi4/libscf_solver/rhf.cc on line: 92
+The most recent 5 function calls were:
+
+psi::PsiException::PsiException(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char const*, int)
+"
+84,HO,aug-cc-pVDZ,PySCF_Setup,"Electron number 9 and spin 0 are not consistent
+Note mol.spin = 2S = Nalpha - Nbeta, not 2S+1"
+85,BeH,STO-3G,Psi4_Setup,"
+Fatal Error: RHF: RHF reference is only for singlets.
+Error occurred in file: /home/conda/feedstock_root/build_artifacts/psi4_1746393050636/work/psi4/src/psi4/libscf_solver/rhf.cc on line: 92
+The most recent 5 function calls were:
+
+psi::PsiException::PsiException(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char const*, int)
+"
+86,BeH,STO-3G,PySCF_Setup,"Electron number 5 and spin 0 are not consistent
+Note mol.spin = 2S = Nalpha - Nbeta, not 2S+1"
+87,BeH,cc-pVDZ,Psi4_Setup,"
+Fatal Error: RHF: RHF reference is only for singlets.
+Error occurred in file: /home/conda/feedstock_root/build_artifacts/psi4_1746393050636/work/psi4/src/psi4/libscf_solver/rhf.cc on line: 92
+The most recent 5 function calls were:
+
+psi::PsiException::PsiException(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char const*, int)
+"
+88,BeH,cc-pVDZ,PySCF_Setup,"Electron number 5 and spin 0 are not consistent
+Note mol.spin = 2S = Nalpha - Nbeta, not 2S+1"
+89,BeH,aug-cc-pVDZ,Psi4_Setup,"
+Fatal Error: RHF: RHF reference is only for singlets.
+Error occurred in file: /home/conda/feedstock_root/build_artifacts/psi4_1746393050636/work/psi4/src/psi4/libscf_solver/rhf.cc on line: 92
+The most recent 5 function calls were:
+
+psi::PsiException::PsiException(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char const*, int)
+"
+90,BeH,aug-cc-pVDZ,PySCF_Setup,"Electron number 5 and spin 0 are not consistent
+Note mol.spin = 2S = Nalpha - Nbeta, not 2S+1"
