@@ -1,0 +1,14 @@
+seaborn
+matplotlib
+pandas
+tqdm
+jupyter
+jupyterlab
+ipython
+scikit-learn
+joblib
+numpy
+qiskit_addon_cutting==0.10.0
+qiskit_addon_sqd==0.10.0
+qiskit_aer==0.17.0
+qiskit_ibm_runtime==0.37.0
