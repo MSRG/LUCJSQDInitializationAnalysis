@@ -1,0 +1,31 @@
+- `Evir1`: Orbital energy of the first virtual orbital
+- `Hvir1`: One-electron integral of the first virtual orbital
+- `Jvir1`: Coulomb integral of the first virtual orbital
+- `Kvir1`: Exchange integral of the first virtual orbital
+- `Evir2`: Orbital energy of the second virtual orbital
+- `Hvir2`: One-electron integral of the second virtual orbital
+- `Jvir2`: Coulomb integral of the second virtual orbital
+- `Kvir2`: Exchange integral of the second virtual orbital
+- `Eocc1`: Orbital energy of the first occupied orbital
+- `Jocc1`: One-electron integral of the first occupied orbital
+- `Kocc1`: Coulomb integral of the first occupied orbital
+- `Hocc1`: Exchange integral of the first occupied orbital
+- `Eocc2`: Orbital energy of the second occupied orbital
+- `Jocc2`: One-electron integral of the second occupied orbital
+- `Kocc2`: Coulomb integral of the second occupied orbital
+- `Hocc2`: Exchange integral of the second occupied orbital
+- `Jia1`: Coulomb integral between the first occupied and first virtual orbital
+- `Jia2`: Coulomb integral between the second occupied and second virtual orbital
+- `Kia1`: Exchange integral between the first occupied and first virtual orbital
+- `Kia2`: Exchange integral between the second occupied and second virtual orbital
+- `diag`: Binary feature denoting whether a=b (virtual orbitals are the same)
+- `orbdiff`: Denominator of MP2 the t2-amplitude
+- `doublecheck`: Numerator of the MP2 t2-amplitude, two-electron integral <ij||ab> 
+- `t2start`: Initial MP2 t2-amplitude
+- `t2mag`: Magnitude of the MP2 t2-amplitude
+- `t2sign`: Sign of the MP2 t2-amplitude
+- `Jia1mag`: Magnitude of the Coulomb integral between the first occupied and first virtual orbital
+- `Jia2mag`: Magnitude of the Coulomb integral between the second occupied and second virtual orbital
+- `Kia1mag`: Magnitude of the Exchange integral between the first occupied and first virtual orbital
+- `Kia2mag`: Magnitude of the Exchange integral between the second occupied and second virtual orbital: 
+- `t2`: CCSD t2-amplitude (target value)
