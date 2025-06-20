@@ -1,0 +1,3 @@
+structure,basis set,method,error
+CLi,STO-3G,Psi4_Setup,'HelperCCEnergy' object has no attribute 'FinalEnergy'
+HH,STO-3G,Psi4_Corr,
