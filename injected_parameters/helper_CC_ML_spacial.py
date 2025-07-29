@@ -1209,7 +1209,7 @@ class HelperCCEnergy(object):
             if CCSD_iter >= start_diis:
                 self.t1, self.t2 = diis_object.extrapolate(self.t1, self.t2)
 
-            self.history.append((CCSD_iter,CCSDcorr_E,abs(CCSDcorr_E - CCSDcorr_E_old),rms))
+            self.history.append((CCSD_iter,CCSDcorr_E))
 
     def updatet1(self):
 
