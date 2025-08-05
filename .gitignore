@@ -5,7 +5,8 @@ __pycache__/
 *.DS_Store
 # C extensions
 *.so
-
+psi*clean
+timer.dat
 # Distribution / packaging
 .Python
 build/
