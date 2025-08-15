@@ -131,7 +131,7 @@ with open("out/status.txt", "a") as f:
     f.write(f"Done test set molecules, now moving onto training. \n \n")
 
 
-sizes = [10, 20, 40, 60, 80 100]
+sizes = [10, 20, 40, 60, 80, 100]
 X_train_all = {}
 y_train_all = {}
 
@@ -139,9 +139,9 @@ for basis in basis_sets:
     for n in sizes:
         filenames = train[:n]
         t1 = time.time()
-
-        with open("out/status.txt", "a") as f:
-            f.write(f"{basis} Basis, N = {n} training molecules.")
+        
+        print(f"{basis} Basis, N = {n} training molecules")
+        print(f"Training molecules: {filenames}")
 
         # get training molecule
         data_dict = {}
@@ -182,41 +182,48 @@ for basis in basis_sets:
                 data=pd.DataFrame(np.array([getattr(A,attr).flatten() for attr in properties]).T,columns=properties)
                 data_dict[struct.split('_')[0]]=data
             except Exception as e:
-                with open("out/failed_molecules.txt", "a") as f:
-                    for molecule in train:
-                        f.write(f"Train molecule with filename {fn} failed: {e} \n")
+                print(f"Molecule with filename {fn} failed: {e}")
                 pass   
 
         X_train_all[basis] = np.vstack([df[top5].to_numpy() for df in data_dict.values()])
         y_train_all[basis] = np.concatenate([df["t2"].to_numpy().reshape(-1) for df in data_dict.values()])
-        
-        model = XGBRegressor(
-            n_estimators=400,
-            max_depth=12,
-            learning_rate=0.05,
-            subsample=0.8,
-            colsample_bytree=0.8,
-            reg_lambda=1.0,
-            reg_alpha=0.0,
-            tree_method="hist",
-            n_jobs=-1,
-            random_state=42
+
+
+        pipeline = Pipeline([
+            ('scaler', MinMaxScaler(feature_range=(-1, 1))),
+            ('xgb', XGBRegressor(tree_method="hist", n_jobs=-1, random_state=42, learning_rate=0.05, subsample=0.8, colsample_bytree=0.8,))
+        ])
+
+  
+        param_grid = {'max_depth': [10, 15, 20],
+                    'n_estimators': [200, 400, 500],
+                    'reg_lambda': [1e-6, 1e-3,1e-1],
+                    'reg_alpha': [1e-6, 1e-3,1e-1]}
+              
+        grid_search = GridSearchCV(
+            pipeline,
+            param_grid,
+            cv=5,
+            scoring='neg_mean_absolute_error',
+            verbose=10000,
+            n_jobs=-1
         )
 
-        scaler = MinMaxScaler(feature_range=(-1,1))
+        t1 = time.time()
+        grid_search.fit(X_train_all[basis], y_train_all[basis])
+        t2 = time.time()
+        
+        y_pred = grid_search.predict(X_test_all[basis])
 
-        X_train_scaled = scaler.fit_transform(X_train_all[basis])
-        X_test_scaled = scaler.transform(X_test_all[basis])
-
-        model.fit(X_train_scaled, y_train_all[basis])
-        y_pred = model.predict(X_test_scaled)
+        with open("out/best_params.txt", "a") as f:
+            f.write(f"Best parameters for basis {basis}, N={n}: {grid_search.best_params_}\n")
         
         r2 = r2_score(y_test_all[basis], y_pred)
         mae = mean_absolute_error(y_test_all[basis], y_pred)
         rmse = root_mean_squared_error(y_test_all[basis], y_pred)
 
-        with open("out/performance.txt", "a") as f:
+        with open("out/optimised_performance.txt", "a") as f:
             f.write(f"Basis: {basis}, N: {n}, MAE: {mae}, RMSE: {rmse}, R2: {r2}\n")
         
-        joblib.dump(scaler, f"out/{basis}_scaler_{n}.pkl")
-        model.save_model(f"out/{basis}_model_{n}.json")
+        joblib.dump(grid_search.best_estimator_, f"out/optimised_{basis}_best_model_{n}.pkl")
+
