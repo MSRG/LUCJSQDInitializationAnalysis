@@ -195,10 +195,10 @@ for basis in basis_sets:
         ])
 
   
-        param_grid = {'max_depth': [10, 15, 20],
-                    'n_estimators': [200, 400, 500],
-                    'reg_lambda': [1e-6, 1e-3,1e-1],
-                    'reg_alpha': [1e-6, 1e-3,1e-1]}
+        param_grid = {'xgb_max_depth': [10, 15, 20],
+                    'xgb_n_estimators': [200, 400, 500],
+                    'xbg_reg_lambda': [1e-6, 1e-3,1e-1],
+                    'xgb_reg_alpha': [1e-6, 1e-3,1e-1]}
               
         grid_search = GridSearchCV(
             pipeline,
