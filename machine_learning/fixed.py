@@ -191,14 +191,14 @@ for basis in basis_sets:
 
         pipeline = Pipeline([
             ('scaler', MinMaxScaler(feature_range=(-1, 1))),
-            ('xgb', XGBRegressor(tree_method="hist", n_jobs=-1, random_state=42, learning_rate=0.05, subsample=0.8, colsample_bytree=0.8,))
+            ('xgb', XGBRegressor(tree_method="hist", n_jobs=1, random_state=42, learning_rate=0.05, subsample=0.8, colsample_bytree=0.8,))
         ])
 
   
-        param_grid = {'xgb_max_depth': [10, 15, 20],
-                    'xgb_n_estimators': [200, 400, 500],
-                    'xbg_reg_lambda': [1e-6, 1e-3,1e-1],
-                    'xgb_reg_alpha': [1e-6, 1e-3,1e-1]}
+        param_grid = {'xgb__max_depth': [10, 15, 20],
+                    'xgb__n_estimators': [200, 400, 500],
+                    'xgb__reg_lambda': [1e-6, 1e-3,1e-1],
+                    'xgb__reg_alpha': [1e-6, 1e-3,1e-1]}
               
         grid_search = GridSearchCV(
             pipeline,
