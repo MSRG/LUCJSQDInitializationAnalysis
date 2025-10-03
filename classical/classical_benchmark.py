@@ -1,31 +1,25 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
+# In[ ]:
 
 
 import pyscf
-import pyscf.cc
-import pyscf.mcscf
+# import pyscf.cc
+# import pyscf.mcscf
+from pyscf import gto, scf, mcscf, cc
+from pyscf.shciscf import shci
+
 
 import matplotlib.pyplot as plt
 import seaborn as sns
 from glob import glob
 from tqdm.notebook import tqdm
 import pandas as pd
-import os, sys, psutil
+import os, sys, time
 
 
-
-# In[2]:
-
-
-os.environ['OMP_NUM_THREADS'] = "64" 
-
-
-
-
-# In[3]:
+# In[ ]:
 
 
 # for structure in glob("structures/*xyz"):
@@ -45,22 +39,94 @@ os.environ['OMP_NUM_THREADS'] = "64"
 #             g.write(f"{a} {x:>13.6f} {y:>13.6f} {z:>13.6f}\n")
 
 
-# In[4]:
+# In[ ]:
 
 
 basis_sets = ['STO-3G','cc-pVDZ','aug-cc-pVDZ']
 
 
-# In[5]:
+# In[ ]:
 
 
 active_spaces = pd.read_csv('../DDLUCJ_active_spaces_unfrozen.csv').dropna(axis=1)
 
 
-# In[6]:
+# In[ ]:
 
 
-active_spaces
+structure_dict = active_spaces.query("molecule == 'ammonia'").iloc[0].to_dict()
+molname = structure_dict['molecule']
+molfroz = structure_dict['n_frozen']
+molelec = structure_dict['n_electrons']
+molorb = structure_dict['num_orbitals']
+structpath = glob(f"./structures/{molname}*.xyz")[0]
+print(molelec,molorb)
+
+
+# In[ ]:
+
+
+# t0 = time.time()
+# # Build N2 molecule
+# mol = gto.Mole()
+# mol.build(
+# verbose=3,
+# atom=structpath,
+# basis='sto-3g'
+# )
+
+
+# # RHF
+# RHF = scf.RHF(mol).run()
+# RHF_energy = RHF.e_tot
+# # CCSD
+# ccsd = cc.CCSD(RHF, frozen=molfroz).run()   
+# CCSD_energy = ccsd.run().e_tot    
+# # CASCI
+# print(molorb, molelec)
+# cas = mcscf.CASCI(RHF, molorb, molelec)
+# CASCI_energy = cas.run().e_tot
+
+
+# #
+# # Multireference
+# #
+
+# mc = shci.SHCISCF(RHF, molorb, molelec)
+
+# # mc.fcisolver.runtimeDir = "runtime"
+# mc.fcisolver.nroots = 1
+# # mc.fcisolver.davidsonTol = 1e-5
+# # mc.fcisolver.dE = 1e-10
+# # # mc.fcisolver.scratchDirectory = "scratch"
+# # mc.fcisolver.nPTiter = 0
+# # mc.fcisolver.DoRDM = True
+
+# if not os.path.exists(mc.fcisolver.runtimeDir):
+#     os.mkdir(mc.fcisolver.runtimeDir)
+
+# if not os.path.exists(mc.fcisolver.scratchDirectory):
+#     os.mkdir(mc.fcisolver.scratchDirectory)    
+# mc.kernel()
+# SHCI_energy = mc.e_tot
+
+# print("Total Time:    ", time.time() - t0)
+
+# print(RHF_energy)
+# print(CCSD_energy)
+# print(CASCI_energy)
+# print(SHCI_energy)
+
+# # File cleanup
+# mc.fcisolver.cleanup_dice_files()
+# if not os.path.exists(mc.fcisolver.scratchDirectory):
+#     os.rmdir(mc.fcisolver.scratchDirectory)
+
+# if not os.path.exists(mc.fcisolver.runtimeDir):    
+#     os.rmdir(mc.fcisolver.runtimeDir)
+
+
+# energies[b][molname] = {"HF":RHF_energy,"CCSD":CCSD_energy,"CASCI":CASCI_energy,"SHCI":CASCI_energy}
 
 
 # In[ ]:
@@ -80,7 +146,7 @@ for b in basis_sets:
         molfroz = structure_dict['n_frozen']
         molelec = structure_dict['n_electrons']
         molorb = structure_dict['num_orbitals']
-
+        
         if 'GDB' in molname:
             structpath = f"./structures/{molname}.xyz"
         else:
@@ -90,34 +156,70 @@ for b in basis_sets:
         print(b,molname,(molelec,molorb))
         if os.path.exists(structpath):
             print(molname)
-
-
-            # Build molecule
-            mol = pyscf.gto.Mole()
+    
+            t0 = time.time()
+            # Build N2 molecule
+            mol = gto.Mole()
             mol.build(
-                atom=structpath,
-                basis=b
+            verbose=3,
+            atom=structpath,
+            basis=b
             )
-
-
+            
             # RHF
-            scf = pyscf.scf.RHF(mol).run()
-            RHF_energy = scf.e_tot
+            RHF = scf.RHF(mol)
+            RHF_energy = RHF.run().e_tot
             # CCSD
-            ccsd = pyscf.cc.CCSD(scf, frozen=molfroz).run()   
-            CCSD_energy = ccsd.run().e_tot    
+            ccsd = cc.CCSD(RHF, frozen=molfroz)
+            CCSD_energy = ccsd.run().e_tot  
+
             # CASCI
-            cas = pyscf.mcscf.CASCI(scf, molorb, molelec)
-            CASCI_energy = cas.run().e_tot
-
-
-
-
+            print(molorb, molelec)
+            try:
+                cas = mcscf.CASCI(RHF, molorb, molelec)
+                CASCI_energy = cas.run().e_tot
+            except MemoryError:
+                CASCI_energy = None
+            
+            #
+            # Multireference
+            #
+            
+            mc = shci.SHCISCF(RHF, molorb, molelec)
+            
+            # mc.fcisolver.runtimeDir = "runtime"
+            mc.fcisolver.nroots = 1
+            mc.fcisolver.davidsonTol = 1e-5
+            mc.fcisolver.dE = 1e-10
+            # mc.fcisolver.scratchDirectory = "scratch"
+            mc.fcisolver.nPTiter = 0
+            mc.fcisolver.DoRDM = True
+            
+            if not os.path.exists(mc.fcisolver.runtimeDir):
+                os.mkdir(mc.fcisolver.runtimeDir)
+            
+            if not os.path.exists(mc.fcisolver.scratchDirectory):
+                os.mkdir(mc.fcisolver.scratchDirectory)    
+            mc.kernel()
+            SHCI_energy = mc.e_tot
+            
+            print("Total Time:    ", time.time() - t0)
+            
             print(RHF_energy)
             print(CCSD_energy)
             print(CASCI_energy)
-
-            energies[b][molname] = {"HF":RHF_energy,"CCSD":CCSD_energy,"CASCI":CASCI_energy}
+            print(SHCI_energy)
+            
+            # File cleanup
+            mc.fcisolver.cleanup_dice_files()
+            if not os.path.exists(mc.fcisolver.scratchDirectory):
+                os.rmdir(mc.fcisolver.scratchDirectory)
+            
+            if not os.path.exists(mc.fcisolver.runtimeDir):    
+                os.rmdir(mc.fcisolver.runtimeDir)
+            
+            
+            energies[b][molname] = {"HF":RHF_energy,"CCSD":CCSD_energy,"CASCI":CASCI_energy,"SHCI":CASCI_energy}
 
 
 # In[ ]:
@@ -147,7 +249,7 @@ df.to_csv('energies.csv')
 # In[ ]:
 
 
-df = pd.read_csv('energies.csv',index_col=0)
+# df = pd.read_csv('energies.csv',index_col=0)
 # df.set_index(['Basis Set', 'Molecule','Method'], inplace=True)
 # df.loc[:,:,'HF'] = df.loc[:,:,'HF'] - df.loc[:,:,'CASCI']
 # df.loc[:,:,'CCSD'] = df.loc[:,:,'CCSD'] - df.loc[:,:,'CASCI']
