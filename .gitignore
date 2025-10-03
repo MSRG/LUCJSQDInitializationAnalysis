@@ -3,6 +3,10 @@ __pycache__/
 *.py[cod]
 *$py.class
 *.DS_Store
+*tmp*
+*RDM*
+*bkp*
+*shci.e*
 # C extensions
 *.so
 psi*clean
