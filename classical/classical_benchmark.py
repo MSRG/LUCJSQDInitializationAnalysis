@@ -17,6 +17,15 @@ from glob import glob
 from tqdm.notebook import tqdm
 import pandas as pd
 import os, sys, time
+import numpy as np
+
+
+# In[ ]:
+
+
+os.environ["OPENBLAS_CORETYPE"] = "generic"
+os.environ["OPENBLAS_NUM_THREADS"] = "64"
+os.environ["OMP_NUM_THREADS"] = "64"
 
 
 # In[ ]:
@@ -54,79 +63,105 @@ active_spaces = pd.read_csv('../DDLUCJ_active_spaces_unfrozen.csv').dropna(axis=
 # In[ ]:
 
 
-structure_dict = active_spaces.query("molecule == 'ammonia'").iloc[0].to_dict()
-molname = structure_dict['molecule']
-molfroz = structure_dict['n_frozen']
-molelec = structure_dict['n_electrons']
-molorb = structure_dict['num_orbitals']
-structpath = glob(f"./structures/{molname}*.xyz")[0]
-print(molelec,molorb)
+df=pd.read_csv('energies.csv',index_col=0)
 
 
 # In[ ]:
 
 
-# t0 = time.time()
-# # Build N2 molecule
-# mol = gto.Mole()
-# mol.build(
-# verbose=3,
-# atom=structpath,
-# basis='sto-3g'
-# )
+def RunClassical(StructurePath,BasisSet,NElec,NOrb,NFroz,verbose=True):
+    """
+    parameters
+    ----------
+    StructurePath: str
+        Path to XYZ structure
 
+    BasisSet: str
+        Specify basis set
 
-# # RHF
-# RHF = scf.RHF(mol).run()
-# RHF_energy = RHF.e_tot
-# # CCSD
-# ccsd = cc.CCSD(RHF, frozen=molfroz).run()   
-# CCSD_energy = ccsd.run().e_tot    
-# # CASCI
-# print(molorb, molelec)
-# cas = mcscf.CASCI(RHF, molorb, molelec)
-# CASCI_energy = cas.run().e_tot
+    NElec: int
+        Number of electrons in the active space
 
+    NOrb:
+        Number of spatial orbitals in the active space
 
-# #
-# # Multireference
-# #
+    NFroz:
+        Number of frozen orbitals
 
-# mc = shci.SHCISCF(RHF, molorb, molelec)
+    returns
+    -------
+    EnergyDict: dict
+        Dictionary containing energies (keys: HF, CCSD, CASCI, SHCI)
 
-# # mc.fcisolver.runtimeDir = "runtime"
-# mc.fcisolver.nroots = 1
-# # mc.fcisolver.davidsonTol = 1e-5
-# # mc.fcisolver.dE = 1e-10
-# # # mc.fcisolver.scratchDirectory = "scratch"
-# # mc.fcisolver.nPTiter = 0
-# # mc.fcisolver.DoRDM = True
+    """
+    t0 = time.time()
+    # Build N2 molecule
+    mol = gto.Mole()
+    mol.build(
+    atom=StructurePath,
+    basis=BasisSet
+    )
 
-# if not os.path.exists(mc.fcisolver.runtimeDir):
-#     os.mkdir(mc.fcisolver.runtimeDir)
+    # RHF
+    RHF = scf.RHF(mol)
+    RHF_energy = RHF.run().e_tot
+    # CCSD
+    ccsd = cc.CCSD(RHF, frozen=NFroz)
+    CCSD_energy = ccsd.run().e_tot  
 
-# if not os.path.exists(mc.fcisolver.scratchDirectory):
-#     os.mkdir(mc.fcisolver.scratchDirectory)    
-# mc.kernel()
-# SHCI_energy = mc.e_tot
+    # CASCI
+    if verbose:
+        print(f"CAS({NElec},{NOrb})")
 
-# print("Total Time:    ", time.time() - t0)
+    try:
+        cas = mcscf.CASCI(RHF, NOrb, NElec)
+        CASCI_energy = cas.run().e_tot
+    except MemoryError:
+        CASCI_energy = None
 
-# print(RHF_energy)
-# print(CCSD_energy)
-# print(CASCI_energy)
-# print(SHCI_energy)
+    #
+    # Multireference
+    #
 
-# # File cleanup
-# mc.fcisolver.cleanup_dice_files()
-# if not os.path.exists(mc.fcisolver.scratchDirectory):
-#     os.rmdir(mc.fcisolver.scratchDirectory)
+    mc = shci.SHCISCF(RHF, NOrb, NElec)
 
-# if not os.path.exists(mc.fcisolver.runtimeDir):    
-#     os.rmdir(mc.fcisolver.runtimeDir)
+    # mc.fcisolver.runtimeDir = "runtime"
+    mc.fcisolver.nroots = 1
+    mc.fcisolver.davidsonTol = 1e-5
+    mc.fcisolver.dE = 1e-10
+    # mc.fcisolver.scratchDirectory = "scratch"
+    mc.fcisolver.nPTiter = 0
+    mc.fcisolver.DoRDM = True
 
+    if not os.path.exists(mc.fcisolver.runtimeDir):
+        os.mkdir(mc.fcisolver.runtimeDir)
 
-# energies[b][molname] = {"HF":RHF_energy,"CCSD":CCSD_energy,"CASCI":CASCI_energy,"SHCI":CASCI_energy}
+    if not os.path.exists(mc.fcisolver.scratchDirectory):
+        os.mkdir(mc.fcisolver.scratchDirectory)    
+    mc.kernel()
+
+    SHCI_energy = mc.e_tot
+
+    if verbose:
+        print("Total Time:    ", time.time() - t0)
+        print(f"HF: {RHF_energy:.6f} Eh")
+        print(f"CCSD: {CCSD_energy:.6f} Eh")
+        try:
+            print(f"CASCI: {CASCI_energy:.6f} Eh")
+        except TypeError: 
+            print(f"CASCI: {None} Eh")
+        print(f"SHCI: {SHCI_energy:.6f} Eh\n")
+
+    # File cleanup
+    mc.fcisolver.cleanup_dice_files()
+    if not os.path.exists(mc.fcisolver.scratchDirectory):
+        os.rmdir(mc.fcisolver.scratchDirectory)
+
+    if not os.path.exists(mc.fcisolver.runtimeDir):    
+        os.rmdir(mc.fcisolver.runtimeDir)
+
+    EnergyDict = {"HF":RHF_energy,"CCSD":CCSD_energy,"CASCI":CASCI_energy,"SHCI":SHCI_energy}
+    return EnergyDict
 
 
 # In[ ]:
@@ -146,80 +181,18 @@ for b in basis_sets:
         molfroz = structure_dict['n_frozen']
         molelec = structure_dict['n_electrons']
         molorb = structure_dict['num_orbitals']
-        
+
+        # Find path
         if 'GDB' in molname:
             structpath = f"./structures/{molname}.xyz"
         else:
             structpath = glob(f"./structures/{molname}*.xyz")[0]
-        print(structpath)
 
-        print(b,molname,(molelec,molorb))
         if os.path.exists(structpath):
+            print(structpath)
+            print(b,molname,(molelec,molorb))
             print(molname)
-    
-            t0 = time.time()
-            # Build N2 molecule
-            mol = gto.Mole()
-            mol.build(
-            verbose=3,
-            atom=structpath,
-            basis=b
-            )
-            
-            # RHF
-            RHF = scf.RHF(mol)
-            RHF_energy = RHF.run().e_tot
-            # CCSD
-            ccsd = cc.CCSD(RHF, frozen=molfroz)
-            CCSD_energy = ccsd.run().e_tot  
-
-            # CASCI
-            print(molorb, molelec)
-            try:
-                cas = mcscf.CASCI(RHF, molorb, molelec)
-                CASCI_energy = cas.run().e_tot
-            except MemoryError:
-                CASCI_energy = None
-            
-            #
-            # Multireference
-            #
-            
-            mc = shci.SHCISCF(RHF, molorb, molelec)
-            
-            # mc.fcisolver.runtimeDir = "runtime"
-            mc.fcisolver.nroots = 1
-            mc.fcisolver.davidsonTol = 1e-5
-            mc.fcisolver.dE = 1e-10
-            # mc.fcisolver.scratchDirectory = "scratch"
-            mc.fcisolver.nPTiter = 0
-            mc.fcisolver.DoRDM = True
-            
-            if not os.path.exists(mc.fcisolver.runtimeDir):
-                os.mkdir(mc.fcisolver.runtimeDir)
-            
-            if not os.path.exists(mc.fcisolver.scratchDirectory):
-                os.mkdir(mc.fcisolver.scratchDirectory)    
-            mc.kernel()
-            SHCI_energy = mc.e_tot
-            
-            print("Total Time:    ", time.time() - t0)
-            
-            print(RHF_energy)
-            print(CCSD_energy)
-            print(CASCI_energy)
-            print(SHCI_energy)
-            
-            # File cleanup
-            mc.fcisolver.cleanup_dice_files()
-            if not os.path.exists(mc.fcisolver.scratchDirectory):
-                os.rmdir(mc.fcisolver.scratchDirectory)
-            
-            if not os.path.exists(mc.fcisolver.runtimeDir):    
-                os.rmdir(mc.fcisolver.runtimeDir)
-            
-            
-            energies[b][molname] = {"HF":RHF_energy,"CCSD":CCSD_energy,"CASCI":CASCI_energy,"SHCI":CASCI_energy}
+            energies[b][molname] = RunClassical(structpath,b,molelec,molorb,molfroz)
 
 
 # In[ ]:
@@ -244,43 +217,6 @@ df = pd.DataFrame(records, columns=['Basis Set', 'Molecule', 'Method', 'Energy']
 
 
 df.to_csv('energies.csv')
-
-
-# In[ ]:
-
-
-# df = pd.read_csv('energies.csv',index_col=0)
-# df.set_index(['Basis Set', 'Molecule','Method'], inplace=True)
-# df.loc[:,:,'HF'] = df.loc[:,:,'HF'] - df.loc[:,:,'CASCI']
-# df.loc[:,:,'CCSD'] = df.loc[:,:,'CCSD'] - df.loc[:,:,'CASCI']
-# df.loc[:,:,'CASCI'] = df.loc[:,:,'CASCI'] - df.loc[:,:,'CASCI']
-
-
-# In[ ]:
-
-
-df
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-g = sns.catplot(data=df.sort_values(by='Molecule'),    x="Molecule",    y="Energy",    hue="Method",    col="Basis Set",    kind="bar",    height=4,    aspect=1.2)
-g.set_titles("{col_name}")
-g.set_axis_labels("Molecule", "Energy")
-
-# Move legend outside the plot
-g._legend.set_bbox_to_anchor((1.05, 0.75))  # (x, y) position relative to the plot
-g._legend.set_frame_on(True)               # Optional: adds a frame around the legend
-g.set_xticklabels(rotation=45)
-plt.tight_layout()
-plt.show()
 
 
 # In[ ]:
