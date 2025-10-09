@@ -1,5 +1,6 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
+machine_learning/injection/sqd-experiment-pipeline/data/moved_amps.zip
 *.py[cod]
 *$py.class
 *.DS_Store
