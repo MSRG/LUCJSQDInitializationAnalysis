@@ -1,0 +1,5 @@
+ammonia
+STO-3G
+CCSD
+3
+d3l7itb4kkus739ceuvg

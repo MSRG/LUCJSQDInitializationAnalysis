@@ -1,0 +1,5 @@
+ammonia
+cc-pVDZ
+MP2
+4
+d3l8m434kkus739cg0h0

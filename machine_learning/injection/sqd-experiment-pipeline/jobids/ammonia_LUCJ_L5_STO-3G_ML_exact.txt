@@ -1,0 +1,5 @@
+ammonia
+STO-3G
+ML_exact
+5
+d3l7l81fk6qs73e6m7g0
