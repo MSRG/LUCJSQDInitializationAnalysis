@@ -1,0 +1,5 @@
+ethylene
+aug-cc-pVDZ
+ML
+5
+d3laa803qtks738c6iqg

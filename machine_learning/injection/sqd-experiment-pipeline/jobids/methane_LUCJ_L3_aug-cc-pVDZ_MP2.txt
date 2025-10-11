@@ -1,0 +1,5 @@
+methane
+aug-cc-pVDZ
+MP2
+3
+d3l9dd03qtks738c5n4g

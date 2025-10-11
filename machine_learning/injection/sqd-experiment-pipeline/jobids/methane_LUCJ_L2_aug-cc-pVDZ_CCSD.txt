@@ -1,0 +1,5 @@
+methane
+aug-cc-pVDZ
+CCSD
+2
+d3l9drr4kkus739cgo20

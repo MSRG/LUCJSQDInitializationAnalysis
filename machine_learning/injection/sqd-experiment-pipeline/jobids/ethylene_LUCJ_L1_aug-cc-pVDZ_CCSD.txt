@@ -1,0 +1,5 @@
+ethylene
+aug-cc-pVDZ
+CCSD
+1
+d3la8h03qtks738c6h60

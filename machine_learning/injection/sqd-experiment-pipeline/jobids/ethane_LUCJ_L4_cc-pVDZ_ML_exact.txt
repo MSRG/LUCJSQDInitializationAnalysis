@@ -1,0 +1,5 @@
+ethane
+cc-pVDZ
+ML_exact
+4
+d3lathodd19c7396r6a0

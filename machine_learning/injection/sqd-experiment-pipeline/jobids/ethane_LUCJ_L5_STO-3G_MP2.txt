@@ -1,0 +1,5 @@
+ethane
+STO-3G
+MP2
+5
+d3laep1fk6qs73e6oung

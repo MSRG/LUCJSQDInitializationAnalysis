@@ -1,0 +1,5 @@
+ethylene
+aug-cc-pVDZ
+zeroes
+3
+d3laba1fk6qs73e6or90

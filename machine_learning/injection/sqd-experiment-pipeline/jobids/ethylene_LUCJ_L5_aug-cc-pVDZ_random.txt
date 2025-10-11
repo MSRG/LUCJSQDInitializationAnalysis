@@ -1,0 +1,5 @@
+ethylene
+aug-cc-pVDZ
+random
+5
+d3lad283qtks738c6lhg

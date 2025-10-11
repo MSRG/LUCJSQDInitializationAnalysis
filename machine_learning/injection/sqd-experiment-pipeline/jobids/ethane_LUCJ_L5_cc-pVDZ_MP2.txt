@@ -1,0 +1,5 @@
+ethane
+cc-pVDZ
+MP2
+5
+d3lao18dd19c7396r110

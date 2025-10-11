@@ -1,0 +1,5 @@
+ethylene
+aug-cc-pVDZ
+MP2
+3
+d3la7jg3qtks738c6gag
