@@ -1,0 +1,5 @@
+ethane
+aug-cc-pVDZ
+ML_exact
+5
+d3lef3r4kkus739clnl0

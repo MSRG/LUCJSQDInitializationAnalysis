@@ -1,0 +1,5 @@
+water
+cc-pVDZ
+MP2
+1
+d3lemu83qtks738cau10

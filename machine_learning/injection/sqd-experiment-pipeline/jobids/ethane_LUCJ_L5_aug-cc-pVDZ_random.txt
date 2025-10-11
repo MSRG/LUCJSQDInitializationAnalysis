@@ -1,0 +1,5 @@
+ethane
+aug-cc-pVDZ
+random
+5
+d3lehe83qtks738caocg

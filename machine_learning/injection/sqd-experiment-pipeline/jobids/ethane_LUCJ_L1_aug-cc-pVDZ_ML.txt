@@ -1,0 +1,5 @@
+ethane
+aug-cc-pVDZ
+ML
+1
+d3lee3g3qtks738cal00
