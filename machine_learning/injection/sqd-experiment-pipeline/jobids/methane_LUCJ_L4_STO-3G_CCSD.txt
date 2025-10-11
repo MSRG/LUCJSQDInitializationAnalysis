@@ -1,0 +1,5 @@
+methane
+STO-3G
+CCSD
+4
+d3l921b4kkus739cgc90

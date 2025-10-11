@@ -1,0 +1,5 @@
+ammonia
+aug-cc-pVDZ
+random
+2
+d3l8ui83qtks738c58cg

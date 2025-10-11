@@ -1,0 +1,5 @@
+ammonia
+cc-pVDZ
+ML_exact
+4
+d3l8p2gdd19c7396p4fg

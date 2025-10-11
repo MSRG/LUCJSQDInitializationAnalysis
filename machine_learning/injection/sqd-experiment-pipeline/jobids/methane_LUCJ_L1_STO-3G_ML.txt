@@ -1,0 +1,5 @@
+methane
+STO-3G
+ML
+1
+d3l92g1fk6qs73e6nj7g

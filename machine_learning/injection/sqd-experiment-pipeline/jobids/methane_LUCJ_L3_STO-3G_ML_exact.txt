@@ -1,0 +1,5 @@
+methane
+STO-3G
+ML_exact
+3
+d3l945o3qtks738c5e1g

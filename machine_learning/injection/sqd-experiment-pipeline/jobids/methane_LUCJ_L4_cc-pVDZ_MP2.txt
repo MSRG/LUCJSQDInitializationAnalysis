@@ -1,0 +1,5 @@
+methane
+cc-pVDZ
+MP2
+4
+d3l97g1fk6qs73e6no70

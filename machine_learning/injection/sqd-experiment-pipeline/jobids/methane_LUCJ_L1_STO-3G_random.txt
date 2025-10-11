@@ -1,0 +1,5 @@
+methane
+STO-3G
+random
+1
+d3l95f8dd19c7396pgcg

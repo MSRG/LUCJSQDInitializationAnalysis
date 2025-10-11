@@ -1,0 +1,5 @@
+methane
+STO-3G
+MP2
+4
+d3l90o83qtks738c5aig

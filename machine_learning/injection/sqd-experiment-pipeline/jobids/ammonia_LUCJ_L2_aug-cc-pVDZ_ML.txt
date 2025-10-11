@@ -1,0 +1,5 @@
+ammonia
+aug-cc-pVDZ
+ML
+2
+d3l8sg83qtks738c56cg
