@@ -1,0 +1,5 @@
+buta-1,3-diene
+aug-cc-pVDZ
+random
+5
+d3lhsa9fk6qs73e7063g
