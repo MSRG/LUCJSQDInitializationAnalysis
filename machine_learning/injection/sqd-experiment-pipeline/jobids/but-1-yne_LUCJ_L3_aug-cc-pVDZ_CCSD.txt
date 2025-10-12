@@ -1,0 +1,5 @@
+but-1-yne
+aug-cc-pVDZ
+CCSD
+3
+d3lth903qtks738core0

@@ -1,0 +1,5 @@
+prop-2-en-1-ol
+aug-cc-pVDZ
+ML_exact
+2
+d3lucbodd19c7397dfm0
