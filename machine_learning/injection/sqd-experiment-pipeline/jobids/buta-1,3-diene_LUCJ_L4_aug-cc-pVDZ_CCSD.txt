@@ -1,0 +1,5 @@
+buta-1,3-diene
+aug-cc-pVDZ
+CCSD
+4
+d3lhnt34kkus739couog

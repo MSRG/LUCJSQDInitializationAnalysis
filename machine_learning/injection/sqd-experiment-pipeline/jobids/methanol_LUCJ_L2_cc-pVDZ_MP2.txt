@@ -1,0 +1,5 @@
+methanol
+cc-pVDZ
+MP2
+2
+d3lg2kpfk6qs73e6uge0

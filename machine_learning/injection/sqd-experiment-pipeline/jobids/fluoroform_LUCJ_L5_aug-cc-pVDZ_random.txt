@@ -1,0 +1,5 @@
+fluoroform
+aug-cc-pVDZ
+random
+5
+d3lh2r0dd19c739715i0

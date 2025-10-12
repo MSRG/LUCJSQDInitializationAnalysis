@@ -1,0 +1,5 @@
+fluoroform
+aug-cc-pVDZ
+CCSD
+4
+d3lgvar4kkus739co7v0

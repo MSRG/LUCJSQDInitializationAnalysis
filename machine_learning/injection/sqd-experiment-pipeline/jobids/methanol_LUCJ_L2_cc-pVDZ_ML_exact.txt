@@ -1,0 +1,5 @@
+methanol
+cc-pVDZ
+ML_exact
+2
+d3lg6eb4kkus739cnfo0

@@ -1,0 +1,5 @@
+formaldehyde
+aug-cc-pVDZ
+CCSD
+5
+d3lfne03qtks738cbukg

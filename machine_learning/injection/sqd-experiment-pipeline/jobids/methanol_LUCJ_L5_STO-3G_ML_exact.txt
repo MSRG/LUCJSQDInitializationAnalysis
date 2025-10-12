@@ -1,0 +1,5 @@
+methanol
+STO-3G
+ML_exact
+5
+d3lg05g3qtks738cc78g

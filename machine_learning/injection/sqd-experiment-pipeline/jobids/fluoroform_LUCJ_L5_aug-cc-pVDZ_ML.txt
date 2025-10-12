@@ -1,0 +1,5 @@
+fluoroform
+aug-cc-pVDZ
+ML
+5
+d3lh0183qtks738cd5q0

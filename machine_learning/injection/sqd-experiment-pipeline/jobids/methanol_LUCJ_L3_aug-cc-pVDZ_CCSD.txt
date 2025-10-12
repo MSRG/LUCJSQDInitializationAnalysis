@@ -1,0 +1,5 @@
+methanol
+aug-cc-pVDZ
+CCSD
+3
+d3lga2o3qtks738ccgu0

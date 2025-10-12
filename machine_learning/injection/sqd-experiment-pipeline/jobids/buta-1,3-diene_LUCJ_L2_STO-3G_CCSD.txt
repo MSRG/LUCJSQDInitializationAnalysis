@@ -1,0 +1,5 @@
+buta-1,3-diene
+STO-3G
+CCSD
+2
+d3lh5d8dd19c739717tg

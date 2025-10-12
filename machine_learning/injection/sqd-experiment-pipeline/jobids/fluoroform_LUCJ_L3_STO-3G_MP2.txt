@@ -1,0 +1,5 @@
+fluoroform
+STO-3G
+MP2
+3
+d3lgec0dd19c73970ib0

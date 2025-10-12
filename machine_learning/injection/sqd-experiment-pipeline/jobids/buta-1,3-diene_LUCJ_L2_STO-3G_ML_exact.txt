@@ -1,0 +1,5 @@
+buta-1,3-diene
+STO-3G
+ML_exact
+2
+d3lh91b4kkus739cogsg
