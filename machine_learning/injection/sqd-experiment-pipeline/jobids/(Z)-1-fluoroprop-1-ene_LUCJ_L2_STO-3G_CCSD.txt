@@ -1,0 +1,5 @@
+(Z)-1-fluoroprop-1-ene
+STO-3G
+CCSD
+2
+d3lvgh03qtks738cqm70

@@ -1,0 +1,5 @@
+(Z)-1-fluoroprop-1-ene
+cc-pVDZ
+ML_exact
+1
+d3lvtfpfk6qs73e7d8p0
