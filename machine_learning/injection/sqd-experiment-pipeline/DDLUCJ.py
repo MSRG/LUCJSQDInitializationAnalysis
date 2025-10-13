@@ -300,7 +300,7 @@ class DDLUCJ:
             sci_solver = partial(solve_sci_batch, spin_sq=self.Spin, max_cycle=self.max_cycle)
         else:
             from qiskit_addon_dice_solver import solve_sci_batch
-            sci_solver = partial(solve_sci_batch, spin_sq=self.Spin, max_cycle=self.max_cycle,mpirun_options= ["-quiet", "-n", "8"],temp_dir="./",clean_temp_dir=False)
+            sci_solver = partial(solve_sci_batch, spin_sq=self.Spin, max_cycle=self.max_cycle,mpirun_options= ["-quiet", "-n", f"{self.n_jobs}"],temp_dir="./",clean_temp_dir=False)
         # List to capture intermediate results
         result_history = []
         
