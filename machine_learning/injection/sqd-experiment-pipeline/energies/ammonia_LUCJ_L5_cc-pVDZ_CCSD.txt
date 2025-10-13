@@ -1,4 +1,0 @@
-cc-pVDZ
-ammonia
-LUCJ(L=5)
--56.20672830636165

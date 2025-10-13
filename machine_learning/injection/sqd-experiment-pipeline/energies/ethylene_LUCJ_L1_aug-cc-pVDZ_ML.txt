@@ -1,4 +1,0 @@
-aug-cc-pVDZ
-ethylene
-LUCJ(L=1)
--78.04539687832205
