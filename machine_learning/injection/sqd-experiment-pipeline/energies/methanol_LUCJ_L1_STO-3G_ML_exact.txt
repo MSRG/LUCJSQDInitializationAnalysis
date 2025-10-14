@@ -1,0 +1,4 @@
+STO-3G
+methanol
+LUCJ(L=1)/ML_exact
+-113.66253429624263

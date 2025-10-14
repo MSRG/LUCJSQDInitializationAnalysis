@@ -1,0 +1,4 @@
+cc-pVDZ
+ethylene
+LUCJ(L=1)/MP2
+-78.07876045124824

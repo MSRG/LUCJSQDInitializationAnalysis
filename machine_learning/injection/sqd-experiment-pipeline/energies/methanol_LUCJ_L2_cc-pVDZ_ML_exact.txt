@@ -1,0 +1,4 @@
+cc-pVDZ
+methanol
+LUCJ(L=2)/ML_exact
+-115.06844749587302
