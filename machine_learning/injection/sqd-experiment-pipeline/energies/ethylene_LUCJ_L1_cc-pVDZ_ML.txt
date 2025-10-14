@@ -1,0 +1,4 @@
+cc-pVDZ
+ethylene
+LUCJ(L=1)/ML
+-78.07876065681909

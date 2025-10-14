@@ -1,0 +1,4 @@
+cc-pVDZ
+methane
+LUCJ(L=3)/MP2
+-40.211696242584054
