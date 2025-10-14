@@ -262,12 +262,7 @@ class DDLUCJ:
             t2=self.t2,
             t1=self.t1,
             n_reps=self.n_reps,
-            interaction_pairs=(alpha_alpha_indices, alpha_beta_indices),
-            # Setting optimize=True enables the "compressed" factorization
-#           optimize=True,
-            # Limit the number of optimization iterations to prevent the code cell from running
-            # too long. Removing this line may improve results.
-#           options=dict(maxiter=1000),
+            interaction_pairs=(alpha_alpha_indices, alpha_beta_indices)
         )
          
         # create an empty quantum circuit
@@ -311,23 +306,32 @@ class DDLUCJ:
             print(f"Gate counts (w/ pre-init passes): {self.isa_circuit.count_ops()}")
 
     def RunDevice(self):
-        if self.JobID==None:
+        if self.JobID is None and self.BitArray is None:
+            self.Circuit()
+            self.Transpile()
             sampler = Sampler(mode=self.backend)
             job = sampler.run([self.isa_circuit], shots=self.shots)
             primitive_result = job.result()
             pub_result = primitive_result[0]
             self.bit_array = pub_result.data.meas
             if self.verbose:
-                print(f"Qiskit Runtime Job ID: {job.job_id()}")
-                
+                print(f"Qiskit Runtime Job ID: {job.job_id()}")    
             self.runtimejob = job.job_id()
-        else:
+            
+        elif self.BitArray is None:
             if self.verbose:
                 print(f"{self.JobID}")            
             job = self.service.job(self.JobID)
             primitive_result = job.result()
             pub_result = primitive_result[0]
             self.bit_array = pub_result.data.meas
+            
+        elif self.JobID is None:
+            self.bit_array = self.BitArray
+            
+        else:
+            if self.verbose:
+                print("Both JobID and BitArray are already set — nothing to do.")            
 
     def Postprocess(self):
     
@@ -376,7 +380,7 @@ class DDLUCJ:
 
         self.result_history = result_history
         
-    def __call__(self,postprocess=True,JobID=None):
+    def __call__(self,postprocess=True,JobID=None,BitArray=None):
         """
         Run the algorithm 
         
@@ -393,10 +397,13 @@ class DDLUCJ:
         """
         self.postprocess = postprocess
         self.JobID = JobID
+        self.BitArray = BitArray
+        
+            
         
         self.Initialize()
-        self.Circuit()
-        self.Transpile()
+        # self.Circuit()
+        # self.Transpile()
         self.RunDevice()
         
         if self.postprocess:
