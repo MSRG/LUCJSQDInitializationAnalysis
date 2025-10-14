@@ -2,8 +2,8 @@
 import psutil
 from functools import partial
 import sys
-# !/Users/grierjones/miniconda3/envs/distributed_LUCJ/bin/python3.13 --version
-# !/Users/grierjones/miniconda3/envs/distributed_LUCJ/bin/python3.13 -m pip install shap --upgrade 
+# !/lustre09/project/6004825/gjones/ENV/bin/python3 --version
+# !/lustre09/project/6004825/gjones/ENV/bin/python3 -m pip install shap --upgrade 
 import joblib
 import time
 from shutil import copy
@@ -37,6 +37,7 @@ from qiskit_ibm_runtime import SamplerV2 as Sampler
 
 from qiskit_addon_sqd.fermion import SCIResult, diagonalize_fermionic_hamiltonian
 from qiskit_addon_sqd.counts import bit_array_to_arrays
+from qiskit.primitives import StatevectorSampler, BitArray
 
 
 from ansatzmap import get_zigzag_physical_layout
@@ -65,13 +66,14 @@ initDDLUCJ = DDLUCJ(StructurePath="../../../../classical/structures/methane50.xy
 counts = np.load(f"../counts/methane_LUCJ_L2_aug-cc-pVDZ_ML_exact.npz")
 bitstrings = counts['bitstrings']
 probarr = counts['probarr']
+bitstrings = BitArray.from_bool_array(bitstrings)
+
 result_history, result = initDDLUCJ(postprocess=True,BitArray=bitstrings) 
 
-dfcheck = energyDF[(energyDF['Molecule'] == name)&(energyDF['Basis Set']==basis)]
 new_energy = result.energy + initDDLUCJ.nuclear_repulsion_energy
 EnergyPath = f"../energies/methane_LUCJ_L2_aug-cc-pVDZ_ML_exact.txt" 
 with open(EnergyPath,'w') as f:
-    new_row={"Basis Set": basis, "Molecule": name, "Method": f"LUCJ(L=2)/ML_exact", "Energy": new_energy}
+    new_row={"Basis Set": "aug-cc-pVDZ", "Molecule": "methane", "Method": f"LUCJ(L=2)/ML_exact", "Energy": new_energy}
     for k,v in new_row.items():
         f.write(f"{v}\n")
 

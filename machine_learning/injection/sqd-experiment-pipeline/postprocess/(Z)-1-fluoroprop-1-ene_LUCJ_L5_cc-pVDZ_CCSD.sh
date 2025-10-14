@@ -15,8 +15,9 @@ module load python/3.10
 module load openmpi
 module load symengine rust
 module load hdf5
+module load openblas
 source /lustre09/project/6004825/gjones/ENV/bin/activate
-
+export LD_LIBRARY_PATH=$EBROOTOPENBLAS/lib:$LD_LIBRARY_PATH
 echo "Running in directory: $(pwd)"
 python (Z)-1-fluoroprop-1-ene_LUCJ_L5_cc-pVDZ_CCSD.py 
 echo "File run"    
