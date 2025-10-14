@@ -39,7 +39,7 @@ from qiskit.transpiler.preset_passmanagers import generate_preset_pass_manager
 
 from qiskit_ibm_runtime import QiskitRuntimeService
 from qiskit_ibm_runtime import SamplerV2 as Sampler
-
+from qiskit.primitives import BitArray
 from qiskit_addon_sqd.fermion import SCIResult, diagonalize_fermionic_hamiltonian
 from qiskit_addon_sqd.counts import bit_array_to_arrays
 
@@ -165,12 +165,12 @@ for i in tqdm(sorted(glob("./jobids/*txt")),desc='Running'):
                             optimization_level=3,
                             temp_dir="./",
                             clean_temp_dir=True,
-                            n_jobs=-1,                            
+                            n_jobs=64,                            
                             verbose=False)
 
-        bitstrings = counts['bitstrings']
-        probarr = counts['probarr']
-        result_history, result = initDDLUCJ(postprocess=True,BitArray=bitstrings) 
+        bitstring_matrix_full, probs_arr_full = counts['bitstrings'], counts['probarr']
+        bit_array = BitArray.from_bool_array(bitstring_matrix_full)
+        result_history, result = initDDLUCJ(postprocess=True,BitArray=bit_array) 
 
         dfcheck = energyDF[(energyDF['Molecule'] == name)&(energyDF['Basis Set']==basis)]
         new_energy = result.energy + initDDLUCJ.nuclear_repulsion_energy

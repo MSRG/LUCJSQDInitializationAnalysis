@@ -328,7 +328,7 @@ class DDLUCJ:
             
         elif self.JobID is None:
             self.bit_array = self.BitArray
-            
+             
         else:
             if self.verbose:
                 print("Both JobID and BitArray are already set — nothing to do.")            
@@ -345,7 +345,7 @@ class DDLUCJ:
             sci_solver = partial(solve_sci_batch, spin_sq=self.Spin, max_cycle=self.max_cycle)
         else:
             from qiskit_addon_dice_solver import solve_sci_batch
-            sci_solver = partial(solve_sci_batch, spin_sq=self.Spin, max_cycle=self.max_cycle,mpirun_options= ["-quiet", "-n", f"{self.n_jobs}"],temp_dir=self.temp_dir,clean_temp_dir=self.clean_temp_dir)
+            sci_solver = partial(solve_sci_batch, spin_sq=self.Spin, mpirun_options= ["-quiet", "-n", f"{self.n_jobs}"],temp_dir=self.temp_dir,clean_temp_dir=self.clean_temp_dir)
         # List to capture intermediate results
         result_history = []
         
