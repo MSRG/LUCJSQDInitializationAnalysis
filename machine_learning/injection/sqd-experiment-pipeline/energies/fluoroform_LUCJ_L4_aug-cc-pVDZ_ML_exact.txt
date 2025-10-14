@@ -1,0 +1,4 @@
+aug-cc-pVDZ
+fluoroform
+LUCJ(L=4)/ML_exact
+-336.81291200148314

@@ -1,0 +1,4 @@
+cc-pVDZ
+methanol
+LUCJ(L=1)/ML
+-115.06844719509562
