@@ -17,9 +17,6 @@ module load hdf5
 source /lustre09/project/6004825/gjones/ENV/bin/activate
 
 echo "Running in directory: $(pwd)"
-echo "Using input file: input.py"
-
 python RunSQDPostProc.py 
-
-echo "File run complete for $NAME."
+echo "File run"
 

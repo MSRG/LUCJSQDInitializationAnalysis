@@ -264,10 +264,10 @@ class DDLUCJ:
             n_reps=self.n_reps,
             interaction_pairs=(alpha_alpha_indices, alpha_beta_indices),
             # Setting optimize=True enables the "compressed" factorization
-            optimize=True,
+#           optimize=True,
             # Limit the number of optimization iterations to prevent the code cell from running
             # too long. Removing this line may improve results.
-            options=dict(maxiter=1000),
+#           options=dict(maxiter=1000),
         )
          
         # create an empty quantum circuit

@@ -3,9 +3,9 @@ __pycache__/
 machine_learning/injection/sqd-experiment-pipeline/data/moved_amps.zip
 *.py[cod]
 *$py.class
-job.e*
-job.o*
-slurm*.out
+*job.e*
+*job.o*
+*slurm*.out
 *.DS_Store
 *tmp*
 *RDM*

@@ -44,7 +44,7 @@ from qiskit_addon_sqd.fermion import SCIResult, diagonalize_fermionic_hamiltonia
 
 from ansatzmap import get_zigzag_physical_layout
 
-from tqdm.notebook import tqdm
+from tqdm import tqdm
 
 from DDLUCJ import DDLUCJ, GrabAmps
 
