@@ -1,0 +1,4 @@
+cc-pVDZ
+formaldehyde
+LUCJ(L=3)/ML_exact
+-113.91428889514243

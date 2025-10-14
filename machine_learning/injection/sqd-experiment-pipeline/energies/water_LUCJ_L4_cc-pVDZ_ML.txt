@@ -1,0 +1,4 @@
+cc-pVDZ
+water
+LUCJ(L=4)/ML
+-76.03188419390803

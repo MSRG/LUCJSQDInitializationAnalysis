@@ -1,0 +1,4 @@
+STO-3G
+formaldehyde
+LUCJ(L=4)/random
+-112.50124588810796
