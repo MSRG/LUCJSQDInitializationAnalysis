@@ -1,0 +1,4 @@
+cc-pVDZ
+ammonia
+LUCJ(L=4)/zeroes
+-56.20672661204744

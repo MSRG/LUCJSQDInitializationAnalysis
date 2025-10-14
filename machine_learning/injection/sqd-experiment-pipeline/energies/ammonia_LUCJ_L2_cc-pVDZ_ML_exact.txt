@@ -1,0 +1,4 @@
+cc-pVDZ
+ammonia
+LUCJ(L=2)/ML_exact
+-56.206728306324656

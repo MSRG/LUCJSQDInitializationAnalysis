@@ -1,0 +1,4 @@
+cc-pVDZ
+ammonia
+LUCJ(L=1)/ML
+-56.206728305644084

@@ -1,0 +1,4 @@
+STO-3G
+water
+LUCJ(L=4)/zeroes
+-75.00857038351754
