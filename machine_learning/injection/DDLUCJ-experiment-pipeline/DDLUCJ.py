@@ -245,7 +245,6 @@ class DDLUCJ:
             ccsd = pyscf.cc.CCSD(scf, frozen=range(self.NFroz)).run()
             self.t1 = ccsd.t1
             self.t2 = ccsd.t2
-        print(self.t1.shape, self.t2.shape)
         
         Nocc, NVirt = self.t1.shape 
         Nact = self.NOrb - self.NFroz
@@ -253,7 +252,6 @@ class DDLUCJ:
         self.t1 = self.t1[self.NFroz:self.NOrb,:NVirtSlice]
         self.t2 = self.t2[self.NFroz:self.NOrb,self.NFroz:self.NOrb,:NVirtSlice,:NVirtSlice]
         
-        print(self.t1.shape, self.t2.shape)
         alpha_alpha_indices = [(p, p + 1) for p in range(self.NOrb - 1)]
         alpha_beta_indices = [(p, p) for p in range(0, self.NOrb, 4)]
          
