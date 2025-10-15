@@ -4,7 +4,7 @@
 #SBATCH --account=rrg-jacobsen-ab
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=64
-#SBATCH --mem-per-cpu=1000M
+#SBATCH --mem-per-cpu=5000M
 #SBATCH --error=job.e%J
 #SBATCH --output=job.o%j
 
@@ -19,5 +19,5 @@ module load openblas
 source /lustre09/project/6004825/gjones/ENV/bin/activate
 export LD_LIBRARY_PATH=$EBROOTOPENBLAS/lib:$LD_LIBRARY_PATH
 echo "Running in directory: $(pwd)"
-python methanol_LUCJ_L3_aug-cc-pVDZ_MP2.py 
+python "methanol_LUCJ_L3_aug-cc-pVDZ_MP2.py" 
 echo "File run"    
