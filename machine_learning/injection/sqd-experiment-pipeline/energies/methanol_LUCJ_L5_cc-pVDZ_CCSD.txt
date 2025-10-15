@@ -1,0 +1,4 @@
+cc-pVDZ
+methanol
+LUCJ(L=5)/CCSD
+-115.06844839776477

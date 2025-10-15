@@ -1,0 +1,4 @@
+aug-cc-pVDZ
+ethylene
+LUCJ(L=5)/random
+-78.04543722873083

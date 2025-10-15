@@ -1,0 +1,4 @@
+aug-cc-pVDZ
+formaldehyde
+LUCJ(L=5)/zeroes
+-113.88484192945266
