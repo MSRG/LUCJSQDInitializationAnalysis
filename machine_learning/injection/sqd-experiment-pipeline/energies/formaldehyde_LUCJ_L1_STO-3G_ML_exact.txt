@@ -1,0 +1,4 @@
+STO-3G
+formaldehyde
+LUCJ(L=1)/ML_exact
+-112.50124301309744

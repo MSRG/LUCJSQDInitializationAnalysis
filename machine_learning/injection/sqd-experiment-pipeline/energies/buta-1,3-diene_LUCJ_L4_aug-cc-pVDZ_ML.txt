@@ -1,0 +1,4 @@
+aug-cc-pVDZ
+buta-1,3-diene
+LUCJ(L=4)/ML
+-153.1139039107823

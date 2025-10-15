@@ -1,0 +1,4 @@
+cc-pVDZ
+fluoroform
+LUCJ(L=5)/ML
+-336.826130354034

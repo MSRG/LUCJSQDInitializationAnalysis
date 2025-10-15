@@ -1,0 +1,4 @@
+cc-pVDZ
+buta-1,3-diene
+LUCJ(L=1)/MP2
+-155.0119961747696

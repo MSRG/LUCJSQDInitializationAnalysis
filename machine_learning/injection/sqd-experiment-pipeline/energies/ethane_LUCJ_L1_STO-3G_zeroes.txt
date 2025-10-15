@@ -1,0 +1,4 @@
+STO-3G
+ethane
+LUCJ(L=1)/zeroes
+-78.45250825970327

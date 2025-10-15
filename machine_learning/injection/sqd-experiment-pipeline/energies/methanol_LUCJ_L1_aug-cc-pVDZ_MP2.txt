@@ -1,0 +1,4 @@
+aug-cc-pVDZ
+methanol
+LUCJ(L=1)/MP2
+-115.06157871153877

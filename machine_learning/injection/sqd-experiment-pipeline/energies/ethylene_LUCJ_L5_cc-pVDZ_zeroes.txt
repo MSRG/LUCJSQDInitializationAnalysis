@@ -1,0 +1,4 @@
+cc-pVDZ
+ethylene
+LUCJ(L=5)/zeroes
+-78.0787184331301

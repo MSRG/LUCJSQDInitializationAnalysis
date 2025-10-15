@@ -1,0 +1,4 @@
+STO-3G
+ethylene
+LUCJ(L=2)/random
+-77.23496514990944

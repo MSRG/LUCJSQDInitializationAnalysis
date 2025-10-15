@@ -1,0 +1,4 @@
+aug-cc-pVDZ
+water
+LUCJ(L=2)/random
+-76.04098240844309

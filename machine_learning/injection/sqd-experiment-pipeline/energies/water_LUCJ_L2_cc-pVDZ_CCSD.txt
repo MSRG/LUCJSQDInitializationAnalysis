@@ -1,0 +1,4 @@
+cc-pVDZ
+water
+LUCJ(L=2)/CCSD
+-76.03188419391255

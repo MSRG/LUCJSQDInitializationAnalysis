@@ -1,0 +1,4 @@
+cc-pVDZ
+fluoroform
+LUCJ(L=1)/zeroes
+-336.82610422657183

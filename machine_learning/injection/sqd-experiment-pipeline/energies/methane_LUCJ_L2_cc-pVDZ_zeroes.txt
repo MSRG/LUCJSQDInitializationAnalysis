@@ -1,0 +1,4 @@
+cc-pVDZ
+methane
+LUCJ(L=2)/zeroes
+-40.211690031315186

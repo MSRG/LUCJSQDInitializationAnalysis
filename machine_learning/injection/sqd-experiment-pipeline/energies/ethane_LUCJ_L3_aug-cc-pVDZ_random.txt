@@ -1,0 +1,4 @@
+aug-cc-pVDZ
+ethane
+LUCJ(L=3)/random
+-79.2371485591982

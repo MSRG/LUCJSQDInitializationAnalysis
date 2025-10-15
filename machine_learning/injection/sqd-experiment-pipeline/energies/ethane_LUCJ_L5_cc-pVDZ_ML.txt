@@ -1,0 +1,4 @@
+cc-pVDZ
+ethane
+LUCJ(L=5)/ML
+-79.2606715454743

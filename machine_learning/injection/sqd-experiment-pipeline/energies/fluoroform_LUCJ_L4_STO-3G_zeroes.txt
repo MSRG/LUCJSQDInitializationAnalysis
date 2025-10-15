@@ -1,0 +1,4 @@
+STO-3G
+fluoroform
+LUCJ(L=4)/zeroes
+-332.2253528139898

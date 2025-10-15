@@ -1,0 +1,4 @@
+cc-pVDZ
+water
+LUCJ(L=2)/zeroes
+-76.03142744621525

@@ -1,0 +1,4 @@
+cc-pVDZ
+methane
+LUCJ(L=1)/CCSD
+-40.211696168034536

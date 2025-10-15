@@ -1,0 +1,4 @@
+STO-3G
+prop-2-en-1-ol
+LUCJ(L=5)/random
+-189.6570890681649
