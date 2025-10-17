@@ -1,0 +1,4 @@
+STO-3G
+(Z)-1-fluoroprop-1-ene
+LUCJ(L=1)/MP2
+-213.34373349264195
