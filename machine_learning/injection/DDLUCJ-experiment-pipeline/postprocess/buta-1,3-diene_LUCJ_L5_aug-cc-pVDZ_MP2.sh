@@ -4,7 +4,7 @@
 #SBATCH --account=rrg-jacobsen-ab
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=64
-#SBATCH --mem-per-cpu=5000M
+#SBATCH --mem-per-cpu=1000M
 #SBATCH --error=job.e%J
 #SBATCH --output=job.o%j
 
@@ -16,8 +16,9 @@ module load openmpi
 module load symengine rust
 module load hdf5
 module load openblas
+export UCX_VFS_ENABLE=no
 source /lustre09/project/6004825/gjones/ENV/bin/activate
 export LD_LIBRARY_PATH=$EBROOTOPENBLAS/lib:$LD_LIBRARY_PATH
 echo "Running in directory: $(pwd)"
-python "buta-1,3-diene_LUCJ_L5_aug-cc-pVDZ_MP2.py" 
+python buta-1,3-diene_LUCJ_L5_aug-cc-pVDZ_MP2.py 
 echo "File run"    
