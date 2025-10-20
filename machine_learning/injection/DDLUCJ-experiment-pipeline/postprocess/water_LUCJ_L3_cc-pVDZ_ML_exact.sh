@@ -4,7 +4,7 @@
 #SBATCH --account=rrg-jacobsen-ab
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=64
-#SBATCH --mem-per-cpu=1000M
+#SBATCH --mem-per-cpu=5000M
 #SBATCH --error=job.e%J
 #SBATCH --output=job.o%j
 
