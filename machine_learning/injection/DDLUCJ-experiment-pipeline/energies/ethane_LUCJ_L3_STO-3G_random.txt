@@ -1,0 +1,4 @@
+STO-3G
+ethane
+LUCJ(L=3)/random
+-78.45292943788084
