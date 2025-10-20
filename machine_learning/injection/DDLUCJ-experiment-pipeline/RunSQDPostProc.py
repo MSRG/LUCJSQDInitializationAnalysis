@@ -210,7 +210,7 @@ export UCX_VFS_ENABLE=no
 source /lustre09/project/6004825/gjones/ENV/bin/activate
 export LD_LIBRARY_PATH=$EBROOTOPENBLAS/lib:$LD_LIBRARY_PATH
 echo "Running in directory: $(pwd)"
-python {name}_LUCJ_L{L}_{basis}_{k}.py 
+python "{name}_LUCJ_L{L}_{basis}_{k}.py" 
 echo "File run"    
 """
     with open(f"./postprocess/{name}_LUCJ_L{L}_{basis}_{k}.sh",'w') as f:

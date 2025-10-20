@@ -20,5 +20,5 @@ export UCX_VFS_ENABLE=no
 source /lustre09/project/6004825/gjones/ENV/bin/activate
 export LD_LIBRARY_PATH=$EBROOTOPENBLAS/lib:$LD_LIBRARY_PATH
 echo "Running in directory: $(pwd)"
-python but-1-yne_LUCJ_L2_cc-pVDZ_ML_exact.py 
+python "but-1-yne_LUCJ_L2_cc-pVDZ_ML_exact.py" 
 echo "File run"    

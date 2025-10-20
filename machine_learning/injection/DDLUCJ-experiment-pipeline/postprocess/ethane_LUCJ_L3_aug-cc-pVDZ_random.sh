@@ -20,5 +20,5 @@ export UCX_VFS_ENABLE=no
 source /lustre09/project/6004825/gjones/ENV/bin/activate
 export LD_LIBRARY_PATH=$EBROOTOPENBLAS/lib:$LD_LIBRARY_PATH
 echo "Running in directory: $(pwd)"
-python ethane_LUCJ_L3_aug-cc-pVDZ_random.py 
+python "ethane_LUCJ_L3_aug-cc-pVDZ_random.py" 
 echo "File run"    

@@ -20,5 +20,5 @@ export UCX_VFS_ENABLE=no
 source /lustre09/project/6004825/gjones/ENV/bin/activate
 export LD_LIBRARY_PATH=$EBROOTOPENBLAS/lib:$LD_LIBRARY_PATH
 echo "Running in directory: $(pwd)"
-python ammonia_LUCJ_L1_STO-3G_CCSD.py 
+python "ammonia_LUCJ_L1_STO-3G_CCSD.py" 
 echo "File run"    
