@@ -378,7 +378,7 @@ class DDLUCJ:
         except ValueError:
             # if the above fails, give the HF wave function as an initial guess
             Vac = np.zeros(self.NOrb,dtype=int)
-            Vac[:self.NElec//2] = np.ones(self.NElec//2,dtype=int)
+            Vac[-self.NElec//2:] = np.ones(self.NElec//2,dtype=int)
             
             self.result = diagonalize_fermionic_hamiltonian(
                 self.hcore,
