@@ -356,26 +356,48 @@ class DDLUCJ:
                 print(f"\tSubsample {i}")
                 print(f"\t\tEnergy: {result.energy + self.nuclear_repulsion_energy}")
                 print(f"\t\tSubspace dimension: {np.prod(result.sci_state.amplitudes.shape)}")
+        try:
         
-        
-        self.result = diagonalize_fermionic_hamiltonian(
-            self.hcore,
-            self.eri,
-            self.bit_array,
-            samples_per_batch=self.samples_per_batch,
-            norb=self.NOrb,
-            nelec=(self.NElec//2,self.NElec//2),
-            num_batches=self.num_batches,
-            energy_tol=self.energy_tol,
-            occupancies_tol=self.occupancies_tol,
-            max_iterations=self.max_iterations,
-            sci_solver=sci_solver,
-            symmetrize_spin=self.symmetrize_spin,
-            carryover_threshold=self.carryover_threshold,
-            callback=callback,
-            seed=12345
-        )        
-
+            self.result = diagonalize_fermionic_hamiltonian(
+                self.hcore,
+                self.eri,
+                self.bit_array,
+                samples_per_batch=self.samples_per_batch,
+                norb=self.NOrb,
+                nelec=(self.NElec//2,self.NElec//2),
+                num_batches=self.num_batches,
+                energy_tol=self.energy_tol,
+                occupancies_tol=self.occupancies_tol,
+                max_iterations=self.max_iterations,
+                sci_solver=sci_solver,
+                symmetrize_spin=self.symmetrize_spin,
+                carryover_threshold=self.carryover_threshold,
+                callback=callback,
+                seed=12345
+            )        
+        except ValueError:
+            # if the above fails, give the HF wave function as an initial guess
+            Vac = np.zeros(self.NOrb,dtype=int)
+            Vac[:self.NElec//2] = np.ones(self.NElec//2,dtype=int)
+            
+            self.result = diagonalize_fermionic_hamiltonian(
+                self.hcore,
+                self.eri,
+                self.bit_array,
+                samples_per_batch=self.samples_per_batch,
+                norb=self.NOrb,
+                nelec=(self.NElec//2,self.NElec//2),
+                num_batches=self.num_batches,
+                energy_tol=self.energy_tol,
+                occupancies_tol=self.occupancies_tol,
+                max_iterations=self.max_iterations,
+                sci_solver=sci_solver,
+                symmetrize_spin=self.symmetrize_spin,
+                carryover_threshold=self.carryover_threshold,
+                callback=callback,
+                initial_occupancies=(Vac,Vac),
+                seed=12345
+            )              
         self.result_history = result_history
         
     def __call__(self,postprocess=True,JobID=None,BitArray=None):
