@@ -1,0 +1,4 @@
+STO-3G
+(Z)-1-fluoroprop-1-ene
+LUCJ(L=5)/random
+-213.31870329164292

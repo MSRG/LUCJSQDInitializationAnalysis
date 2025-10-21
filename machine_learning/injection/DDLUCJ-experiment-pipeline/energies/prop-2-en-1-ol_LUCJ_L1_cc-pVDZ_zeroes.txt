@@ -1,0 +1,4 @@
+cc-pVDZ
+prop-2-en-1-ol
+LUCJ(L=1)/zeroes
+-191.9962608591145
