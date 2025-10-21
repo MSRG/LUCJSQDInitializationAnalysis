@@ -245,7 +245,6 @@ class DDLUCJ:
             ccsd = pyscf.cc.CCSD(scf, frozen=range(self.NFroz)).run()
             self.t1 = ccsd.t1
             self.t2 = ccsd.t2
-        print(self.t1.shape, self.t2.shape)
         
         Nocc, NVirt = self.t1.shape 
         Nact = self.NOrb - self.NFroz
@@ -253,7 +252,6 @@ class DDLUCJ:
         self.t1 = self.t1[self.NFroz:self.NOrb,:NVirtSlice]
         self.t2 = self.t2[self.NFroz:self.NOrb,self.NFroz:self.NOrb,:NVirtSlice,:NVirtSlice]
         
-        print(self.t1.shape, self.t2.shape)
         alpha_alpha_indices = [(p, p + 1) for p in range(self.NOrb - 1)]
         alpha_beta_indices = [(p, p) for p in range(0, self.NOrb, 4)]
          
@@ -328,7 +326,7 @@ class DDLUCJ:
             
         elif self.JobID is None:
             self.bit_array = self.BitArray
-            
+             
         else:
             if self.verbose:
                 print("Both JobID and BitArray are already set — nothing to do.")            
@@ -358,26 +356,48 @@ class DDLUCJ:
                 print(f"\tSubsample {i}")
                 print(f"\t\tEnergy: {result.energy + self.nuclear_repulsion_energy}")
                 print(f"\t\tSubspace dimension: {np.prod(result.sci_state.amplitudes.shape)}")
+        try:
         
-        
-        self.result = diagonalize_fermionic_hamiltonian(
-            self.hcore,
-            self.eri,
-            self.bit_array,
-            samples_per_batch=self.samples_per_batch,
-            norb=self.NOrb,
-            nelec=(self.NElec//2,self.NElec//2),
-            num_batches=self.num_batches,
-            energy_tol=self.energy_tol,
-            occupancies_tol=self.occupancies_tol,
-            max_iterations=self.max_iterations,
-            sci_solver=sci_solver,
-            symmetrize_spin=self.symmetrize_spin,
-            carryover_threshold=self.carryover_threshold,
-            callback=callback,
-            seed=12345
-        )        
-
+            self.result = diagonalize_fermionic_hamiltonian(
+                self.hcore,
+                self.eri,
+                self.bit_array,
+                samples_per_batch=self.samples_per_batch,
+                norb=self.NOrb,
+                nelec=(self.NElec//2,self.NElec//2),
+                num_batches=self.num_batches,
+                energy_tol=self.energy_tol,
+                occupancies_tol=self.occupancies_tol,
+                max_iterations=self.max_iterations,
+                sci_solver=sci_solver,
+                symmetrize_spin=self.symmetrize_spin,
+                carryover_threshold=self.carryover_threshold,
+                callback=callback,
+                seed=12345
+            )        
+        except ValueError:
+            # if the above fails, give the HF wave function as an initial guess
+            Vac = np.zeros(self.NOrb,dtype=int)
+            Vac[-self.NElec//2:] = np.ones(self.NElec//2,dtype=int)
+            
+            self.result = diagonalize_fermionic_hamiltonian(
+                self.hcore,
+                self.eri,
+                self.bit_array,
+                samples_per_batch=self.samples_per_batch,
+                norb=self.NOrb,
+                nelec=(self.NElec//2,self.NElec//2),
+                num_batches=self.num_batches,
+                energy_tol=self.energy_tol,
+                occupancies_tol=self.occupancies_tol,
+                max_iterations=self.max_iterations,
+                sci_solver=sci_solver,
+                symmetrize_spin=self.symmetrize_spin,
+                carryover_threshold=self.carryover_threshold,
+                callback=callback,
+                initial_occupancies=(Vac,Vac),
+                seed=12345
+            )              
         self.result_history = result_history
         
     def __call__(self,postprocess=True,JobID=None,BitArray=None):

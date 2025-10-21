@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --time=0-8:00:00
+#SBATCH --time=0-12:00:00
 #SBATCH -J (Z)-1-fluoroprop-1-ene_LUCJ_L5_cc-pVDZ_random
 #SBATCH --account=rrg-jacobsen-ab
 #SBATCH --nodes=1

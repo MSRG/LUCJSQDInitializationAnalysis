@@ -189,7 +189,7 @@ with open(EnergyPath,'w') as f:
         f.write(filecontents)
 
     runfile=f"""#!/bin/bash
-#SBATCH --time=0-8:00:00
+#SBATCH --time=0-12:00:00
 #SBATCH -J {name}_LUCJ_L{L}_{basis}_{k}
 #SBATCH --account=rrg-jacobsen-ab
 #SBATCH --nodes=1
@@ -228,7 +228,7 @@ echo "File run"
 
 postprocessed = []
 for i in tqdm(sorted(glob("./jobids/*txt")),desc='Running'):
-    i.split("/")[-1].replace('.txt','').split('_')
+                                                  
     with open(i,'r') as f:
         name,basis,k,L,JobID = [i.strip() for i in f.readlines()]
     print(name,basis,k,L,JobID)
@@ -241,12 +241,12 @@ for i in tqdm(sorted(glob("./jobids/*txt")),desc='Running'):
 
 
 
-    JobPath = f"../jobids/{name}_LUCJ_L{L}_{basis}_{k}.txt" 
-    EnergyPath = f"../energies/{name}_LUCJ_L{L}_{basis}_{k}.txt" 
+    JobPath = f"./jobids/{name}_LUCJ_L{L}_{basis}_{k}.txt" 
+    EnergyPath = f"./energies/{name}_LUCJ_L{L}_{basis}_{k}.txt" 
 
-    # if os.path.exists(JobPath)==True and os.path.exists(EnergyPath)==False:
-    print(f"Running {name}_LUCJ_L{L}_{basis}_{k}")
-    run(pathxyz,name,basis,n_electrons,num_orbitals,L,k)
+    if os.path.exists(JobPath)==True and os.path.exists(EnergyPath)==False:
+        print(f"Running {name}_LUCJ_L{L}_{basis}_{k}")
+        run(pathxyz,name,basis,n_electrons,num_orbitals,L,k)
 
 
 # In[ ]:

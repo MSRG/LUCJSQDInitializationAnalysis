@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --time=0-8:00:00
+#SBATCH --time=0-12:00:00
 #SBATCH -J prop-2-en-1-ol_LUCJ_L1_STO-3G_CCSD
 #SBATCH --account=rrg-jacobsen-ab
 #SBATCH --nodes=1

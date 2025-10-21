@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --time=0-8:00:00
+#SBATCH --time=0-12:00:00
 #SBATCH -J fluoroform_LUCJ_L3_aug-cc-pVDZ_random
 #SBATCH --account=rrg-jacobsen-ab
 #SBATCH --nodes=1
