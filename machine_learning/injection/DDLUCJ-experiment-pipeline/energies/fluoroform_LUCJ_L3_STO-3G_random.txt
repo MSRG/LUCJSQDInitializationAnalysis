@@ -1,0 +1,4 @@
+STO-3G
+fluoroform
+LUCJ(L=3)/random
+-332.2254710976699

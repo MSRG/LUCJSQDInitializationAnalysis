@@ -1,0 +1,4 @@
+cc-pVDZ
+fluoroform
+LUCJ(L=3)/random
+-336.8261301163256
