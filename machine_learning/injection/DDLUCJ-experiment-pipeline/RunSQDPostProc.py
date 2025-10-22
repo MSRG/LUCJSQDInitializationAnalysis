@@ -231,7 +231,7 @@ for i in tqdm(sorted(glob("./jobids/*txt")),desc='Running'):
                                                   
     with open(i,'r') as f:
         name,basis,k,L,JobID = [i.strip() for i in f.readlines()]
-    print(name,basis,k,L,JobID)
+#   print(name,basis,k,L,JobID)
     moldict = moldf[moldf['molecule']==name]
 
     n_electrons=moldict['n_electrons'].values[0]
