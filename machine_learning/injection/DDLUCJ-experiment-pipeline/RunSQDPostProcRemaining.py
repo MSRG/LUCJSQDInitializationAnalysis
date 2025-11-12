@@ -135,7 +135,7 @@ def PostProcessLocally(pathxyz,name,basis,n_electrons,num_orbitals,L,k):
     new_energy = result.energy + initDDLUCJ.nuclear_repulsion_energy
     EnergyPath = f"./energies/{name}_LUCJ_L{L}_{basis}_{k}.txt" 
     with open(EnergyPath,'w') as f:
-        new_row={{"Basis Set": "{basis}", "Molecule": "{name}", "Method": f"LUCJ(L={L})/{k}", "Energy": new_energy}}
+        new_row={"Basis Set": "{basis}", "Molecule": "{name}", "Method": f"LUCJ(L={L})/{k}", "Energy": new_energy}
         for k,v in new_row.items():
             f.write(f"{v}\\n")
 
