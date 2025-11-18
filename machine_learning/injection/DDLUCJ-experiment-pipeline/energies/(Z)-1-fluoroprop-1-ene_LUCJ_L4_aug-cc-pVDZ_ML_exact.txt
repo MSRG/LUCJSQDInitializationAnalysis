@@ -1,1 +1,4 @@
-{basis}\n{name}\nLUCJ(L=4)/ML_exact\n-215.95027320712586\n
+aug-cc-pVDZ
+(Z)-1-fluoroprop-1-ene
+LUCJ(L=4)/ML_exact
+-215.95027320712586
