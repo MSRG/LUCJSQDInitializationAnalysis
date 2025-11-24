@@ -1,1 +1,4 @@
-{basis}\n{name}\nLUCJ(L=5)/ML_exact\n-191.95352764006634\n
+aug-cc-pVDZ
+prop-2-en-1-ol
+LUCJ(L=5)/ML_exact
+-191.95352764006634
