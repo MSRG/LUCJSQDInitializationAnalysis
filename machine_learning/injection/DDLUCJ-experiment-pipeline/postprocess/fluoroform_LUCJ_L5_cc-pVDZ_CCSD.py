@@ -2,8 +2,8 @@
 import psutil
 from functools import partial
 import sys
-# !/lustre09/project/6004825/gjones/ENV/bin/python3 --version
-# !/lustre09/project/6004825/gjones/ENV/bin/python3 -m pip install shap --upgrade 
+# !/home/grierjones/miniconda3/envs/LUCJ/bin/python3 --version
+# !/home/grierjones/miniconda3/envs/LUCJ/bin/python3 -m pip install shap --upgrade 
 import joblib
 import time
 from shutil import copy
@@ -60,7 +60,10 @@ initDDLUCJ = DDLUCJ(StructurePath="../../../../classical/structures/GDB04_5.xyz"
                     optimization_level=3,
                     temp_dir="./",
                     clean_temp_dir=True,
-                    n_jobs=64,                            
+                    n_jobs=64,
+                    num_batches = 10,
+                    max_iterations=5,
+                    samples_per_batch=1000,
                     verbose=False)
 
 counts = np.load(f"../counts/fluoroform_LUCJ_L5_cc-pVDZ_CCSD.npz")
