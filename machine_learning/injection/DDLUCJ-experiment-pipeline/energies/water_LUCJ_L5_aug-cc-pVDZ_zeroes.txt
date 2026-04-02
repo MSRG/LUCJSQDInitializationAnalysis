@@ -1,4 +1,4 @@
 aug-cc-pVDZ
 water
 LUCJ(L=5)/zeroes
--76.0409740049447
+-76.04097400494945

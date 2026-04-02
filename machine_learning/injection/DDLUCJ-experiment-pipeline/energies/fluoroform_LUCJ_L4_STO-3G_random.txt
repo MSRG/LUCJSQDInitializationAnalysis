@@ -1,4 +1,4 @@
 STO-3G
 fluoroform
 LUCJ(L=4)/random
--332.2254737468504
+-332.2249969099279

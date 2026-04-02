@@ -1,4 +1,4 @@
 aug-cc-pVDZ
 formaldehyde
 LUCJ(L=3)/random
--113.88484210350272
+-113.88484230059426

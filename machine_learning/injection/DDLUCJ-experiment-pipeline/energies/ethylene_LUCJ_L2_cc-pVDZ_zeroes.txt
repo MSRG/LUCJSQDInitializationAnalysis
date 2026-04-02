@@ -1,4 +1,4 @@
 cc-pVDZ
 ethylene
 LUCJ(L=2)/zeroes
--78.07865161749757
+-78.0786358761678

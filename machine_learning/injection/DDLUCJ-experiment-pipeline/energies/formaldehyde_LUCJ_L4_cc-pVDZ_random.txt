@@ -1,4 +1,4 @@
 cc-pVDZ
 formaldehyde
 LUCJ(L=4)/random
--113.91428888555434
+-113.91428994538789

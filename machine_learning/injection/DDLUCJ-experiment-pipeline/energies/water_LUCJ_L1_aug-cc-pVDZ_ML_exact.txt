@@ -1,4 +1,4 @@
 aug-cc-pVDZ
 water
 LUCJ(L=1)/ML_exact
--76.04098240844051
+-76.04098240845401

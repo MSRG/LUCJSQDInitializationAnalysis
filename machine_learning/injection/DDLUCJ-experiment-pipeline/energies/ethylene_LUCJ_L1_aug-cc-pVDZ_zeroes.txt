@@ -1,4 +1,4 @@
 aug-cc-pVDZ
 ethylene
 LUCJ(L=1)/zeroes
--78.04541139567031
+-78.04543771083863

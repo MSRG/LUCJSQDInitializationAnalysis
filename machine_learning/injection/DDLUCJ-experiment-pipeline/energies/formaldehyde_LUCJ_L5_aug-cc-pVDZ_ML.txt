@@ -1,4 +1,4 @@
 aug-cc-pVDZ
 formaldehyde
 LUCJ(L=5)/ML
--113.88484214520197
+-113.88484230082376

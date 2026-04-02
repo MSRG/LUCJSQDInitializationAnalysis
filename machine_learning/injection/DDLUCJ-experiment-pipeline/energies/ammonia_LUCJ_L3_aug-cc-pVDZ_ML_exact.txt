@@ -1,4 +1,4 @@
 aug-cc-pVDZ
 ammonia
 LUCJ(L=3)/ML_exact
--56.2053088822633
+-56.20530888226437

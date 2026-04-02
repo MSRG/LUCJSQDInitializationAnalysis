@@ -1,4 +1,4 @@
 cc-pVDZ
 methanol
 LUCJ(L=4)/zeroes
--115.0683998492041
+-115.0684287742707
