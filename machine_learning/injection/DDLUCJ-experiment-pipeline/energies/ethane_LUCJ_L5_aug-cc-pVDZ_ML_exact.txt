@@ -1,4 +1,4 @@
 aug-cc-pVDZ
 ethane
 LUCJ(L=5)/ML_exact
--79.23714261793872
+-79.23714678044995

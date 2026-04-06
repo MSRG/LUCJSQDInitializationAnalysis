@@ -1,4 +1,4 @@
 aug-cc-pVDZ
 methanol
 LUCJ(L=3)/random
--115.06157878232159
+-115.0615790035479
