@@ -1,4 +1,4 @@
 cc-pVDZ
 ethylene
 LUCJ(L=4)/random
--78.07876200521875
+-78.07876207161863
