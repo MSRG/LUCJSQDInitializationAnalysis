@@ -1,4 +1,4 @@
 cc-pVDZ
 ethylene
 LUCJ(L=5)/ML_exact
--78.07876133013701
+-78.07876198484

@@ -1,4 +1,4 @@
 aug-cc-pVDZ
 water
 LUCJ(L=4)/random
--76.04098240845309
+-76.04098240845344
