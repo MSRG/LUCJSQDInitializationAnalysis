@@ -167,7 +167,10 @@ initDDLUCJ = DDLUCJ(StructurePath="{pathxyz}",
                     optimization_level=3,
                     temp_dir="./",
                     clean_temp_dir=True,
-                    n_jobs=64,                            
+                    n_jobs=64,
+                    num_batches = 10,
+                    max_iterations=5,
+                    samples_per_batch=1000,
                     verbose=False)
 
 counts = np.load(f"../counts/{name}_LUCJ_L{L}_{basis}_{k}.npz")
@@ -189,12 +192,12 @@ with open(EnergyPath,'w') as f:
         f.write(filecontents)
 
     runfile=f"""#!/bin/bash
-#SBATCH --time=0-12:00:00
-#SBATCH -J {name}_LUCJ_L{L}_{basis}_{k}
+#SBATCH --time=1-0:00:00
 #SBATCH --account=rrg-jacobsen-ab
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=64
-#SBATCH --mem-per-cpu=5000M
+#SBATCH --mem-per-cpu=1000M
+#SBATCH --job-name={name}_LUCJ_L{L}_{basis}_{k}
 #SBATCH --error=job.e%J
 #SBATCH --output=job.o%j
 
@@ -206,11 +209,16 @@ module load openmpi
 module load symengine rust
 module load hdf5
 module load openblas
-export UCX_VFS_ENABLE=no
 source /lustre09/project/6004825/gjones/ENV/bin/activate
 export LD_LIBRARY_PATH=$EBROOTOPENBLAS/lib:$LD_LIBRARY_PATH
+
+export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
+export OPENBLAS_NUM_THREADS=$SLURM_CPUS_PER_TASK
+export MKL_NUM_THREADS=$SLURM_CPUS_PER_TASK
+export NUMEXPR_NUM_THREADS=$SLURM_CPUS_PER_TASK
 echo "Running in directory: $(pwd)"
-python "{name}_LUCJ_L{L}_{basis}_{k}.py" 
+
+python {name}_LUCJ_L{L}_{basis}_{k}.py 
 echo "File run"    
 """
     with open(f"./postprocess/{name}_LUCJ_L{L}_{basis}_{k}.sh",'w') as f:
@@ -228,10 +236,10 @@ echo "File run"
 
 postprocessed = []
 for i in tqdm(sorted(glob("./jobids/*txt")),desc='Running'):
-                                                  
+    i.split("/")[-1].replace('.txt','').split('_')
     with open(i,'r') as f:
         name,basis,k,L,JobID = [i.strip() for i in f.readlines()]
-#   print(name,basis,k,L,JobID)
+    print(name,basis,k,L,JobID)
     moldict = moldf[moldf['molecule']==name]
 
     n_electrons=moldict['n_electrons'].values[0]
@@ -241,12 +249,12 @@ for i in tqdm(sorted(glob("./jobids/*txt")),desc='Running'):
 
 
 
-    JobPath = f"./jobids/{name}_LUCJ_L{L}_{basis}_{k}.txt" 
-    EnergyPath = f"./energies/{name}_LUCJ_L{L}_{basis}_{k}.txt" 
+    JobPath = f"../jobids/{name}_LUCJ_L{L}_{basis}_{k}.txt" 
+    EnergyPath = f"../energies/{name}_LUCJ_L{L}_{basis}_{k}.txt" 
 
-    if os.path.exists(JobPath)==True and os.path.exists(EnergyPath)==False:
-        print(f"Running {name}_LUCJ_L{L}_{basis}_{k}")
-        run(pathxyz,name,basis,n_electrons,num_orbitals,L,k)
+    # if os.path.exists(JobPath)==True and os.path.exists(EnergyPath)==False:
+    print(f"Running {name}_LUCJ_L{L}_{basis}_{k}")
+    run(pathxyz,name,basis,n_electrons,num_orbitals,L,k)
 
 
 # In[ ]:

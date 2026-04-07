@@ -1,10 +1,10 @@
 #!/bin/bash
 #SBATCH --time=1-0:00:00
-#SBATCH -J formaldehyde_LUCJ_L2_aug-cc-pVDZ_ML
 #SBATCH --account=rrg-jacobsen-ab
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=64
 #SBATCH --mem-per-cpu=1000M
+#SBATCH --job-name=formaldehyde_LUCJ_L2_aug-cc-pVDZ_ML
 #SBATCH --error=job.e%J
 #SBATCH --output=job.o%j
 

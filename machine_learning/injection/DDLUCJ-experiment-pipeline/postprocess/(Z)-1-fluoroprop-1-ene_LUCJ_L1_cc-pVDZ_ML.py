@@ -2,8 +2,8 @@
 import psutil
 from functools import partial
 import sys
-# !/Users/grierjones/miniconda3/envs/distributed_LUCJ/bin/python3.13 --version
-# !/Users/grierjones/miniconda3/envs/distributed_LUCJ/bin/python3.13 -m pip install shap --upgrade 
+# !/Users/grierjones/miniconda3/envs/distributed_LUCJ/bin/python3 --version
+# !/Users/grierjones/miniconda3/envs/distributed_LUCJ/bin/python3 -m pip install shap --upgrade 
 import joblib
 import time
 from shutil import copy

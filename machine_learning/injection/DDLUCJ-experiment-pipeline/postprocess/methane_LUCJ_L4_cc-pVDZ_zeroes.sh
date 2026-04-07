@@ -1,10 +1,10 @@
 #!/bin/bash
 #SBATCH --time=1-0:00:00
-#SBATCH -J methane_LUCJ_L4_cc-pVDZ_zeroes
 #SBATCH --account=rrg-jacobsen-ab
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=64
 #SBATCH --mem-per-cpu=1000M
+#SBATCH --job-name=methane_LUCJ_L4_cc-pVDZ_zeroes
 #SBATCH --error=job.e%J
 #SBATCH --output=job.o%j
 
