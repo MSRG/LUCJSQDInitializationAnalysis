@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --time=0-8:00:00
+#SBATCH --time=1-0:00:00
 #SBATCH -J methane_LUCJ_L3_STO-3G_CCSD
 #SBATCH --account=rrg-jacobsen-ab
 #SBATCH --nodes=1
