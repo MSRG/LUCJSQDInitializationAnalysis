@@ -25,7 +25,7 @@ virtualenv --no-download $SLURM_TMPDIR/env
 source $SLURM_TMPDIR/env/bin/activate
 pip install --no-index --upgrade pip
 pip install -e /home/gjones/projects/def-jacobsen/gjones/qiskit-addon-dice-solver/
-
+pip install -e /scratch/gjones/distributed_LUCJ/
 
 export LD_LIBRARY_PATH=$EBROOTOPENBLAS/lib:$LD_LIBRARY_PATH
 
@@ -35,5 +35,5 @@ export MKL_NUM_THREADS=$SLURM_CPUS_PER_TASK
 export NUMEXPR_NUM_THREADS=$SLURM_CPUS_PER_TASK
 echo "Running in directory: $(pwd)"
 
-python ethane_LUCJ_L1_cc-pVDZ_MP2.py 
+python "ethane_LUCJ_L1_cc-pVDZ_MP2.py"
 echo "File run"    

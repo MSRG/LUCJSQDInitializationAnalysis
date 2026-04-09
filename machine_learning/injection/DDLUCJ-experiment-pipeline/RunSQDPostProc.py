@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[ ]:
+# In[1]:
 
 
 import psutil
@@ -51,57 +51,32 @@ from tqdm import tqdm
 from DDLUCJ import DDLUCJ, GrabAmps
 
 
-# In[ ]:
+# In[2]:
 
 
 BasisDirs=glob('data/*')
 
 
-# In[ ]:
+# In[3]:
 
 
 energyDF=pd.read_csv("../../../classical/energies.csv",index_col=0)
 
 
-# In[ ]:
+# In[4]:
 
 
 moldf = pd.read_csv('molecules.csv')
 activespacedf = pd.read_csv("active_spaces.csv")
 
 
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
+# In[5]:
 
 
 BasisSets = ['STO-3G','cc-pVDZ','aug-cc-pVDZ']
 
 
-# In[ ]:
-
-
-# os.mkdir('counts')
-# service = QiskitRuntimeService()
-
-
-# In[ ]:
-
-
-"False"
-
-
-# In[ ]:
+# In[6]:
 
 
 def run(pathxyz,name,basis,n_electrons,num_orbitals,L,k):
@@ -193,16 +168,17 @@ with open(EnergyPath,'w') as f:
 
     runfile=f"""#!/bin/bash
 #SBATCH --time=1-0:00:00
+#SBATCH -J {name}_LUCJ_L{L}_{basis}_{k}
 #SBATCH --account=rrg-jacobsen-ab
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=64
 #SBATCH --mem-per-cpu=1000M
-#SBATCH --job-name={name}_LUCJ_L{L}_{basis}_{k}
 #SBATCH --error=job.e%J
 #SBATCH --output=job.o%j
 
 
 
+echo 'About to run python file'
 echo 'About to run python file'
 module load python/3.10
 
@@ -219,7 +195,6 @@ pip install --no-index --upgrade pip
 pip install -e /home/gjones/projects/def-jacobsen/gjones/qiskit-addon-dice-solver/
 pip install -e /scratch/gjones/distributed_LUCJ/
 
-
 export LD_LIBRARY_PATH=$EBROOTOPENBLAS/lib:$LD_LIBRARY_PATH
 
 export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
@@ -228,20 +203,26 @@ export MKL_NUM_THREADS=$SLURM_CPUS_PER_TASK
 export NUMEXPR_NUM_THREADS=$SLURM_CPUS_PER_TASK
 echo "Running in directory: $(pwd)"
 
-python "{name}_LUCJ_L{L}_{basis}_{k}.py" 
+python "{name}_LUCJ_L{L}_{basis}_{k}.py"
 echo "File run"    
 """
     with open(f"./postprocess/{name}_LUCJ_L{L}_{basis}_{k}.sh",'w') as f:
             f.write(runfile)
 
 
-# In[ ]:
+# In[7]:
 
 
 # os.mkdir('energies')
 
 
-# In[ ]:
+# In[9]:
+
+
+len(glob("./jobids/*txt"))
+
+
+# In[8]:
 
 
 postprocessed = []
