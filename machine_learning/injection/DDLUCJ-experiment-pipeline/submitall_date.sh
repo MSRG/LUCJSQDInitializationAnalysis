@@ -11,16 +11,16 @@ for i in $runfiles; do
         file_month=$(stat -c "%y" "$file2" | cut -c6-7)
 
         if [[ "$file_month" == "10" ]]; then
-	    echo "$file_month"
-  	    cd ./postprocess
-            sbatch "$i"
-  	    cd ../
-            echo "$i"
+          echo "$file_month"
+  	     #cd ./postprocess
+         #sbatch "$i"
+  	     #cd ../
+          echo "$i"
         fi
     elif [[ -f "$i" && ! -e "$file2" ]]; then
-  	    cd ./postprocess
-            sbatch "$i"
-  	    cd ../
+  	   #cd ./postprocess
+       #sbatch "$i"
+  	   #cd ../
         echo "$i"
     fi
 done
