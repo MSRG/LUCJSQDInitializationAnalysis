@@ -92,7 +92,7 @@ BasisSets = ['STO-3G','cc-pVDZ','aug-cc-pVDZ']
 
 
 # os.mkdir('counts')
-service = QiskitRuntimeService()
+# service = QiskitRuntimeService()
 
 
 # In[ ]:
@@ -205,11 +205,21 @@ with open(EnergyPath,'w') as f:
 
 echo 'About to run python file'
 module load python/3.10
+
+module load StdEnv/2023
 module load openmpi
 module load symengine rust
 module load hdf5
 module load openblas
-source /lustre09/project/6004825/gjones/ENV/bin/activate
+
+echo "TEMP DIR: $SLURM_TMPDIR"
+virtualenv --no-download $SLURM_TMPDIR/env
+source $SLURM_TMPDIR/env/bin/activate
+pip install --no-index --upgrade pip
+pip install -e /home/gjones/projects/def-jacobsen/gjones/qiskit-addon-dice-solver/
+pip install -e /scratch/gjones/distributed_LUCJ/
+
+
 export LD_LIBRARY_PATH=$EBROOTOPENBLAS/lib:$LD_LIBRARY_PATH
 
 export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
@@ -218,7 +228,7 @@ export MKL_NUM_THREADS=$SLURM_CPUS_PER_TASK
 export NUMEXPR_NUM_THREADS=$SLURM_CPUS_PER_TASK
 echo "Running in directory: $(pwd)"
 
-python {name}_LUCJ_L{L}_{basis}_{k}.py 
+python "{name}_LUCJ_L{L}_{basis}_{k}.py" 
 echo "File run"    
 """
     with open(f"./postprocess/{name}_LUCJ_L{L}_{basis}_{k}.sh",'w') as f:
