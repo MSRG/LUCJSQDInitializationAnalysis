@@ -1,4 +1,4 @@
 cc-pVDZ
 (Z)-1-fluoroprop-1-ene
 LUCJ(L=5)/ML_exact
--215.99161026187483
+-215.9644015486025

@@ -1,4 +1,4 @@
 aug-cc-pVDZ
 methanol
 LUCJ(L=1)/zeroes
--115.0615780509394
+-115.06157893823902

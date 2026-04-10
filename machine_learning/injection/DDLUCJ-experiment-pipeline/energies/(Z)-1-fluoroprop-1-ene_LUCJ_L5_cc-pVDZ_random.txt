@@ -1,4 +1,4 @@
 cc-pVDZ
 (Z)-1-fluoroprop-1-ene
 LUCJ(L=5)/random
--215.9886548465173
+-215.96502960032717
