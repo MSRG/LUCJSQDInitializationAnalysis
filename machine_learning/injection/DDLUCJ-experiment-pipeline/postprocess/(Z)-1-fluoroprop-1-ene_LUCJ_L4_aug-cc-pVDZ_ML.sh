@@ -3,7 +3,7 @@
 #SBATCH -J (Z)-1-fluoroprop-1-ene_LUCJ_L4_aug-cc-pVDZ_ML
 #SBATCH --account=rrg-jacobsen-ab
 #SBATCH --nodes=1
-#SBATCH --ntasks-per-node=64
+#SBATCH --ntasks-per-node=128
 #SBATCH --mem-per-cpu=1000M
 #SBATCH --error=job.e%J
 #SBATCH --output=job.o%j
