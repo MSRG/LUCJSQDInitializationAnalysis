@@ -34,6 +34,6 @@ export OPENBLAS_NUM_THREADS=$SLURM_CPUS_PER_TASK
 export MKL_NUM_THREADS=$SLURM_CPUS_PER_TASK
 export NUMEXPR_NUM_THREADS=$SLURM_CPUS_PER_TASK
 echo "Running in directory: $(pwd)"
-
+echo "fluoroform_LUCJ_L1_cc-pVDZ_ML_exact"
 python "fluoroform_LUCJ_L1_cc-pVDZ_ML_exact.py"
 echo "File run"    

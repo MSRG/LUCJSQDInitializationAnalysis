@@ -34,6 +34,6 @@ export OPENBLAS_NUM_THREADS=$SLURM_CPUS_PER_TASK
 export MKL_NUM_THREADS=$SLURM_CPUS_PER_TASK
 export NUMEXPR_NUM_THREADS=$SLURM_CPUS_PER_TASK
 echo "Running in directory: $(pwd)"
-
+echo "but-1-yne_LUCJ_L5_aug-cc-pVDZ_random"
 python "but-1-yne_LUCJ_L5_aug-cc-pVDZ_random.py"
 echo "File run"    

@@ -34,6 +34,6 @@ export OPENBLAS_NUM_THREADS=$SLURM_CPUS_PER_TASK
 export MKL_NUM_THREADS=$SLURM_CPUS_PER_TASK
 export NUMEXPR_NUM_THREADS=$SLURM_CPUS_PER_TASK
 echo "Running in directory: $(pwd)"
-
+echo "(Z)-1-fluoroprop-1-ene_LUCJ_L3_aug-cc-pVDZ_ML"
 python "(Z)-1-fluoroprop-1-ene_LUCJ_L3_aug-cc-pVDZ_ML.py"
 echo "File run"    
