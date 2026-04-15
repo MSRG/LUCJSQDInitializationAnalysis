@@ -1,0 +1,13 @@
+but-1-yne_LUCJ_L5_aug-cc-pVDZ_random.sh
+buta-1,3-diene_LUCJ_L1_aug-cc-pVDZ_random.sh
+fluoroform_LUCJ_L1_aug-cc-pVDZ_ML_exact.sh
+buta-1,3-diene_LUCJ_L3_aug-cc-pVDZ_CCSD.sh
+prop-2-en-1-ol_LUCJ_L2_STO-3G_random.sh
+fluoroform_LUCJ_L1_cc-pVDZ_ML_exact.sh
+(Z)-1-fluoroprop-1-ene_LUCJ_L2_aug-cc-pVDZ_ML.sh
+(Z)-1-fluoroprop-1-ene_LUCJ_L3_aug-cc-pVDZ_ML.sh
+prop-2-en-1-ol_LUCJ_L5_aug-cc-pVDZ_ML_exact.sh
+(Z)-1-fluoroprop-1-ene_LUCJ_L3_aug-cc-pVDZ_random.sh
+fluoroform_LUCJ_L1_STO-3G_CCSD.sh
+prop-2-en-1-ol_LUCJ_L2_STO-3G_ML.sh
+buta-1,3-diene_LUCJ_L1_aug-cc-pVDZ_CCSD.sh
