@@ -1,4 +1,4 @@
 aug-cc-pVDZ
 buta-1,3-diene
 LUCJ(L=1)/CCSD
--70646.0604888675
+-58430.16994785824
