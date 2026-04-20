@@ -1,5 +1,4 @@
 #!/bin/bash
-#!/bin/bash
 
 files=(
   "machine_learning/injection/DDLUCJ-experiment-pipeline/energies/(Z)-1-fluoroprop-1-ene_LUCJ_L2_aug-cc-pVDZ_ML.txt"
@@ -18,5 +17,8 @@ for f in "${files[@]}"; do
   # Use awk to check if the value is >= -1000 (i.e., not sufficiently negative)
   if awk -v e="$energy" 'BEGIN { exit !(e > -1000) }'; then
     echo "  $f  -->  $energy"
+  else
+
+    echo "BAD  $f  -->  $energy"
   fi
 done
