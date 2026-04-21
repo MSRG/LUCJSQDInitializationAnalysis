@@ -1,10 +1,10 @@
 #!/bin/bash
-#SBATCH --time=1-0:00:00
+#SBATCH --time=0-24:00:00
 #SBATCH -J prop-2-en-1-ol_LUCJ_L2_STO-3G_random
 #SBATCH --account=rrg-jacobsen-ab
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=64
-#SBATCH --mem-per-cpu=1000M
+#SBATCH --mem-per-cpu=2GB
 #SBATCH --error=job.e%J
 #SBATCH --output=job.o%j
 

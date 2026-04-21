@@ -1,10 +1,10 @@
 #!/bin/bash
-#SBATCH --time=1-0:00:00
+#SBATCH --time=0-24:00:00
 #SBATCH -J buta-1,3-diene_LUCJ_L1_STO-3G_CCSD
 #SBATCH --account=rrg-jacobsen-ab
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=64
-#SBATCH --mem-per-cpu=1000M
+#SBATCH --mem-per-cpu=2GB
 #SBATCH --error=job.e%J
 #SBATCH --output=job.o%j
 
@@ -34,6 +34,6 @@ export OPENBLAS_NUM_THREADS=$SLURM_CPUS_PER_TASK
 export MKL_NUM_THREADS=$SLURM_CPUS_PER_TASK
 export NUMEXPR_NUM_THREADS=$SLURM_CPUS_PER_TASK
 echo "Running in directory: $(pwd)"
-
+echo "buta-1,3-diene_LUCJ_L1_STO-3G_CCSD"
 python "buta-1,3-diene_LUCJ_L1_STO-3G_CCSD.py"
 echo "File run"    
