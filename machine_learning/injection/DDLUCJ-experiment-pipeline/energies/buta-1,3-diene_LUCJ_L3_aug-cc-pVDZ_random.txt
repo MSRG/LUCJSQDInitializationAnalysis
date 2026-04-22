@@ -1,4 +1,4 @@
 aug-cc-pVDZ
 buta-1,3-diene
 LUCJ(L=3)/random
--154.46972477876517
+-154.46901601980773
