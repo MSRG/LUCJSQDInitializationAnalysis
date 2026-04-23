@@ -1,4 +1,4 @@
 aug-cc-pVDZ
 prop-2-en-1-ol
 LUCJ(L=3)/ML_exact
--191.95176704494753
+-190.91830036419617
