@@ -227,7 +227,8 @@ class DDLUCJ:
         
         RHF = scf.RHF(mol).run()
         cas = mcscf.CASCI(RHF, self.NOrb, self.NElec,ncore=self.NFroz)
-    
+        self.num_elec_a = self.NElec//2
+        self.num_elec_b = self.NElec//2
         # cas = pyscf.mcscf.CASCI(scf, num_orbitals, num_elec_a+num_elec_b)
         active_space = list(range(cas.ncore,cas.ncore+cas.ncas))
         if self.verbose:
@@ -329,8 +330,49 @@ class DDLUCJ:
              
         else:
             if self.verbose:
-                print("Both JobID and BitArray are already set — nothing to do.")            
+                print("Both JobID and BitArray are already set — nothing to do.") 
+                
+    def PostprocessFulqrum(self):
+        """
+        Use Fulqrum
+        """
+        from fulqum_sqd import diagonalize_fermionic_hamiltonian
+        if self.bitarraypath is not None:
+            counts = np.load(self.bitarraypath,allow_pickle=True)
+            self.bitstring_matrix_full = counts['bitstrings']
+            self.probs_arr_full = counts['probarr']
+            
+        occ_a = np.zeros(self.NOrb,dtype=int)
+        occ_a[-self.num_elec_a:] = np.ones(self.num_elec_a,dtype=int)
+        occ_b = np.zeros(self.NOrb,dtype=int)
+        occ_b[-self.num_elec_b:] = np.ones(self.num_elec_b,dtype=int)     
+        current_occupancies = [occ_a,occ_b]
+        
+        # Some probabilities equal to zero somehow?
+        probs_arr_full = self.probs_arr_full
+        bitstring_matrix_full = self.bitstring_matrix_full
+        
+        probs_arr_full = np.clip(probs_arr_full, 0, None)
+        probs_arr_full = probs_arr_full / probs_arr_full.sum()
+        bitstring_matrix_full = [''.join(row.astype(int).astype(str)) for row in bitstring_matrix_full]
+        
+        total_energy, subspace_dimension = diagonalize_fermionic_hamiltonian(
+            self.nuclear_repulsion_energy,
+            self.hcore,
+            self.eri,
+            bitstring_matrix_full, 
+            probs_arr_full,
+            current_occupancies=current_occupancies,
+            samples_per_batch=self.samples_per_batch,
+            norb=self.NOrb,
+            nelec=(self.num_elec_a,self.num_elec_b),
+            num_batches=self.num_batches,
+            max_iterations=self.max_iterations,
+            carryover_threshold=self.carryover_threshold
+        )        
 
+        self.total_energy, self.subspace_dimension = total_energy, subspace_dimension
+        
     def Postprocess(self):
     
     
@@ -400,7 +442,7 @@ class DDLUCJ:
             )              
         self.result_history = result_history
         
-    def __call__(self,postprocess=True,JobID=None,BitArray=None):
+    def __call__(self,postprocess=True,JobID=None,BitArray=None,usefulqrum=False,bitarraypath=None):
         """
         Run the algorithm 
         
@@ -418,7 +460,8 @@ class DDLUCJ:
         self.postprocess = postprocess
         self.JobID = JobID
         self.BitArray = BitArray
-        
+        self.usefulqrum = usefulqrum
+        self.bitarraypath = bitarraypath
             
         
         self.Initialize()
@@ -427,8 +470,13 @@ class DDLUCJ:
         self.RunDevice()
         
         if self.postprocess:
-            self.Postprocess()
-            return self.result_history, self.result
+            if self.usefulqrum and self.bitarraypath is not None:
+                self.PostprocessFulqrum()
+                return self.total_energy, self.subspace_dimension
+                
+            else:
+                self.Postprocess()
+                return self.result_history, self.result
         else:
             return self.runtimejob
 
