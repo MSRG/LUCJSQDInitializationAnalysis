@@ -55,13 +55,7 @@ counts = np.load(f"../counts/buta-1,3-diene_LUCJ_L1_STO-3G_ML.npz")
 bitstrings = counts['bitstrings']
 bitstrings = BitArray.from_bool_array(bitstrings)
 
-# --- EXECUTION STEP ---
-result_history, result = initDDLUCJ(postprocess=True, BitArray=bitstrings) 
-
-# --- ROBUST ENERGY SELECTION ---
-# Pull from the very last iteration in the history
-final_energy = result_history[-1][0].energy
-new_energy = final_energy + initDDLUCJ.nuclear_repulsion_energy
+new_energy, subspace = initDDLUCJ(postprocess=True,BitArray=bitstrings,usefulqrum=True,bitarraypath=f"../counts/buta-1,3-diene_LUCJ_L1_STO-3G_ML.npz") 
 
 EnergyPath = f"../energies/buta-1,3-diene_LUCJ_L1_STO-3G_ML.txt" 
 

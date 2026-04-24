@@ -2,18 +2,17 @@
 #SBATCH --time=0-24:00:00
 #SBATCH -J fluoroform_LUCJ_L4_STO-3G_random
 #SBATCH --account=rrg-jacobsen-ab
-#SBATCH --nodes=1
-#SBATCH --ntasks-per-node=64
+#SBATCH --ntasks-per-node=1
+#SBATCH --cpus-per-task=32
 #SBATCH --mem-per-cpu=2GB
 #SBATCH --error=job.e%J
 #SBATCH --output=job.o%j
 
 
+set -e
 
-echo 'About to run python file'
 echo 'About to run python file'
 module load python/3.10
-
 module load StdEnv/2023
 module load openmpi
 module load symengine rust
@@ -24,15 +23,16 @@ echo "TEMP DIR: $SLURM_TMPDIR"
 virtualenv --no-download $SLURM_TMPDIR/env
 source $SLURM_TMPDIR/env/bin/activate
 pip install --no-index --upgrade pip
-pip install -e /home/gjones/projects/def-jacobsen/gjones/qiskit-addon-dice-solver/
-pip install -e /scratch/gjones/distributed_LUCJ/
+pip install /scratch/gjones/wheels/fulqrum*.whl
+pip install -e /home/gjones/scratch/distributed_LUCJ/
+pip install openfermion
 
 export LD_LIBRARY_PATH=$EBROOTOPENBLAS/lib:$LD_LIBRARY_PATH
-
-export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
+export OMP_NUM_THREADS=32
 export OPENBLAS_NUM_THREADS=$SLURM_CPUS_PER_TASK
 export MKL_NUM_THREADS=$SLURM_CPUS_PER_TASK
 export NUMEXPR_NUM_THREADS=$SLURM_CPUS_PER_TASK
+
 echo "Running in directory: $(pwd)"
 echo "fluoroform_LUCJ_L4_STO-3G_random"
 python "fluoroform_LUCJ_L4_STO-3G_random.py"
