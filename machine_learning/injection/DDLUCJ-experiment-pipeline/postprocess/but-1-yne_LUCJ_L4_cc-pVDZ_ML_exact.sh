@@ -1,13 +1,12 @@
 #!/bin/bash
-#SBATCH --time=0-24:00:00
+#SBATCH --time=2-0:00:00
 #SBATCH -J but-1-yne_LUCJ_L4_cc-pVDZ_ML_exact
 #SBATCH --account=rrg-jacobsen-ab
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=32
-#SBATCH --mem-per-cpu=2GB
+#SBATCH --mem-per-cpu=5GB
 #SBATCH --error=job.e%J
 #SBATCH --output=job.o%j
-
 
 set -e
 

@@ -1,13 +1,12 @@
 #!/bin/bash
-#SBATCH --time=0-24:00:00
+#SBATCH --time=2-0:00:00
 #SBATCH -J fluoroform_LUCJ_L3_STO-3G_CCSD
 #SBATCH --account=rrg-jacobsen-ab
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=32
-#SBATCH --mem-per-cpu=2GB
+#SBATCH --mem-per-cpu=5GB
 #SBATCH --error=job.e%J
 #SBATCH --output=job.o%j
-
 
 set -e
 
