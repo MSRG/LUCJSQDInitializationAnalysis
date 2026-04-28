@@ -1,4 +1,4 @@
 STO-3G
 (Z)-1-fluoroprop-1-ene
 LUCJ(L=4)/CCSD
--213.1659808008343
+[-213.1297768]

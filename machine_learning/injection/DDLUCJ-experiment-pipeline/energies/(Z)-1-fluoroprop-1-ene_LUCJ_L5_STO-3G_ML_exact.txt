@@ -1,4 +1,4 @@
 STO-3G
 (Z)-1-fluoroprop-1-ene
 LUCJ(L=5)/ML_exact
--213.1421481222368
+[-213.12791229]
