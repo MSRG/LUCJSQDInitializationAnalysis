@@ -501,17 +501,17 @@ def GrabAmps(name,basisset):
         Keys: MP2, CCSD, ML, ML_exact, zeroes, random
         
     """
-    t1ML_exact = np.load(f'data/{basisset}/amplitudes/amps_{name}_{basisset}_t1_ML_exact.npz')['k']
-    t1exact = np.load(f'data/{basisset}/amplitudes/amps_{name}_{basisset}_t1_exact.npz')['k']
-    t1rand = np.load(f'data/{basisset}/amplitudes/amps_{name}_{basisset}_t1_rand.npz')['k']
-    t1zeroes = np.load(f'data/{basisset}/amplitudes/amps_{name}_{basisset}_t1_zeroes.npz')['k']
+    t1ML_exact = np.load(f'../data/{basisset}/amplitudes/amps_{name}_{basisset}_t1_ML_exact.npz')['k']
+    t1exact = np.load(f'../data/{basisset}/amplitudes/amps_{name}_{basisset}_t1_exact.npz')['k']
+    t1rand = np.load(f'../data/{basisset}/amplitudes/amps_{name}_{basisset}_t1_rand.npz')['k']
+    t1zeroes = np.load(f'../data/{basisset}/amplitudes/amps_{name}_{basisset}_t1_zeroes.npz')['k']
     
-    t2ML=np.load(f'data/{basisset}/amplitudes/amps_{name}_{basisset}_t2_ML.npz')['k']
-    t2ML_exact=np.load(f'data/{basisset}/amplitudes/amps_{name}_{basisset}_t2_ML_exact.npz')['k']
-    t2MP2=np.load(f'data/{basisset}/amplitudes/amps_{name}_{basisset}_t2_MP2.npz')['k']
-    t2exact=np.load(f'data/{basisset}/amplitudes/amps_{name}_{basisset}_t2_exact.npz')['k']
-    t2rand=np.load(f'data/{basisset}/amplitudes/amps_{name}_{basisset}_t2_rand.npz')['k']
-    t2zeroes=np.load(f'data/{basisset}/amplitudes/amps_{name}_{basisset}_t2_zeroes.npz')['k']
+    t2ML=np.load(f'../data/{basisset}/amplitudes/amps_{name}_{basisset}_t2_ML.npz')['k']
+    t2ML_exact=np.load(f'../data/{basisset}/amplitudes/amps_{name}_{basisset}_t2_ML_exact.npz')['k']
+    t2MP2=np.load(f'../data/{basisset}/amplitudes/amps_{name}_{basisset}_t2_MP2.npz')['k']
+    t2exact=np.load(f'../data/{basisset}/amplitudes/amps_{name}_{basisset}_t2_exact.npz')['k']
+    t2rand=np.load(f'../data/{basisset}/amplitudes/amps_{name}_{basisset}_t2_rand.npz')['k']
+    t2zeroes=np.load(f'../data/{basisset}/amplitudes/amps_{name}_{basisset}_t2_zeroes.npz')['k']
 
     ampdict = {"MP2":(t1zeroes,t2MP2),"CCSD":(t1exact,t2exact),"ML":(t1zeroes,t2ML),"ML_exact":(t1ML_exact,t2ML_exact),"zeroes":(t1zeroes,t2zeroes),"random":(t1rand,t2rand)}
     
