@@ -1,4 +1,4 @@
 cc-pVDZ
 buta-1,3-diene
 LUCJ(L=1)/zeroes
--155.0072537721249
+[-155.00474768]

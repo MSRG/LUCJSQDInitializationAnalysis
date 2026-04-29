@@ -1,4 +1,4 @@
 aug-cc-pVDZ
 but-1-yne
 LUCJ(L=4)/random
--154.09367994189978
+[-154.91678575]

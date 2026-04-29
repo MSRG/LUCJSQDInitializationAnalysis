@@ -1,4 +1,4 @@
 aug-cc-pVDZ
 but-1-yne
 LUCJ(L=5)/ML_exact
--152.5516160270816
+[-154.91678535]

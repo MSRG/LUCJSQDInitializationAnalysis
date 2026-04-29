@@ -1,4 +1,4 @@
 aug-cc-pVDZ
 prop-2-en-1-ol
 LUCJ(L=4)/random
--191.95184008990623
+[-191.95163651]

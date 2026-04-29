@@ -1,4 +1,4 @@
 cc-pVDZ
 buta-1,3-diene
 LUCJ(L=5)/ML_exact
--153.73855444939608
+[-154.94310684]

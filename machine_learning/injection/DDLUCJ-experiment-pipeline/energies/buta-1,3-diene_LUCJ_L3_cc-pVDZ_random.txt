@@ -1,4 +1,4 @@
 cc-pVDZ
 buta-1,3-diene
 LUCJ(L=3)/random
--154.2660968446507
+[-154.93432674]

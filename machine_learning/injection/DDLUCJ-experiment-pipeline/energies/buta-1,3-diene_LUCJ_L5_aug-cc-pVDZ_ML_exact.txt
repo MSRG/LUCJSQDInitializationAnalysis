@@ -1,4 +1,4 @@
 aug-cc-pVDZ
 buta-1,3-diene
 LUCJ(L=5)/ML_exact
--154.4685976123411
+[-154.93991371]

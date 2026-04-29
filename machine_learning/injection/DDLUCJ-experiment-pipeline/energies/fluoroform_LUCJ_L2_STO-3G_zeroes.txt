@@ -1,4 +1,4 @@
 STO-3G
 fluoroform
 LUCJ(L=2)/zeroes
--332.2237835069325
+[-332.22244356]

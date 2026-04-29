@@ -1,4 +1,4 @@
 STO-3G
 fluoroform
 LUCJ(L=4)/ML_exact
--332.22507529683605
+[-332.22266236]
