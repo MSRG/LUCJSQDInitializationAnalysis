@@ -1,4 +1,4 @@
 cc-pVDZ
 ethane
 LUCJ(L=3)/random
--79.26044129345365
+[-79.25713943]

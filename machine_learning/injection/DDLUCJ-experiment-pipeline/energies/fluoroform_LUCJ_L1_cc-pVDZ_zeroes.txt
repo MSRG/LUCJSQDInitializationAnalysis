@@ -1,4 +1,4 @@
 cc-pVDZ
 fluoroform
 LUCJ(L=1)/zeroes
--336.8257575494038
+[-336.82558621]

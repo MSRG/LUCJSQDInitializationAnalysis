@@ -1,4 +1,4 @@
 cc-pVDZ
 methane
 LUCJ(L=3)/random
--40.211696245605026
+[-40.21169621]

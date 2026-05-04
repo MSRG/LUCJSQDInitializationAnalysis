@@ -1,4 +1,4 @@
 aug-cc-pVDZ
 ethylene
 LUCJ(L=4)/random
--78.04543790293138
+[-78.04543729]

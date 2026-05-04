@@ -1,4 +1,4 @@
 aug-cc-pVDZ
 methane
 LUCJ(L=3)/zeroes
--40.199729410091024
+[-40.1997294]

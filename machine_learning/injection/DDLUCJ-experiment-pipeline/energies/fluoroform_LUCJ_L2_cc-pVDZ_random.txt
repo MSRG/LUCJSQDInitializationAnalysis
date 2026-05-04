@@ -1,4 +1,4 @@
 cc-pVDZ
 fluoroform
 LUCJ(L=2)/random
--336.82588334525786
+[-336.82510628]

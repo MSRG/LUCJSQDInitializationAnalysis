@@ -1,4 +1,4 @@
 cc-pVDZ
 formaldehyde
 LUCJ(L=2)/CCSD
--113.91428981358469
+[-113.91428976]

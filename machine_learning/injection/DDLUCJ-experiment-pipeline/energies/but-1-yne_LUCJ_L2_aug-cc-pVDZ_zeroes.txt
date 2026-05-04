@@ -1,4 +1,4 @@
 aug-cc-pVDZ
 but-1-yne
 LUCJ(L=2)/zeroes
--154.9179624246363
+[-154.91695565]

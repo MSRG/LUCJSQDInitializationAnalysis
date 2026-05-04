@@ -1,4 +1,4 @@
 aug-cc-pVDZ
 fluoroform
 LUCJ(L=2)/CCSD
--336.8129123474503
+[-336.81290791]

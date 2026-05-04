@@ -1,4 +1,4 @@
 STO-3G
 formaldehyde
 LUCJ(L=2)/zeroes
--112.50104953749566
+[-112.50123647]

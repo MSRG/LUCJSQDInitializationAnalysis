@@ -1,4 +1,4 @@
 aug-cc-pVDZ
 ammonia
 LUCJ(L=3)/CCSD
--56.20530888226428
+[-56.20530888]

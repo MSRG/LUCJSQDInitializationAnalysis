@@ -1,4 +1,4 @@
 cc-pVDZ
 ethane
 LUCJ(L=3)/ML_exact
--79.2605189223638
+[-79.25791276]

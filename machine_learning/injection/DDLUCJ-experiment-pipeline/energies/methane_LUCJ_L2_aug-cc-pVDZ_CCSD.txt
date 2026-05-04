@@ -1,4 +1,4 @@
 aug-cc-pVDZ
 methane
 LUCJ(L=2)/CCSD
--40.199729458042654
+[-40.19972946]

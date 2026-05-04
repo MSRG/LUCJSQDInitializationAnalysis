@@ -1,4 +1,4 @@
 cc-pVDZ
 fluoroform
 LUCJ(L=1)/ML_exact
--336.8260151673484
+[-336.82533671]

@@ -1,4 +1,4 @@
 aug-cc-pVDZ
 fluoroform
 LUCJ(L=1)/random
--336.8129118186613
+[-336.81290701]

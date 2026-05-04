@@ -1,4 +1,4 @@
 aug-cc-pVDZ
 methane
 LUCJ(L=1)/ML_exact
--40.199729458042825
+[-40.19972946]

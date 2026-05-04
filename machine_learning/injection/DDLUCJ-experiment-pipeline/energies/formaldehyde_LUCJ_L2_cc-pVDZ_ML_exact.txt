@@ -1,4 +1,4 @@
 cc-pVDZ
 formaldehyde
 LUCJ(L=2)/ML_exact
--113.91428966744407
+[-113.91428976]

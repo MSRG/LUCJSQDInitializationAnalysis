@@ -1,4 +1,4 @@
 cc-pVDZ
 ammonia
 LUCJ(L=3)/random
--56.20672830635896
+[-56.20672829]

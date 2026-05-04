@@ -1,4 +1,4 @@
 cc-pVDZ
 methane
 LUCJ(L=5)/ML_exact
--40.21169624560501
+[-40.21169621]

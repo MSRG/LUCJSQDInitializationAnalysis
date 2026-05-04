@@ -1,4 +1,4 @@
 cc-pVDZ
 methanol
 LUCJ(L=5)/ML_exact
--115.06845609465657
+[-115.06841252]

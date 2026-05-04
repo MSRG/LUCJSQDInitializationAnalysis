@@ -1,4 +1,4 @@
 STO-3G
 ethylene
 LUCJ(L=3)/ML_exact
--77.23487760373341
+[-77.23437354]

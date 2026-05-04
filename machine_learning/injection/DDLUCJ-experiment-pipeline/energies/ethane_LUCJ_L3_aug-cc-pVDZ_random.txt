@@ -1,4 +1,4 @@
 aug-cc-pVDZ
 ethane
 LUCJ(L=3)/random
--79.2371488983328
+[-79.23704778]

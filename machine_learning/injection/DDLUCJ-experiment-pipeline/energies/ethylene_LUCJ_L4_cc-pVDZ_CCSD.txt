@@ -1,4 +1,4 @@
 cc-pVDZ
 ethylene
 LUCJ(L=4)/CCSD
--78.07876413870062
+[-78.07869687]

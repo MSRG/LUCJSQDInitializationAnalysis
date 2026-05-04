@@ -1,4 +1,4 @@
 cc-pVDZ
 formaldehyde
 LUCJ(L=2)/MP2
--113.91428977929424
+[-113.91428976]

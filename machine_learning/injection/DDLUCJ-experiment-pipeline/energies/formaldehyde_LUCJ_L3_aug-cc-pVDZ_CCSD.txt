@@ -1,4 +1,4 @@
 aug-cc-pVDZ
 formaldehyde
 LUCJ(L=3)/CCSD
--113.88484230094092
+[-113.88484229]

@@ -1,4 +1,4 @@
 aug-cc-pVDZ
 methane
 LUCJ(L=2)/random
--40.19972945804291
+[-40.19972946]

@@ -1,4 +1,4 @@
 aug-cc-pVDZ
 ethane
 LUCJ(L=2)/CCSD
--79.23714931752316
+[-79.237059]

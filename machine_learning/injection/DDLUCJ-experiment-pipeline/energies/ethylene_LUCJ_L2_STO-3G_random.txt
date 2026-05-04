@@ -1,4 +1,4 @@
 STO-3G
 ethylene
 LUCJ(L=2)/random
--77.2349625046997
+[-77.23446821]

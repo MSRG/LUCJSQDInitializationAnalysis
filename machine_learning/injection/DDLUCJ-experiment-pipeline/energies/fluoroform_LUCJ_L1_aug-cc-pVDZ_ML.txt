@@ -1,4 +1,4 @@
 aug-cc-pVDZ
 fluoroform
 LUCJ(L=1)/ML
--336.81291243937596
+[-336.81290626]

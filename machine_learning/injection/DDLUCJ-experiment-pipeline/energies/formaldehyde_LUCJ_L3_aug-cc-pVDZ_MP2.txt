@@ -1,4 +1,4 @@
 aug-cc-pVDZ
 formaldehyde
 LUCJ(L=3)/MP2
--113.8848423008654
+[-113.88484229]

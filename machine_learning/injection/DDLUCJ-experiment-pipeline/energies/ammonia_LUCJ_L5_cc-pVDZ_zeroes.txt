@@ -1,4 +1,4 @@
 cc-pVDZ
 ammonia
 LUCJ(L=5)/zeroes
--56.206725359651465
+[-56.20672817]

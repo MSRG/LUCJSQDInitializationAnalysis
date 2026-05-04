@@ -1,4 +1,4 @@
 aug-cc-pVDZ
 ethane
 LUCJ(L=1)/zeroes
--79.2371493116701
+[-79.23714841]

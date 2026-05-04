@@ -1,4 +1,4 @@
 cc-pVDZ
 formaldehyde
 LUCJ(L=3)/zeroes
--113.9142781327147
+[-113.91428328]
