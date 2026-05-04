@@ -1,4 +1,4 @@
 aug-cc-pVDZ
 methanol
 LUCJ(L=4)/ML_exact
--115.06157901570498
+[-115.06157873]

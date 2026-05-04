@@ -1,4 +1,4 @@
 aug-cc-pVDZ
 prop-2-en-1-ol
 LUCJ(L=5)/zeroes
--191.95391914789013
+[-191.952019]
