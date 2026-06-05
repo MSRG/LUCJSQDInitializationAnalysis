@@ -1,5 +1,5 @@
-# DDLUCJ
-Data-driven localized unitary cluster Jastrow ansatz 
+# Analyzing Initialization Strategies for the Local Unitary Cluster Jastrow Ansatz within the Quantum-Centric Supercomputing Framework
+
 
 
 ## Update with path to files, visualization, etc. so I can help plot things for the paper - GMJ
@@ -8,7 +8,7 @@ Data-driven localized unitary cluster Jastrow ansatz
 Data analysis `DDLUCJ/machine_learning/injection/DDLUCJ-experiment-pipeline`
 
 # TO-DO 
-- [ ] Plots (`PlotSQDEnergies.ipynb`)
+- [x] Plots (`PlotSQDEnergies.ipynb`)
 - [ ] Double check postprocessing parameters... (`RunSQDPostProcLocal.ipynb`)
-- [ ] Rename repo
+- [x] Rename repo
 - [ ] Python package
