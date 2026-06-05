@@ -1,0 +1,4 @@
+cc-pVDZ
+formaldehyde
+LUCJ(L=3)/MP2
+[-113.91428976]

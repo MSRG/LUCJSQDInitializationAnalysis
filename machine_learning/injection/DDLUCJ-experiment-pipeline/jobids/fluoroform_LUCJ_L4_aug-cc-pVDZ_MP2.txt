@@ -1,0 +1,5 @@
+fluoroform
+aug-cc-pVDZ
+MP2
+4
+d3lguo0dd19c739711p0

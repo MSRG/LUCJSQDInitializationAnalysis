@@ -1,0 +1,4 @@
+aug-cc-pVDZ
+ethane
+LUCJ(L=4)/ML_exact
+[-79.2370509]

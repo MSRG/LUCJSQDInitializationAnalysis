@@ -1,0 +1,4 @@
+cc-pVDZ
+water
+LUCJ(L=4)/ML_exact
+[-76.03188388]

@@ -1,0 +1,4 @@
+cc-pVDZ
+formaldehyde
+LUCJ(L=2)/CCSD
+[-113.91428976]

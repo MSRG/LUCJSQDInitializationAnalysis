@@ -1,0 +1,4 @@
+STO-3G
+methanol
+LUCJ(L=3)/CCSD
+[-113.6625352]

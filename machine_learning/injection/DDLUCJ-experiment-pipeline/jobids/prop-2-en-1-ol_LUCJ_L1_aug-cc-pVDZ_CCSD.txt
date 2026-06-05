@@ -1,0 +1,5 @@
+prop-2-en-1-ol
+aug-cc-pVDZ
+CCSD
+1
+d3lual8dd19c7397de10

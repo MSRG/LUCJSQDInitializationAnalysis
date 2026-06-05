@@ -1,0 +1,4 @@
+cc-pVDZ
+fluoroform
+LUCJ(L=4)/MP2
+[-336.82485877]

@@ -1,0 +1,5 @@
+ethylene
+STO-3G
+CCSD
+2
+d3l9je83qtks738c5t1g

@@ -1,0 +1,5 @@
+water
+aug-cc-pVDZ
+CCSD
+2
+d3leuf0dd19c7396v3hg

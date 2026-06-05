@@ -1,0 +1,5 @@
+ethane
+aug-cc-pVDZ
+zeroes
+2
+d3lefbhfk6qs73e6st3g

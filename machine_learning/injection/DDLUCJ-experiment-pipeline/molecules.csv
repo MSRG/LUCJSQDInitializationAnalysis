@@ -1,0 +1,13 @@
+molecule,formula,mol_filename,num_orbitals,n_electrons
+ammonia,NH3,ammonia157.xyz,8,10
+methane,CH4,methane50.xyz,9,10
+ethylene,C2H4,ethylene42.xyz,14,16
+ethane,C2H6,ethane28.xyz,16,18
+water,H2O,water183.xyz,7,10
+formaldehyde,CH20,formaldehyde138.xyz,12,16
+methanol,CH3OH,methanol22.xyz,14,18
+fluoroform,CHF3,GDB04_5.xyz,21,34
+"buta-1,3-diene",C4H6,GDB04_53.xyz,26,30
+but-1-yne,C4H6,GDB04_49.xyz,26,30
+prop-2-en-1-ol,C3H6O,GDB04_33.xyz,26,32
+(Z)-1-fluoroprop-1-ene,C3H5F,GDB04_65.xyz,25,32

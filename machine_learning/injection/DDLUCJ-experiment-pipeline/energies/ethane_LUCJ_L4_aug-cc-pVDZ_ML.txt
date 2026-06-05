@@ -1,0 +1,4 @@
+aug-cc-pVDZ
+ethane
+LUCJ(L=4)/ML
+[-79.23708081]

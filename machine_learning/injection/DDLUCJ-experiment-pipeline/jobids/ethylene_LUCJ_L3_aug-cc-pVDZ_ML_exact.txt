@@ -1,0 +1,5 @@
+ethylene
+aug-cc-pVDZ
+ML_exact
+3
+d3laakpfk6qs73e6oqkg

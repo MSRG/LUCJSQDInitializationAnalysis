@@ -1,0 +1,4 @@
+STO-3G
+buta-1,3-diene
+LUCJ(L=2)/ML_exact
+[-153.02854752]

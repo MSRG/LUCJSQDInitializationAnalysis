@@ -1,0 +1,4 @@
+STO-3G
+ethylene
+LUCJ(L=2)/CCSD
+[-77.23451767]

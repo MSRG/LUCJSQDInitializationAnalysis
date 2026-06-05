@@ -1,0 +1,5 @@
+formaldehyde
+STO-3G
+CCSD
+4
+d3lf6khfk6qs73e6tka0

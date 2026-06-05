@@ -1,0 +1,5 @@
+(Z)-1-fluoroprop-1-ene
+STO-3G
+zeroes
+5
+d3lvls0dd19c7397elog

@@ -1,0 +1,5 @@
+fluoroform
+cc-pVDZ
+ML_exact
+3
+d3lgrf0dd19c73970uo0

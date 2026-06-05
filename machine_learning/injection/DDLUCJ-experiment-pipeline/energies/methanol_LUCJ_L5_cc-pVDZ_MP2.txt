@@ -1,0 +1,4 @@
+cc-pVDZ
+methanol
+LUCJ(L=5)/MP2
+[-115.0684515]

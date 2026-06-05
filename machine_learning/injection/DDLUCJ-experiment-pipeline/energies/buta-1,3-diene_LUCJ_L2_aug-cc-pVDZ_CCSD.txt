@@ -1,0 +1,4 @@
+aug-cc-pVDZ
+buta-1,3-diene
+LUCJ(L=2)/CCSD
+[-154.93991445]

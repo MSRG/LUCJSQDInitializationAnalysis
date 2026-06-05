@@ -1,0 +1,4 @@
+cc-pVDZ
+ethylene
+LUCJ(L=3)/random
+[-78.07831034]

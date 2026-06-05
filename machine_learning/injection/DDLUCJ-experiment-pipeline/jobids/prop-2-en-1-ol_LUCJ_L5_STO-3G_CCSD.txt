@@ -1,0 +1,5 @@
+prop-2-en-1-ol
+STO-3G
+CCSD
+5
+d3ltpq83qtks738cp3f0

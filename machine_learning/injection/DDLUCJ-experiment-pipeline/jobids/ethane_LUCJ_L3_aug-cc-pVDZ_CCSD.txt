@@ -1,0 +1,5 @@
+ethane
+aug-cc-pVDZ
+CCSD
+3
+d3ledo34kkus739clm40

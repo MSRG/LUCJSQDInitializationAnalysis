@@ -1,0 +1,4 @@
+cc-pVDZ
+methanol
+LUCJ(L=5)/random
+[-115.06838892]

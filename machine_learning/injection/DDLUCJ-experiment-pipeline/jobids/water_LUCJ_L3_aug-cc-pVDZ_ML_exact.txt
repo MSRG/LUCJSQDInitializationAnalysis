@@ -1,0 +1,5 @@
+water
+aug-cc-pVDZ
+ML_exact
+3
+d3lf0modd19c7396v5n0

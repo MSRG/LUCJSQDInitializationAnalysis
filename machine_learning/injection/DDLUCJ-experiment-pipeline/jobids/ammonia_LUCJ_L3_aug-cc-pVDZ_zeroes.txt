@@ -1,0 +1,5 @@
+ammonia
+aug-cc-pVDZ
+zeroes
+3
+d3l8tq1fk6qs73e6nem0

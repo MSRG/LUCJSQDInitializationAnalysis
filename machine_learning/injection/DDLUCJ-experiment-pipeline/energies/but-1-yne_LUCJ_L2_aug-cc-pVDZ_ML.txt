@@ -1,0 +1,4 @@
+aug-cc-pVDZ
+but-1-yne
+LUCJ(L=2)/ML
+[-154.91694017]

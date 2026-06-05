@@ -1,0 +1,4 @@
+STO-3G
+fluoroform
+LUCJ(L=1)/MP2
+[-332.22335056]

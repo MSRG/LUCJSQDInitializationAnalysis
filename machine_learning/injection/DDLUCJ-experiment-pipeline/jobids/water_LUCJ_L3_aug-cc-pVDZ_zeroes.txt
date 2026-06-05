@@ -1,0 +1,5 @@
+water
+aug-cc-pVDZ
+zeroes
+3
+d3lf1u03qtks738cb8k0

@@ -1,0 +1,5 @@
+methane
+aug-cc-pVDZ
+random
+3
+d3l9gn03qtks738c5qdg

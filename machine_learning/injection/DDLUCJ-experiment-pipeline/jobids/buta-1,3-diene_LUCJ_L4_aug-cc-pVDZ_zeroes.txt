@@ -1,0 +1,5 @@
+buta-1,3-diene
+aug-cc-pVDZ
+zeroes
+4
+d3lhq9pfk6qs73e7048g

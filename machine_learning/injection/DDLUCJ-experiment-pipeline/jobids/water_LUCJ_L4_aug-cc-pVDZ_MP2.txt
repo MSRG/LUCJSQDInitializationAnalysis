@@ -1,0 +1,5 @@
+water
+aug-cc-pVDZ
+MP2
+4
+d3lets9fk6qs73e6tbe0

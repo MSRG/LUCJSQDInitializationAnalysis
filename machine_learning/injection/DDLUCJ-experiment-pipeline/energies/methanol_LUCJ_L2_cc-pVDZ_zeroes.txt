@@ -1,0 +1,4 @@
+cc-pVDZ
+methanol
+LUCJ(L=2)/zeroes
+[-115.06843234]

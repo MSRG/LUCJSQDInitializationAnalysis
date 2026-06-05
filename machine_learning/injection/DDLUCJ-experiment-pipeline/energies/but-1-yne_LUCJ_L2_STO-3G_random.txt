@@ -1,0 +1,4 @@
+STO-3G
+but-1-yne
+LUCJ(L=2)/random
+[-153.05309913]

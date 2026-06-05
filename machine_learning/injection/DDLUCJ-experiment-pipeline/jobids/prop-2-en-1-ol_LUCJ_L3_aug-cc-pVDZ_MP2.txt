@@ -1,0 +1,5 @@
+prop-2-en-1-ol
+aug-cc-pVDZ
+MP2
+3
+d3lua69fk6qs73e7bpc0

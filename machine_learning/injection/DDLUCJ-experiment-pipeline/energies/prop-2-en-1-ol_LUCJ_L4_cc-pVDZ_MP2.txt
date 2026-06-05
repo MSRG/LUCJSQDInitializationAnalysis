@@ -1,0 +1,4 @@
+cc-pVDZ
+prop-2-en-1-ol
+LUCJ(L=4)/MP2
+[-191.93728792]

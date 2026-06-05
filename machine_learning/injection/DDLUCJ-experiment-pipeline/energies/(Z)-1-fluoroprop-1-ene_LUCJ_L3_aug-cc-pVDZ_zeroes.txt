@@ -1,0 +1,4 @@
+aug-cc-pVDZ
+(Z)-1-fluoroprop-1-ene
+LUCJ(L=3)/zeroes
+[-215.94997631]

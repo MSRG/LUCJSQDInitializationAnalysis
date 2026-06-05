@@ -1,0 +1,4 @@
+cc-pVDZ
+formaldehyde
+LUCJ(L=3)/random
+[-113.91428976]

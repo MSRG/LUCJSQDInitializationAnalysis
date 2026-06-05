@@ -1,0 +1,5 @@
+methane
+aug-cc-pVDZ
+zeroes
+3
+d3l9fm34kkus739cgprg

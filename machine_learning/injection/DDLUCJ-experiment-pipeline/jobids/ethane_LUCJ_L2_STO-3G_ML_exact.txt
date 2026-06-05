@@ -1,0 +1,5 @@
+ethane
+STO-3G
+ML_exact
+2
+d3laiq03qtks738c6r60

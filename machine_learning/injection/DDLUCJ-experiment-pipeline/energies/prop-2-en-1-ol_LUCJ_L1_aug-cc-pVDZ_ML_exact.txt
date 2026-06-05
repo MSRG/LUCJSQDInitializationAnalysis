@@ -1,0 +1,4 @@
+aug-cc-pVDZ
+prop-2-en-1-ol
+LUCJ(L=1)/ML_exact
+[-191.95170225]

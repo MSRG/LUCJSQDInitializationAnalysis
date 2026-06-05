@@ -1,0 +1,4 @@
+cc-pVDZ
+ethane
+LUCJ(L=4)/MP2
+[-79.25906894]

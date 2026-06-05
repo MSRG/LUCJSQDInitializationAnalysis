@@ -1,0 +1,4 @@
+cc-pVDZ
+fluoroform
+LUCJ(L=5)/CCSD
+[-336.82548906]

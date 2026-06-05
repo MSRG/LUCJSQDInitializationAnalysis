@@ -1,0 +1,5 @@
+ammonia
+cc-pVDZ
+CCSD
+2
+d3l8mo34kkus739cg150

@@ -1,0 +1,5 @@
+(Z)-1-fluoroprop-1-ene
+aug-cc-pVDZ
+CCSD
+3
+d3m02f83qtks738cr6q0

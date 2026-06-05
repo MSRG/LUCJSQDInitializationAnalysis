@@ -1,0 +1,5 @@
+ethane
+aug-cc-pVDZ
+MP2
+2
+d3lb1f03qtks738c79e0

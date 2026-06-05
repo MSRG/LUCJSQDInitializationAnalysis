@@ -1,0 +1,13 @@
+molecule,spin_sq,n_frozen,n_electrons,num_orbitals,,
+water,,0,10,7,,Classic SQD
+ammonia,,0,10,8,,Dice SQD
+methane,,0,10,9,,
+formaldehyde,,0,16,12,,
+ethylene,,0,16,14,,
+ethane,,0,18,16,,
+methanol,,0,18,14,,
+GDB04_53,,0,30,26,,
+GDB04_49,,0,30,26,,
+GDB04_33,,0,32,26,,
+GDB04_65,,0,32,25,,
+GDB04_5,,0,34,21,,

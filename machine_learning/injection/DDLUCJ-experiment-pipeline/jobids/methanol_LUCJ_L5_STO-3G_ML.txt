@@ -1,0 +1,5 @@
+methanol
+STO-3G
+ML
+5
+d3lfuoodd19c73970360

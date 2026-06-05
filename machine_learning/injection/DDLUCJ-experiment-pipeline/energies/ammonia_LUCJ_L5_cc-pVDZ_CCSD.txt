@@ -1,0 +1,4 @@
+cc-pVDZ
+ammonia
+LUCJ(L=5)/CCSD
+[-56.20672829]

@@ -1,0 +1,4 @@
+aug-cc-pVDZ
+methane
+LUCJ(L=1)/ML
+[-40.19972946]

@@ -1,0 +1,5 @@
+methanol
+aug-cc-pVDZ
+random
+4
+d3lgd334kkus739cnmg0

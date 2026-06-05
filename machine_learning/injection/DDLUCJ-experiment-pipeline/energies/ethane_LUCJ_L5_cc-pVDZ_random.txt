@@ -1,0 +1,4 @@
+cc-pVDZ
+ethane
+LUCJ(L=5)/random
+[-79.25972609]

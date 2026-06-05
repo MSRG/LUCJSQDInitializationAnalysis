@@ -1,0 +1,5 @@
+ethane
+STO-3G
+CCSD
+4
+d3lag3odd19c7396qpf0

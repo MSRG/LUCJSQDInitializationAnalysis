@@ -1,0 +1,4 @@
+STO-3G
+prop-2-en-1-ol
+LUCJ(L=2)/ML_exact
+[-189.4806889]

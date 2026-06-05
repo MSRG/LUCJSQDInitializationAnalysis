@@ -1,0 +1,4 @@
+cc-pVDZ
+methanol
+LUCJ(L=3)/ML
+[-115.06843677]

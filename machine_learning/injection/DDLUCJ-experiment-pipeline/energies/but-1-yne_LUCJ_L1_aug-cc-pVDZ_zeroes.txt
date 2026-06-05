@@ -1,0 +1,4 @@
+aug-cc-pVDZ
+but-1-yne
+LUCJ(L=1)/zeroes
+[-154.91777878]

@@ -1,0 +1,4 @@
+aug-cc-pVDZ
+but-1-yne
+LUCJ(L=5)/CCSD
+[-154.91685702]

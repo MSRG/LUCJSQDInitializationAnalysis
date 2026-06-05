@@ -1,0 +1,4 @@
+STO-3G
+methanol
+LUCJ(L=1)/zeroes
+[-113.66235635]

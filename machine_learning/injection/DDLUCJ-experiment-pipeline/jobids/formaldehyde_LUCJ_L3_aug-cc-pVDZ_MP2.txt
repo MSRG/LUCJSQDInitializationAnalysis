@@ -1,0 +1,5 @@
+formaldehyde
+aug-cc-pVDZ
+MP2
+3
+d3lfmn1fk6qs73e6u4qg

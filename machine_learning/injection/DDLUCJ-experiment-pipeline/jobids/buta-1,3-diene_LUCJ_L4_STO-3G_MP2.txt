@@ -1,0 +1,5 @@
+buta-1,3-diene
+STO-3G
+MP2
+4
+d3lh4a8dd19c739716t0

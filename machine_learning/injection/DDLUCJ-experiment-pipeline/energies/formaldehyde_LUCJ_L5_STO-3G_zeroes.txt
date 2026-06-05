@@ -1,0 +1,4 @@
+STO-3G
+formaldehyde
+LUCJ(L=5)/zeroes
+[-112.50122324]

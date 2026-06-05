@@ -1,0 +1,5 @@
+methanol
+aug-cc-pVDZ
+zeroes
+2
+d3lgbjodd19c73970fg0

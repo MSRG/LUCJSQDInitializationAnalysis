@@ -1,0 +1,5 @@
+methanol
+STO-3G
+MP2
+3
+d3lfrchfk6qs73e6u990

@@ -1,0 +1,5 @@
+fluoroform
+STO-3G
+CCSD
+3
+d3lgg08dd19c73970k0g

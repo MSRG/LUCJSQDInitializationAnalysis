@@ -1,0 +1,5 @@
+methane
+cc-pVDZ
+ML_exact
+4
+d3l9aor4kkus739cgktg

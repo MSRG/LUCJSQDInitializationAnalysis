@@ -1,0 +1,5 @@
+ethane
+cc-pVDZ
+CCSD
+4
+d3lapapfk6qs73e6p8v0

@@ -1,0 +1,5 @@
+formaldehyde
+aug-cc-pVDZ
+random
+3
+d3lfprodd19c7396vufg

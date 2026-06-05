@@ -1,0 +1,4 @@
+aug-cc-pVDZ
+buta-1,3-diene
+LUCJ(L=4)/ML_exact
+[-154.93993326]

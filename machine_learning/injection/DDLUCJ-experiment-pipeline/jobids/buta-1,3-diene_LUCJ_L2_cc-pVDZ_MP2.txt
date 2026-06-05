@@ -1,0 +1,5 @@
+buta-1,3-diene
+cc-pVDZ
+MP2
+2
+d3lhd783qtks738cdhtg

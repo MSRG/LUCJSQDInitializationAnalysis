@@ -1,0 +1,5 @@
+fluoroform
+aug-cc-pVDZ
+zeroes
+5
+d3lh16g3qtks738cd6tg

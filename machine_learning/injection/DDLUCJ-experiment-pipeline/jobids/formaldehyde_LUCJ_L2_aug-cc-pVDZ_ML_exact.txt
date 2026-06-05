@@ -1,0 +1,5 @@
+formaldehyde
+aug-cc-pVDZ
+ML_exact
+2
+d3lfo603qtks738cbvf0

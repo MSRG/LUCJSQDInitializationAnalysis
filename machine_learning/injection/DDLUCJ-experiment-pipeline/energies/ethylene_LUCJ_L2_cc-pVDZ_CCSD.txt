@@ -1,0 +1,4 @@
+cc-pVDZ
+ethylene
+LUCJ(L=2)/CCSD
+[-78.07873078]

@@ -1,0 +1,5 @@
+buta-1,3-diene
+cc-pVDZ
+MP2
+5
+d3lhec0dd19c73971g20

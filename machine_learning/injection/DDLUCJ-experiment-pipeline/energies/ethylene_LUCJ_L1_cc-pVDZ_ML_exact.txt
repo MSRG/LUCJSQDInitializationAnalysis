@@ -1,0 +1,4 @@
+cc-pVDZ
+ethylene
+LUCJ(L=1)/ML_exact
+[-78.07868277]

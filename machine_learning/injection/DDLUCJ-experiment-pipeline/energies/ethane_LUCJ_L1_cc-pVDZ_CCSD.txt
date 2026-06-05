@@ -1,0 +1,4 @@
+cc-pVDZ
+ethane
+LUCJ(L=1)/CCSD
+[-79.25971142]

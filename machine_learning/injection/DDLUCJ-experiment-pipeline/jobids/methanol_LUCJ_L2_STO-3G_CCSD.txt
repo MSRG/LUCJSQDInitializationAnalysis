@@ -1,0 +1,5 @@
+methanol
+STO-3G
+CCSD
+2
+d3lfsgj4kkus739cn5u0

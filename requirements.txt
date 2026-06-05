@@ -8,6 +8,7 @@ ipython
 scikit-learn
 joblib
 numpy
+xgboost
 qiskit_addon_cutting==0.10.0
 qiskit_addon_sqd==0.10.0
 qiskit_aer==0.17.0
