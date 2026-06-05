@@ -35,7 +35,11 @@ import time
 import numpy as np
 import psi4
 
+<<<<<<< HEAD
 psi4.set_num_threads(12)
+=======
+
+>>>>>>> main
 
 
 def distribute_triples(ijk,doubles):
@@ -1095,8 +1099,12 @@ class HelperCCEnergy(object):
 
         # Set up DIIS before iterations begin
         diis_object = helper_diis(self.t1, self.t2, max_diis)
+<<<<<<< HEAD
         self.history = []
         self.time_to_converge = -999
+=======
+
+>>>>>>> main
         # Iterate!
         for CCSD_iter in range(1, maxiter + 1):
             if iterate == True:
@@ -1114,13 +1122,19 @@ class HelperCCEnergy(object):
                    diis_object.diis_size))
 
             # Check convergence
+<<<<<<< HEAD
             
+=======
+>>>>>>> main
             if (abs(CCSDcorr_E - CCSDcorr_E_old) < e_conv and rms < r_conv):
                 print('\nCCSD has converged in %.3f seconds!' %
                       (time.time() - ccsd_tstart))
                 self.steps = CCSD_iter
                 self.FinalEnergy=CCSDcorr_E
+<<<<<<< HEAD
                 self.time_to_converge = time.time()-ccsd_tstart
+=======
+>>>>>>> main
                 tmp_tau = self.build_tau()
 
 
@@ -1130,6 +1144,10 @@ class HelperCCEnergy(object):
 
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
                 if self.Triples:
                     print ('Starting (T) calculation ~')
                     #Put all the amplitudes and orbitals back in canonical for the (T)
@@ -1191,9 +1209,14 @@ class HelperCCEnergy(object):
                     #Pert_T=np.sum(self.pairs)
                     CCSD_T_E = CCSDcorr_E + Pert_T + self.rhf_e
                     self.F=F
+<<<<<<< HEAD
                     self.time_to_converge = time.time()-ccsdt_start
 
                     print ('(T) has converged in '+str(self.time_to_converge) +' seconds')
+=======
+
+                    print ('(T) has converged in '+str(time.time()-ccsdt_start) +' seconds')
+>>>>>>> main
                     print('CCSD Correlation Energy:           '+str(CCSDcorr_E))
                     print('Perturbative (T) correlation energy:     ' + str(Pert_T))
                     print ('CCSD(T) correlation energy: {}'.format(np.sum(self.pairs)))
@@ -1212,8 +1235,11 @@ class HelperCCEnergy(object):
             if CCSD_iter >= start_diis:
                 self.t1, self.t2 = diis_object.extrapolate(self.t1, self.t2)
 
+<<<<<<< HEAD
             self.history.append((CCSD_iter,CCSDcorr_E))
 
+=======
+>>>>>>> main
     def updatet1(self):
 
         ### Build OEI intermediates
@@ -1284,7 +1310,10 @@ class HelperCCEnergy(object):
             if (abs(CCSDcorr_E - CCSDcorr_E_old) < e_conv and rms < r_conv):
                 print('\nCCSD has converged in %.3f seconds!' %
                       (time.time() - ccsd_tstart))
+<<<<<<< HEAD
                 self.time_to_converge = time.time()-ccsd_tstart
+=======
+>>>>>>> main
                 return CCSDcorr_E
 
             # Update old energy
