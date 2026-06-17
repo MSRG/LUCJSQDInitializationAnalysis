@@ -53,13 +53,7 @@ from tqdm import tqdm
 
 from qiskit_ibm_runtime import QiskitRuntimeService
 
-service = QiskitRuntimeService(
-    channel='ibm_quantum_platform',
-    instance='crn:v1:bluemix:public:quantum-computing:us-east:a/d2c50f33c43a44abb94280706332351d:21577587-df3e-4814-9e65-9c35f3e49ac9::',
-    token='ftOG5BKTXn28EJQj40jtvdphdXrPxQUY8F21lvP5IJPG'
-).save_account(    channel='ibm_quantum_platform',
-     instance='crn:v1:bluemix:public:quantum-computing:us-east:a/d2c50f33c43a44abb94280706332351d:21577587-df3e-4814-9e65-9c35f3e49ac9::',
-     token='ftOG5BKTXn28EJQj40jtvdphdXrPxQUY8F21lvP5IJPG',overwrite=True)
+service = QiskitRuntimeService(channel='ibm_quantum_platform').save_account(channel='ibm_quantum_platform',overwrite=True)
 
 
 # In[ ]:
@@ -459,7 +453,6 @@ for row in tqdm(moldf.itertuples(),desc='Molecule'):
                                     t2=t2,
                                     n_reps = L,
                                     channel = 'ibm_quantum_platform',
-                                    instance = 'crn:v1:bluemix:public:quantum-computing:us-east:a/d2c50f33c43a44abb94280706332351d:21577587-df3e-4814-9e65-9c35f3e49ac9::',
                                     backend = None,         
                                     optimization_level=3)
 
