@@ -1,14 +1,21 @@
 # Analyzing Initialization Strategies for the Local Unitary Cluster Jastrow Ansatz within the Quantum-Centric Supercomputing Framework
 
 
+ArXiv Link: [https://arxiv.org/abs/2606.14933](https://arxiv.org/abs/2606.14933)
 
-## Update with path to files, visualization, etc. so I can help plot things for the paper - GMJ
+Citation:
+```
+@misc{jones2026analyzinginitializationstrategieslocal,
+      title={Analyzing Initialization Strategies for the Local Unitary Cluster Jastrow Ansatz within the Quantum-Centric Supercomputing Framework}, 
+      author={Grier M. Jones and Maforikan J. Amoussou and Maximilian O. Leach and Hans-Arno Jacobsen},
+      year={2026},
+      eprint={2606.14933},
+      archivePrefix={arXiv},
+      primaryClass={physics.chem-ph},
+      url={https://arxiv.org/abs/2606.14933}, 
+}
+```
 
 # Relevant paths
-Data analysis `DDLUCJ/machine_learning/injection/DDLUCJ-experiment-pipeline`
-
-# TO-DO 
-- [x] Plots (`PlotSQDEnergies.ipynb`)
-- [ ] Double check postprocessing parameters... (`RunSQDPostProcLocal.ipynb`)
-- [x] Rename repo
-- [ ] Python package
+- Classical reference data: `classical`
+- Data analysis `machine_learning/injection/experiment-pipeline`
