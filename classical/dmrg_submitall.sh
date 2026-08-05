@@ -4,7 +4,7 @@ topdir=$(pwd)
 
 for i in $files; do
     dirpath=$(dirname "$i")
-   #cp "${topdir}/dmrg_run.sh" "${dirpath}/dmrg_run.sh"
+    cp "${topdir}/classical.py" "${dirpath}/classical.py"
 
     cd "$dirpath" || { echo "Cannot cd to $dirpath"; continue; }
 
