@@ -2,7 +2,7 @@ import os
 import pandas as pd
 from classical import run_DMRG
 
-structure = './structures/ammonia157.xyz'
+structure = '../../structures/ammonia157.xyz'
 basis = 'cc-pVDZ'
 n_electrons = 10
 num_orbitals = 8

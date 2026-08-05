@@ -2,7 +2,7 @@ import os
 import pandas as pd
 from classical import run_DMRG
 
-structure = './structures/water183.xyz'
+structure = '../../structures/water183.xyz'
 basis = 'cc-pVDZ'
 n_electrons = 10
 num_orbitals = 7

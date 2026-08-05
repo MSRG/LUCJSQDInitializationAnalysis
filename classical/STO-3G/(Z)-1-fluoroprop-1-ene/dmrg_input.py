@@ -2,7 +2,7 @@ import os
 import pandas as pd
 from classical import run_DMRG
 
-structure = './structures/GDB04_65.xyz'
+structure = '../../structures/GDB04_65.xyz'
 basis = 'STO-3G'
 n_electrons = 32
 num_orbitals = 25

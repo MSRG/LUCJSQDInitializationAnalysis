@@ -2,7 +2,7 @@ import os
 import pandas as pd
 from classical import run_DMRG
 
-structure = './structures/ethylene42.xyz'
+structure = '../../structures/ethylene42.xyz'
 basis = 'cc-pVDZ'
 n_electrons = 16
 num_orbitals = 14

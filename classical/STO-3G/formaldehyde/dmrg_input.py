@@ -2,7 +2,7 @@ import os
 import pandas as pd
 from classical import run_DMRG
 
-structure = './structures/formaldehyde138.xyz'
+structure = '../../structures/formaldehyde138.xyz'
 basis = 'STO-3G'
 n_electrons = 16
 num_orbitals = 12
