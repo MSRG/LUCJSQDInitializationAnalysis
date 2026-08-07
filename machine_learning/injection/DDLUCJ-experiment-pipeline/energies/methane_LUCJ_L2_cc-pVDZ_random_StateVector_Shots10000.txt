@@ -1,0 +1,5 @@
+Basis Set: cc-pVDZ
+Molecule: methane
+Method: LUCJ(L=2)/random
+Energy: -40.21169620921533
+Subspace Dimension: 15876
