@@ -1,0 +1,5 @@
+Basis Set: aug-cc-pVDZ
+Molecule: ammonia
+Method: LUCJ(L=1)/zeroes
+Energy: -56.20522331321221
+Subspace Dimension: 1

@@ -1,0 +1,4 @@
+Molecule,Basis Set,Layers,Injection,Energy,Subspace Dim
+ammonia,STO-3G,2,MP2,-55.46723784621516,25
+ammonia,STO-3G,2,MP2,-55.48040026095452,81
+ammonia,STO-3G,2,MP2,-55.508109588142155,324

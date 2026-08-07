@@ -1,0 +1,5 @@
+Basis Set: STO-3G
+Molecule: ammonia
+Method: LUCJ(L=4)/random
+Energy: -55.51992920362222
+Subspace Dimension: 3136

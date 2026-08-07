@@ -86,7 +86,7 @@ def diagonalize_fermionic_hamiltonian(
                 num_elec_b,
                 seed,
             )
-    
+
         subsamples = [
             subsample(bitstrings, probs, min(len(bitstrings), len(bitstrings)), seed)
             for _ in range(num_batches)
@@ -159,18 +159,46 @@ def diagonalize_fermionic_hamiltonian(
             print(
                 f"  Initial guess vector v0 construction took: {v0_end - v0_start:.4f} seconds"
             )
-    
             print("  Starting eigensolving ...")
             start = time.perf_counter()
-            eigvals, eigvecs = spla.eigsh(
-                Hsub_csr_linop,  # use `Hsub` for the matrix-free mode. Memory-efficient but slower.
-                k=1,
-                which="SA",
-                tol=tol,
-                v0=v0,
-            )
+            
+            # Check subspace dimension N (dimension of the Hamiltonian operator)
+            N = Hsub_csr_linop.shape[0]
+            
+            if N == 1:
+                # Subspace dimension is 1 (e.g. only HF state present)
+                # Compute matrix element directly via LinearOperator matvec on [1.0]
+                val = Hsub_csr_linop.matvec(np.array([1.0], dtype=Hsub.dtype))[0]
+                eigvals = np.array([val])
+                eigvecs = np.array([[1.0]])
+            elif N <= 1: # k = 1 requested, so if N <= k
+                # Convert LinearOperator to dense matrix for exact eigh
+                dense_H = Hsub_csr_linop.matmat(np.eye(N, dtype=Hsub.dtype))
+                eigvals, eigvecs = spla_dense.eigh(dense_H)
+                eigvals, eigvecs = eigvals[:1], eigvecs[:, :1]
+            else:
+                # Standard ARPACK iterative eigensolver for N > 1
+                eigvals, eigvecs = spla.eigsh(
+                    Hsub_csr_linop,
+                    k=1,
+                    which="SA",
+                    tol=tol,
+                    v0=v0,
+                )
+                
             end = time.perf_counter()
-            total_energy = eigvals + nuclear_repulsion_energy
+            total_energy = eigvals + nuclear_repulsion_energy    
+            # print("  Starting eigensolving ...")
+            # start = time.perf_counter()
+            # eigvals, eigvecs = spla.eigsh(
+            #     Hsub_csr_linop,  # use `Hsub` for the matrix-free mode. Memory-efficient but slower.
+            #     k=1,
+            #     which="SA",
+            #     tol=tol,
+            #     v0=v0,
+            # )
+            # end = time.perf_counter()
+            # total_energy = eigvals + nuclear_repulsion_energy
             print(f"  Eigensolving took: {end - start:.4f} seconds")
             print(f"  Electronic Energy: {eigvals}")
             print(f"  Total Energy: {total_energy}")

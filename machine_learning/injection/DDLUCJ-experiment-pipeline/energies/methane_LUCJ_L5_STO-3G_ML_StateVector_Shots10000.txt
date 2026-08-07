@@ -1,0 +1,5 @@
+Basis Set: STO-3G
+Molecule: methane
+Method: LUCJ(L=5)/ML
+Energy: -39.74883361480873
+Subspace Dimension: 256
