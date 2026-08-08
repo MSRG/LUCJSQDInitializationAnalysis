@@ -1,5 +1,5 @@
 Basis Set: cc-pVDZ
 Molecule: ammonia
 Method: LUCJ(L=1)/random
-Energy: -56.206728293837735
+Energy: -56.20672829383779
 Subspace Dimension: 3136

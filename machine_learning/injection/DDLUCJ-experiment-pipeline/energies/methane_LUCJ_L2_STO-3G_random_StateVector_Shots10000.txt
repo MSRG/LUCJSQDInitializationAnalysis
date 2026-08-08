@@ -1,5 +1,5 @@
 Basis Set: STO-3G
 Molecule: methane
 Method: LUCJ(L=2)/random
-Energy: -39.80615652516585
+Energy: -39.80615652516589
 Subspace Dimension: 15876

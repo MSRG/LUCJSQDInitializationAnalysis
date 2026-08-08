@@ -1,5 +1,5 @@
 Basis Set: STO-3G
 Molecule: ammonia
 Method: LUCJ(L=1)/ML
-Energy: -55.47515685248724
-Subspace Dimension: 25
+Energy: -55.45727694383144
+Subspace Dimension: 16

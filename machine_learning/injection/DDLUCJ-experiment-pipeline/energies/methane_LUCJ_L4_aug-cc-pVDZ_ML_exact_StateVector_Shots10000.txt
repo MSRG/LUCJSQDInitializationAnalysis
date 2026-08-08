@@ -1,5 +1,5 @@
 Basis Set: aug-cc-pVDZ
 Molecule: methane
 Method: LUCJ(L=4)/ML_exact
-Energy: -40.19961406335122
+Energy: -40.19961406335129
 Subspace Dimension: 1

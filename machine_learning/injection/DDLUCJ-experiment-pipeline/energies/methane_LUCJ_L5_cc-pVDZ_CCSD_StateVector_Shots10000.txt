@@ -1,5 +1,5 @@
 Basis Set: cc-pVDZ
 Molecule: methane
 Method: LUCJ(L=5)/CCSD
-Energy: -40.198916503214264
-Subspace Dimension: 9
+Energy: -40.199784461535316
+Subspace Dimension: 49
