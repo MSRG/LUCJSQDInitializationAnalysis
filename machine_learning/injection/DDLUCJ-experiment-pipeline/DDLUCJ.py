@@ -216,9 +216,16 @@ class DDLUCJ:
         elif self.JobID is None:
             self.bit_array = self.BitArray
                 
-    def PostprocessFulqrum(self):
+    def PostprocessFulqrum(self, use_recovery=True):
         """
         Use Fulqrum postprocessing
+
+        Parameters
+        ----------
+        use_recovery : bool, default True
+            If False, skip configuration recovery entirely and diagonalize on a
+            single round of hamming-weight-postselected bitstrings (i.e. the
+            "no configuration recovery" baseline).
         """
         from fulqum_sqd import diagonalize_fermionic_hamiltonian
 
@@ -236,11 +243,17 @@ class DDLUCJ:
         else:
             raise ValueError("No bit_array found in memory and no valid bitarraypath provided!")
 
-        occ_a = np.zeros(self.NOrb, dtype=int)
-        occ_a[-self.num_elec_a:] = np.ones(self.num_elec_a, dtype=int)
-        occ_b = np.zeros(self.NOrb, dtype=int)
-        occ_b[-self.num_elec_b:] = np.ones(self.num_elec_b, dtype=int)     
-        current_occupancies = [occ_a, occ_b]
+        if use_recovery:
+            occ_a = np.zeros(self.NOrb, dtype=int)
+            occ_a[-self.num_elec_a:] = np.ones(self.num_elec_a, dtype=int)
+            occ_b = np.zeros(self.NOrb, dtype=int)
+            occ_b[-self.num_elec_b:] = np.ones(self.num_elec_b, dtype=int)
+            current_occupancies = [occ_a, occ_b]
+        else:
+            # No recovery: force plain hamming-weight postselection every round
+            # (fulqum_exact.diagonalize_fermionic_hamiltonian also enforces
+            # max_iterations=1 in this mode).
+            current_occupancies = None
         
         probs_arr_full = self.probs_arr_full
         bitstring_matrix_full = self.bitstring_matrix_full
@@ -269,7 +282,8 @@ class DDLUCJ:
             nelec=(self.num_elec_a, self.num_elec_b),
             num_batches=self.num_batches,
             max_iterations=self.max_iterations,
-            carryover_threshold=self.carryover_threshold
+            carryover_threshold=self.carryover_threshold,
+            use_recovery=use_recovery,
         )        
 
         self.total_energy, self.subspace_dimension = total_energy, subspace_dimension
@@ -341,7 +355,7 @@ class DDLUCJ:
             )              
         self.result_history = result_history
         
-    def __call__(self, postprocess=True, JobID=None, BitArray=None, usefulqrum=False, bitarraypath=None):
+    def __call__(self, postprocess=True, JobID=None, BitArray=None, usefulqrum=False, bitarraypath=None, use_recovery=True):
         self.postprocess = postprocess
         self.JobID = JobID
         self.BitArray = BitArray
@@ -353,7 +367,7 @@ class DDLUCJ:
         
         if self.postprocess:
             if self.usefulqrum:
-                self.PostprocessFulqrum()
+                self.PostprocessFulqrum(use_recovery=use_recovery)
                 return self.total_energy, self.subspace_dimension
             else:
                 self.Postprocess()

@@ -50,7 +50,8 @@ def diagonalize_fermionic_hamiltonian(
     carryover_threshold=1e-4,
     current_occupancies=None,
     tol=1e-5,
-    seed=12345):        
+    seed=12345,
+    use_recovery=True):        
 
     fermionic_op = integrals_to_fq_fermionic_op( one_body_integrals=hcore, two_body_integrals=eri)
     fulqrum_operator = fermionic_op.extended_jw_transformation()
@@ -64,13 +65,24 @@ def diagonalize_fermionic_hamiltonian(
     
     carryover_full_strs = []
     S = None  # Subspace
-    
+
+    if not use_recovery:
+        # Without configuration recovery there is nothing for later iterations to
+        # refine -- postselection on the raw samples is identical every round --
+        # so we only ever need a single pass.
+        if max_iterations != 1 and max_iterations is not None:
+            print(
+                f"use_recovery=False: overriding max_iterations={max_iterations} -> 1"
+            )
+        max_iterations = 1
+
     for ni in range(max_iterations):
         iter_start = time.perf_counter()
         print(f"ITERATION {ni}")
-        if current_occupancies is None:
-            # If we don't have average orbital occupancy information, simply postselect
-            # bitstrings with the correct numbers of spin-up and spin-down electrons
+        if not use_recovery or current_occupancies is None:
+            # If we don't have average orbital occupancy information (or recovery is
+            # disabled entirely), simply postselect bitstrings with the correct
+            # numbers of spin-up and spin-down electrons
             bitstrings, probs = postselect_by_hamming_right_and_left(
                 bit_array, prob_array, num_elec_a, num_elec_b
             )
