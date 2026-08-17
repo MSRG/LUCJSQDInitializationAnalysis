@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --time=2-0:00:00
+#SBATCH --time=1-0:00:00
 #SBATCH -J fluoroform_LUCJ_L4_aug-cc-pVDZ_zeroes_StateVector_Shots10000
 #SBATCH --account=rrg-jacobsen-ab
 #SBATCH --ntasks-per-node=1
@@ -11,7 +11,7 @@
 set -e
 
 echo 'About to run python file'
-module load python/3.10
+module load python/3.11
 module load StdEnv/2023
 module load openmpi
 module load symengine rust
@@ -19,12 +19,13 @@ module load hdf5
 module load openblas
 
 echo "TEMP DIR: $SLURM_TMPDIR"
-virtualenv --no-download $SLURM_TMPDIR/env
-source $SLURM_TMPDIR/env/bin/activate
-pip install --no-index --upgrade pip
-pip install /scratch/gjones/wheels/fulqrum*.whl
-pip install -e /home/gjones/scratch/distributed_LUCJ/
-pip install openfermion
+source /home/gjones/scratch/tmp_env/bin/activate
+# virtualenv --no-download $SLURM_TMPDIR/env
+# source $SLURM_TMPDIR/env/bin/activate
+# pip install --no-index --upgrade pip
+# pip install --find-links=/home/gjones/projects/def-jacobsen/gjones/wheels/ fulqrum
+# pip install -e /home/gjones/scratch/distributed_LUCJ/
+# pip install openfermion
 
 export LD_LIBRARY_PATH=$EBROOTOPENBLAS/lib:$LD_LIBRARY_PATH
 export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
