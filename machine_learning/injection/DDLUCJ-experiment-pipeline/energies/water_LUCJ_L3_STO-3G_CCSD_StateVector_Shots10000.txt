@@ -1,0 +1,5 @@
+Basis Set: STO-3G
+Molecule: water
+Method: LUCJ(L=3)/CCSD
+Energy: -74.98742453441967
+Subspace Dimension: 36

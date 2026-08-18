@@ -1,0 +1,5 @@
+Basis Set: aug-cc-pVDZ
+Molecule: water
+Method: LUCJ(L=2)/ML_exact
+Energy: -76.04092863345073
+Subspace Dimension: 4

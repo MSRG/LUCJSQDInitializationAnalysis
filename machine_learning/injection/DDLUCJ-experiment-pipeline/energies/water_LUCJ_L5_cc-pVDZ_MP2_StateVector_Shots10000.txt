@@ -1,0 +1,5 @@
+Basis Set: cc-pVDZ
+Molecule: water
+Method: LUCJ(L=5)/MP2
+Energy: -76.02851565715079
+Subspace Dimension: 9
