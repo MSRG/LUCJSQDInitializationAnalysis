@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --time=1-0:00:00
+#SBATCH --time=0-8:00:00
 #SBATCH -J ethylene_LUCJ_L5_aug-cc-pVDZ_CCSD_StateVector_Shots10000
 #SBATCH --account=rrg-jacobsen-ab
 #SBATCH --ntasks-per-node=1

@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --time=1-0:00:00
+#SBATCH --time=0-8:00:00
 #SBATCH -J prop-2-en-1-ol_LUCJ_L2_STO-3G_ML_StateVector_Shots10000
 #SBATCH --account=rrg-jacobsen-ab
 #SBATCH --ntasks-per-node=1
