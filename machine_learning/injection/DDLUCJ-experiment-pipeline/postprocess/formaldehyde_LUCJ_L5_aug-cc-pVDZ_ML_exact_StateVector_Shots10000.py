@@ -17,7 +17,7 @@ ampdict = GrabAmps("formaldehyde", "aug-cc-pVDZ")
 t1, t2 = ampdict["ML_exact"]
 
 initDDLUCJ = DDLUCJ(
-    StructurePath="../../../classical/structures/formaldehyde138.xyz",
+    StructurePath="../../../../classical/structures/formaldehyde138.xyz",
     BasisSet="aug-cc-pVDZ",
     NElec=int(16),
     NOrb=int(12),

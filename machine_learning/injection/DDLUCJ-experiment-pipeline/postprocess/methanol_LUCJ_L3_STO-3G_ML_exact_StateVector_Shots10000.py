@@ -17,7 +17,7 @@ ampdict = GrabAmps("methanol", "STO-3G")
 t1, t2 = ampdict["ML_exact"]
 
 initDDLUCJ = DDLUCJ(
-    StructurePath="../../../classical/structures/methanol22.xyz",
+    StructurePath="../../../../classical/structures/methanol22.xyz",
     BasisSet="STO-3G",
     NElec=int(18),
     NOrb=int(14),

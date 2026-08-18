@@ -17,7 +17,7 @@ ampdict = GrabAmps("water", "cc-pVDZ")
 t1, t2 = ampdict["zeroes"]
 
 initDDLUCJ = DDLUCJ(
-    StructurePath="../../../classical/structures/water183.xyz",
+    StructurePath="../../../../classical/structures/water183.xyz",
     BasisSet="cc-pVDZ",
     NElec=int(10),
     NOrb=int(7),

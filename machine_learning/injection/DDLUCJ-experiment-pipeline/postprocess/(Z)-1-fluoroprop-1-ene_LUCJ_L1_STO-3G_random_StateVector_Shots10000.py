@@ -17,7 +17,7 @@ ampdict = GrabAmps("(Z)-1-fluoroprop-1-ene", "STO-3G")
 t1, t2 = ampdict["random"]
 
 initDDLUCJ = DDLUCJ(
-    StructurePath="../../../classical/structures/GDB04_65.xyz",
+    StructurePath="../../../../classical/structures/GDB04_65.xyz",
     BasisSet="STO-3G",
     NElec=int(32),
     NOrb=int(25),

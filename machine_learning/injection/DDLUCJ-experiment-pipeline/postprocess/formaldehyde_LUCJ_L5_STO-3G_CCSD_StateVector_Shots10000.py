@@ -17,7 +17,7 @@ ampdict = GrabAmps("formaldehyde", "STO-3G")
 t1, t2 = ampdict["CCSD"]
 
 initDDLUCJ = DDLUCJ(
-    StructurePath="../../../classical/structures/formaldehyde138.xyz",
+    StructurePath="../../../../classical/structures/formaldehyde138.xyz",
     BasisSet="STO-3G",
     NElec=int(16),
     NOrb=int(12),

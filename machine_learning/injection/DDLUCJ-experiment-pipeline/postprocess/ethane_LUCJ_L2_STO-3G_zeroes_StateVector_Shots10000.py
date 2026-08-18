@@ -17,7 +17,7 @@ ampdict = GrabAmps("ethane", "STO-3G")
 t1, t2 = ampdict["zeroes"]
 
 initDDLUCJ = DDLUCJ(
-    StructurePath="../../../classical/structures/ethane28.xyz",
+    StructurePath="../../../../classical/structures/ethane28.xyz",
     BasisSet="STO-3G",
     NElec=int(18),
     NOrb=int(16),

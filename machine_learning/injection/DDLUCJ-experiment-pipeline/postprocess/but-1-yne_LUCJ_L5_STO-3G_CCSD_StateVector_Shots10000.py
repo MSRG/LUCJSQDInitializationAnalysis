@@ -17,7 +17,7 @@ ampdict = GrabAmps("but-1-yne", "STO-3G")
 t1, t2 = ampdict["CCSD"]
 
 initDDLUCJ = DDLUCJ(
-    StructurePath="../../../classical/structures/GDB04_49.xyz",
+    StructurePath="../../../../classical/structures/GDB04_49.xyz",
     BasisSet="STO-3G",
     NElec=int(30),
     NOrb=int(26),

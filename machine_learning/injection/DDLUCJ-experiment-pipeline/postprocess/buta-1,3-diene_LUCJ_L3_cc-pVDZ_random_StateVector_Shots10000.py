@@ -17,7 +17,7 @@ ampdict = GrabAmps("buta-1,3-diene", "cc-pVDZ")
 t1, t2 = ampdict["random"]
 
 initDDLUCJ = DDLUCJ(
-    StructurePath="../../../classical/structures/GDB04_53.xyz",
+    StructurePath="../../../../classical/structures/GDB04_53.xyz",
     BasisSet="cc-pVDZ",
     NElec=int(30),
     NOrb=int(26),

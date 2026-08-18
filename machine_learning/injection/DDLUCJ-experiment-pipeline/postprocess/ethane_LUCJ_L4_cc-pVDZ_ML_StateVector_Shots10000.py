@@ -17,7 +17,7 @@ ampdict = GrabAmps("ethane", "cc-pVDZ")
 t1, t2 = ampdict["ML"]
 
 initDDLUCJ = DDLUCJ(
-    StructurePath="../../../classical/structures/ethane28.xyz",
+    StructurePath="../../../../classical/structures/ethane28.xyz",
     BasisSet="cc-pVDZ",
     NElec=int(18),
     NOrb=int(16),

@@ -17,7 +17,7 @@ ampdict = GrabAmps("water", "STO-3G")
 t1, t2 = ampdict["random"]
 
 initDDLUCJ = DDLUCJ(
-    StructurePath="../../../classical/structures/water183.xyz",
+    StructurePath="../../../../classical/structures/water183.xyz",
     BasisSet="STO-3G",
     NElec=int(10),
     NOrb=int(7),

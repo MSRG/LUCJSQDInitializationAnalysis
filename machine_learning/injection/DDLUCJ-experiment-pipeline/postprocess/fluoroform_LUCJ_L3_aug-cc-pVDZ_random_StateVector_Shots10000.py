@@ -17,7 +17,7 @@ ampdict = GrabAmps("fluoroform", "aug-cc-pVDZ")
 t1, t2 = ampdict["random"]
 
 initDDLUCJ = DDLUCJ(
-    StructurePath="../../../classical/structures/GDB04_5.xyz",
+    StructurePath="../../../../classical/structures/GDB04_5.xyz",
     BasisSet="aug-cc-pVDZ",
     NElec=int(34),
     NOrb=int(21),

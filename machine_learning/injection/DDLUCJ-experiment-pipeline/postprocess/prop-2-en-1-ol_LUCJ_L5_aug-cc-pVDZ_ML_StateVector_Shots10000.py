@@ -17,7 +17,7 @@ ampdict = GrabAmps("prop-2-en-1-ol", "aug-cc-pVDZ")
 t1, t2 = ampdict["ML"]
 
 initDDLUCJ = DDLUCJ(
-    StructurePath="../../../classical/structures/GDB04_33.xyz",
+    StructurePath="../../../../classical/structures/GDB04_33.xyz",
     BasisSet="aug-cc-pVDZ",
     NElec=int(32),
     NOrb=int(26),

@@ -17,7 +17,7 @@ ampdict = GrabAmps("(Z)-1-fluoroprop-1-ene", "aug-cc-pVDZ")
 t1, t2 = ampdict["CCSD"]
 
 initDDLUCJ = DDLUCJ(
-    StructurePath="../../../classical/structures/GDB04_65.xyz",
+    StructurePath="../../../../classical/structures/GDB04_65.xyz",
     BasisSet="aug-cc-pVDZ",
     NElec=int(32),
     NOrb=int(25),
